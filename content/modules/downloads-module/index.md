@@ -1,6 +1,6 @@
 ---
 title: Downloads Module
-template: documentation/content.html
+template: content.html
 ---
 
 # Downloads Module

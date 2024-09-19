@@ -8,3 +8,11 @@ menu:
 # Basics
 
 ## Installation
+
+## Starting the server
+
+## Installing modules
+
+## Installing extensions
+
+## Installing themes
