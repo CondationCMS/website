@@ -1,0 +1,39 @@
+/*
+ * Globals
+ */
+.content-row {
+  margin-top: 10px;
+}
+
+/*
+ * Header
+ */
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, .5);
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link+.nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/**
+prism
+**/
+code[class*="language-"],
+pre[class*="language-"] {
+  text-shadow: none;
+}
+.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url {
+  background: none;
+}

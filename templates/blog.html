@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %} {{ meta.title }} {% endblock %}
+
+{% block content %}
+{{ content | raw }}
+<div class="blog-entries">
+	{% set pageNumber = requestContext.getQueryParameter('page', '1') %}
+	{% set page = nodeList.from("/blog/*").sort("publish_date").reverse(true).page(pageNumber).size(3).list() %}
+	{% for entry in page.items %}
+	<div class="entry card">
+		<div class="card-body">
+			<h4 class="card-title">{{ entry.name }}</h4>
+			<h6>{{ entry.meta['publish_date'] | date('dd-MM-yyyy') }}</h6>
+			<p class="card-text">{{ entry.content}}</p>
+			<a href="{{ entry.path}}" class="btn btn-primary">komplett lesen</a>
+		</div>
+	</div>
+	<hr />
+	{% endfor %}
+	<nav>
+		<ul class="pagination justify-content-center">
+			{% if page.page == 1 %}
+				<li class="page-item disabled">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+			{% else %}
+				<li class="page-item">
+					<a class="page-link" href="{{ requestContext.uri + "?page=" + (page.page - 1) }}" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+			{% endif %}
+			{% if page.page == page.totalPages %}
+				<li class="page-item disabled">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			{% else %}
+				<li class="page-item">
+					<a class="page-link" href="{{ requestContext.uri + "?page=" + (page.page + 1) }}" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+	</nav>
+</div>
+{% endblock %}

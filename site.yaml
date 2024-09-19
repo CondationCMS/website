@@ -1,0 +1,16 @@
+id: marx-software
+hostname: 
+  - "marx-software.de"
+  - localhost
+baseurl: "https://marx-software.de"
+name: "mm1"
+template:
+  engine: pebble
+theme: bootstrap5
+index:
+  persistent: true
+modules:
+  active:
+    - pebble-module
+    - seo-module
+
