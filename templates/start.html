@@ -3,16 +3,15 @@
 {% block title %} {{ meta.title }} {% endblock %}
 
 {% block content %}
-<div>
-	{{ content | raw }}
-</div>
-
-<div class="why">
+<div class="why row">
 	<div class="p-5 text-center bg-body-tertiary">
 		<div class="container py-5">
 			<h1 class="text-body-emphasis">The foundation for effortless content creation</h1>
 			<p class="col-lg-8 mx-auto lead">
-				"We believe that great content is the foundation for successful communication and lasting connections. With Condation, we aim to create the base where ideas can grow and thrive. Our goal is to provide a solid, reliable platform that enables everyone to easily create, manage, and share their content—helping to change the world, one idea at a time."
+				"We believe that great content is the foundation for successful communication and lasting connections.
+				With Condation, we aim to create the base where ideas can grow and thrive. Our goal is to provide a
+				solid, reliable platform that enables everyone to easily create, manage, and share their content—helping
+				to change the world, one idea at a time."
 			</p>
 		</div>
 	</div>
@@ -20,14 +19,14 @@
 
 <hr />
 
-<div class="container">
-	<div class="row row-cols-1 row-cols-md-3">
-		{% if sections.containsKey('features') %}
-		{% for feature in sections.get('features') %}
-		{{feature.content | raw}}
-		{% endfor %}
-		{% endif %}
-	</div>
+
+<div class="row row-cols-1 row-cols-md-3">
+	{% if sections.containsKey('features') %}
+	{% for feature in sections.get('features') %}
+	{{feature.content | raw}}
+	{% endfor %}
+	{% endif %}
 </div>
+
 
 {% endblock %}

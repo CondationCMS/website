@@ -12,10 +12,13 @@
 
     <link href="/theme/assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet" defer />
     <link href="/theme/assets/bootstrap-icons-1.11.1/bootstrap-icons.min.css" rel="stylesheet" defer />
+    <!--link href="/assets/bulma-1.0.2/bulma.min.css" rel="stylesheet" defer /-->
     <link href="/assets/prism-1.29.0/prism.css" rel="stylesheet" defer />
     <link href="/assets/prism-1.29.0/prism-tomorrow.min.css" rel="stylesheet" defer />
     <link href="/assets/app-1.css" rel="stylesheet" defer />
+
     
+
     {% if ENV == 'prod'%}
     <!-- Matomo Tag Manager -->
     <script>
@@ -33,15 +36,21 @@
 </head>
 
 <body>
-    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-        {% include "base.menu.html" %}
 
-        <div id="content" class="row content-row">
-            {% block content %}{% endblock %}
-        </div>
+    <div class="container">
+        <header>
+            {% include "base.menu.html" %}
+        </header>
+
+        <main class="main-area">
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
 
     </div>
+
 
     {% include "base.footer.html" %}
 
