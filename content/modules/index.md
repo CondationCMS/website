@@ -34,6 +34,6 @@ Various template engines are supported, so there is something for every preferen
 
 [Ads Module](/modules/ads-module)
 
-## Videos modules
+## Video modules
 
-[Videos Module](/modules/videos-module)
+[Video Module](/modules/video-module)
