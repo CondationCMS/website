@@ -13,9 +13,12 @@ template: content.html
 
 [Pebble](https://pebbletemplates.io/) is a template engine inspired by [Twig](https://twig.symfony.com/).
 
-## Freemarker
+## Apache Freemarker
 
 [Apache Freemarker](https://freemarker.apache.org) is one of the older representatives of the template engines, but is still widely used.
 
-[Download](https://github.com/CondationCMS/freemarker-module/releases)
+For a better view, we use the [square bracket](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) syntax in freemarker.
 
+## Apache Velocity
+
+[Apache Velocity](https://velocity.apache.org) is one of the older representatives of the template engines, but is still widely used.

@@ -9,6 +9,9 @@ menu:
 
 This project wouldn't be possible with a lot of help of wonderful open source projects.
 
+These is only a more or less complete list of other open source projects we are using.
+If something is missing, let us know.
+
 ## From the eclipse foundation
 
 * [Eclipse Jetty](https://jetty.org)
@@ -48,3 +51,11 @@ This project wouldn't be possible with a lot of help of wonderful open source pr
 * [junit](https://junit.org/junit5/)
 * [mockito](https://site.mockito.org/)
 * [Awaitility](https://github.com/awaitility/awaitility)
+
+
+## In modules
+
+* [Apache Freemarker](https://freemarker.apache.org/)
+* [Apache Velocity](https://velocity.apache.org/)
+* [Thymeleaef](https://www.thymeleaf.org/)
+* [Pebble](https://pebbletemplates.io/)
