@@ -1,12 +1,10 @@
-id: marx-software
+id: condation
 hostname: 
-  - "marx-software.de"
+  - "condation.com"
   - localhost
-baseurl: "https://marx-software.de"
-name: "mm1"
+baseurl: "https://condation.com"
 template:
   engine: pebble
-theme: bootstrap5
 index:
   persistent: true
 modules:
