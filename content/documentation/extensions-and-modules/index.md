@@ -6,3 +6,5 @@ menu:
 ---
 
 # Extensions & Modules
+
+[Creating extensions](/documentation/extensions-and-modules/extensions)
