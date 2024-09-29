@@ -7,7 +7,7 @@ menu:
 
 # Extensions
 
-
+Extensions are a simple way to extend the cms-server to your needs.
 
 ## Register Shortcode
 
