@@ -6,3 +6,5 @@ menu:
 ---
 
 # Templates
+
+Read more about [templates](/documentation/templates-and-themes)
