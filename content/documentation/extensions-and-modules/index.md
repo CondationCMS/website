@@ -8,3 +8,7 @@ menu:
 # Extensions & Modules
 
 [Creating extensions](/documentation/extensions-and-modules/extensions)
+
+[Creating modules](/documentation/extensions-and-modules/modules)
+
+[Hooks](/documentation/extensions-and-modules/hooks)
