@@ -15,6 +15,9 @@ Condation requires java version 21 installed.
 
 Download the current 
 
+* [Server configuration](/documentation/basics/server-config)
+* [Site configuration](/documentation/basics/site-config)
+
 ## Starting the server
 
 ```shell
