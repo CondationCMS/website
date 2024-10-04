@@ -13,7 +13,7 @@ Condation requires java version 21 installed.
 
 ## Installation
 
-Download the current 
+Download the current [latest release](https://github.com/CondationCMS/cms-server/releases) and unzip the release to a folder of your choice.
 
 * [Server configuration](/documentation/basics/server-config)
 * [Site configuration](/documentation/basics/site-config)
