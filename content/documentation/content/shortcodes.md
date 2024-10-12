@@ -3,14 +3,18 @@ title: Shortcodes
 template: documentation/content.html
 ---
 
-# Shortcodes
+# ShortCodes
 
-With shortcodes it is possible to extend the rendering of the markdown content.
+With ShortCodes it is possible to extend the rendering of the markdown content. 
 
-Shortcodes are helpful for extension and module developers. 
+The video integration for example uses ShortCodes to provided simple integration of videos inside content or template.
 
-The youtube integration for example uses shortcodes to provided simple integration of videos inside content or template.
-
+Markdown content usage example:
 ```markdown
 \[\[video type="youtube" id="y0sF5xhGreA" title="Everybody loves little cats" /\]\]
+```
+
+Pebble template usage example:
+```twig
+{{ shortCode.call('video', {'type': 'youtube', 'id': 'y0sF5xhGreA', 'title' : 'Everybody loves little cats'}) }}
 ```

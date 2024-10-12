@@ -16,120 +16,30 @@ If the possibilities of Markdown are not sufficient, extensions can be created b
 If the CMS is running in DEV mode (caution, this is not recommended for productive operation), you can activate preview mode by appending **?preview** to the URL.
 This means that unpublished content is also displayed.
 
-## Meta attributes
+## MetaData
 
-In addition to the reserved attributes presented below, any attributes can also be defined.
-These are then available in the template code.
+The front matter yaml header defines the required metadata as well as your custom data, [read more](/documentation/content/metadata)
 
-### Title
+## How is content found
 
-```yaml
-title: The title.
-```
+All content is stored inside the *content/* folder of a site.
+Every content file has the file ending **.md**.
 
-### Render template
+If a request comes in, the following steps are executed to find the corresponding content file.
 
-The template to be used to render this page.
+Request: http://condation.com/documentation
 
-```yaml
-template: blog-entry.html
-```
+1. get the uri: /documentation
+2. check if there is an folder **documentation** in the sites *content/* folder
+3. **if yes**: try to load the index.md of the documentation folder
+4. **if no**: check if there is a file named **documentation.md** inside the **content/** folder
+5. **if yes**: load it
+6. if no: 404
 
-### Excerpt
+Some example requests:
 
-The content excerpt is used wherever the Query or NodeList function is used in templates.
+http://condation.com/ => content/index.md
 
-```yaml
-excerpt: Short excerpt of the content.
-```
+http://condation.com/documentation => content/documentation/index.md
 
-### Visibility
-
-In the standard system, a page is considered published as soon as it has been created.
-
-```yaml
-published: false
-```
-
-#### Publish from a certain date
-
-```yaml
-publish_date: 2023-12-01
-```
-
-#### No more publishing after a certain date
-
-```yaml
-unpublish_date: 2023-12-31
-```
-
-### Menu
-
-If menus are created using the **navigation** function, these attributes can be used to control whether a page appears in the menu, where it appears and what title it has.
-
-#### Visibility in menus
-
-```yaml
-menu:
-    visible: true/false
-```
-
-#### Position in menus
-
-The menu items are displayed in ascending order by position; if no position attribute has been assigned, the standard 1000 applies. 
-If items are assigned more than once, they are sorted alphanumerically.
-
-```yaml
-menu:
-    position: 50
-```
-
-#### Title used in menus
-
-If the value in the title attribute is too long and therefore not suitable for the menu, it can simply be overwritten.
-
-```yaml
-menu:
-    title: Short title
-```
-
-
-### Redirects
-
-The redirect attribute can be used to redirect pages to external URLs.
-
-```yaml
-redirect:
-    status: 301
-    location: https://google.de
-```
-
-### Content-Type
-
-Other text-based formats can also be created by setting the content type.
-The default content type is **text/html** and does not have to be specified explicitly.
-
-```yaml
-content:
-    type: "application/json"
-```
-
-### Views
-
-Using views (type: view), queries can be specified directly in the metadata and processed in the template using **${page.items}**.
-
-```yaml
-template: views/test.html
-type: view
-content:
-  query:
-    from: "/"
-    excerpt: 250
-    order_by: title
-    order_direction: asc
-    conditions: 
-      - name: where
-        operator: =
-        key: template
-        value: content.html
-```
+http://condation.com/documentation/content/metadata => content/documentation/content/metadata.md

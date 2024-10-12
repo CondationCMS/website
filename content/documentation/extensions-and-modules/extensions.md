@@ -7,9 +7,12 @@ menu:
 
 # Extensions
 
-Extensions are a simple way to extend the cms-server to your needs.
+Extensions are a simple way to extend the condation-server to your needs.
+Extensions are written in JavaScript and stored inside the *extension/* folder of your site.
+Due to the single threaded nature of the used [JavaScript Engine](https://www.graalvm.org/) they are loaded and executed on every request.
 
-## Register Shortcode
+
+## Example registering a Shortcode
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
