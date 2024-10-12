@@ -17,7 +17,7 @@ template: content.html
 
 [Apache Freemarker](https://freemarker.apache.org) is one of the older representatives of the template engines, but is still widely used.
 
-For a better view, we use the [square bracket](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) syntax in freemarker.
+For a better view, we use the square bracket syntax in freemarker.
 
 ## Apache Velocity
 
