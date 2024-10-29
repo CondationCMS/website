@@ -39,22 +39,12 @@ We’re excited to introduce a new feature we’re particularly proud of: the re
 Our previous parser, which relied on regular expressions, had significant limitations—only strings could be used as parameter values. The new parser overcomes these restrictions by supporting numbers and booleans as well. To make it even more powerful, it now allows the use of expressions that can access the metadata of the current page.
 
 ```html
-<<<<<<< HEAD
 \[\[title title="${meta.title}" /\]\]
 \[\[person age=46 /\]\]
 \[\[person admin=false /\]\]
-=======
-[[title title="${meta.title}" /]]
-[[person age=46 /]]
-[[person admin=false /]]
->>>>>>> dd847ea (release 6.4.0)
 ```
 
 
 have fun trying it out!
 
-<<<<<<< HEAD
 CU
-=======
-CU
->>>>>>> dd847ea (release 6.4.0)
