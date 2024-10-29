@@ -17,6 +17,7 @@ Download the current [latest release](https://github.com/CondationCMS/cms-server
 
 * [Server configuration](/documentation/basics/server-config)
 * [Site configuration](/documentation/basics/site-config)
+* [Media configuration](/documentation/basics/media-config)
 
 ## Starting the server
 
