@@ -22,3 +22,7 @@ For a better view, we use the square bracket syntax in freemarker.
 ## Apache Velocity
 
 [Apache Velocity](https://velocity.apache.org) is one of the older representatives of the template engines, but is still widely used.
+
+## Jinja
+
+[Jinja](https://github.com/HubSpot/jinjava/) a template engine under developing by HubSpot. Syntax is similar to pebble.

@@ -20,4 +20,4 @@ You can find information about the available engines here: [module](/modules/tem
 
 ## Themes
 
-You can find out more about the possibilities offered by the use of themes [here](/projects/cms/templates-and-themes/theming)
+You can find out more about the possibilities offered by the use of themes [here](/documentation/templates-and-themes/theming)
