@@ -14,7 +14,7 @@ Media configuration is stored in **config/media.toml**
 name = "small"          # (2.1)
 width = 256             # (2.2)
 height = 256            # (2.3)
-format = "webp"         # (2.4))
+format = "webp"         # (2.4)
 compression = true      # (2.5)
 ```
 

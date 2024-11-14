@@ -19,26 +19,23 @@ Support for themes allows the reuse of templates, extensions, assets and message
 
 ## configuration
 
-```yaml
-name: test
-template:
-  engine: thymeleaf
-modules:
-  active:
-    - thymeleaf-module
-    - search-module
-media:
-  formats:
-    - name: small
-      width: 256
-      height: 256
-      format: webp
-      compression: true
+```toml
+name = "test"
+
+\[template\]
+engine = "thymeleaf"
+
+\[modules\]
+active = \[ "thymeleaf-module", "search-module" \]
 ```
 
 ### Name
 
 Each theme requires a unique name. It can then be referenced in a site using this name.
+
+### Parent theme name
+
+A theme can have a parent theme.
 
 ### Template-Engine
 
