@@ -5,8 +5,8 @@ baseurl = "https://condation.com"
 [template]
 engine = "pebble"
 
-[index]
-persistent = true
+[index.query]
+mode = "PERSISTENT"
 
 [modules]
 active = [ "pebble-module", "seo-module" ]

@@ -13,6 +13,9 @@ List of modules for the CMS!
 
 [Downloads Module](/modules/downloads-module)
 
+## Components modules
+
+[Components Module](/modules/components-module)
 
 ## Forms modules
 
