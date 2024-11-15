@@ -7,7 +7,7 @@ menu:
 
 # In open source we trust
 
-This project wouldn't be possible with a lot of help of wonderful open source projects.
+This project wouldn't be possible without a lot of help of wonderful open source projects.
 
 These is only a more or less complete list of other open source projects we are using.
 If something is missing, let us know.
