@@ -2,11 +2,11 @@ id = "condation"
 hostname = [ "condation.com", "localhost" ]
 baseurl = "https://condation.com"
 
-[template]
-engine = "pebble"
-
 [index.query]
 mode = "PERSISTENT"
 
 [modules]
-active = [ "pebble-module", "seo-module" ]
+active = [ "seo-module" ]
+
+[cache]
+content = true

@@ -5,8 +5,8 @@
 {% block content %}
 {{ content | raw }}
 <div class="blog-entries">
-	{% set pageNumber = requestContext.getQueryParameter('page', '1') %}
-	{% set page = nodeList.from("/blog/*").sort("publish_date").reverse(true).page(pageNumber).size(3).list() %}
+	{% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
+	{% assign page = nodeList.from("/blog/*").sort("publish_date").reverse(true).page(pageNumber).size(3).list() %}
 	{% for entry in page.items %}
 	<div class="entry card">
 		<div class="card-body">
