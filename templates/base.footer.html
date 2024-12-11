@@ -6,7 +6,7 @@
 
 
         <ul class="nav justify-content-center ">
-            {% set nodes = navigation.list("/about/") %}
+            {% assign nodes = navigation.list("/about/") %}
             {% for node in nodes %}
             <li class="nav-item">
                 <a href="{{ node.path }}" class="nav-link px-2 text-body-secondary">{{node.name}}</a>
