@@ -5,6 +5,9 @@ template: content.html
 
 # Template engines
 
+We provide a [default template engine](/documentation/templates-and-themes/default-template-engine), so in most cases installing a template engine module is not necessary. 
+But if you need some special features or want to use your common syntax we provide implementations of the most commonly used template engines.
+
 ## Thymeleaf
 
 [Thymeleaf](https://www.thymeleaf.org/) is probably the most frequently used template engine in the Java environment.

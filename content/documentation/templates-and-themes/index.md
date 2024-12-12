@@ -5,18 +5,25 @@ menu:
     position: 20
 ---
 
+Next to our [default template engine](/documentation/templates-and-themes/default-template-engine), we provide modules for the most commonly used java template engines.
+
 Various template engines are available for creating templates.
 You can find information about the available engines here: [module](/modules/template-engines)
 
-## Link function
 
-## Navigation function
+## Template functions
 
-## NodeList function
+Template functions are handy helpers to
 
-## Query function
+### Link function
 
-## Taxonomy function
+### Navigation function
+
+### NodeList function
+
+### Query function
+
+### Taxonomy function
 
 ## Themes
 
