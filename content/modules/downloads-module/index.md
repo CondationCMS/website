@@ -18,7 +18,7 @@ The file name serves as the ID for referencing the download file.
 
 The ShortCode *downloads\_link* can be used to create the links in the content.
 
-```md
+```shortcode
 \[\[downloads_link id="test.zip"/\]\]
 // Displays with number of downloads
 \[\[downloads_link id="test.zip",count="true"/\]\]

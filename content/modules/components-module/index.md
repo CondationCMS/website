@@ -34,7 +34,7 @@ Some examples:
 
 The ShortCode *components* can be used to render a component.
 
-```md
+```shortcode
 \[\[components component="test-component" param1="some data" param2="some other data" /\]\]
 ```
 

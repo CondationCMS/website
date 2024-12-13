@@ -10,7 +10,7 @@ Today we released the first version of the [video-module](/modules/video-module)
 
 It provides a ShortCode to integrate a video from [youtube](https://youtube.com/) or [vimeo](https://vimeo.com/) into markdown content or template code.
 
-```markdown
+```shortcode
 \[\[video type="youtube" id="y0sF5xhGreA" title="Everybody loves little cats" /\]\]
 ```
 

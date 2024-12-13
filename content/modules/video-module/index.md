@@ -13,7 +13,7 @@ This modules offers youtube and vidmeo video integration for the CondationCMS.
 
 This example integrates a youtube video in markdown.
 
-```html
+```shortcode
 \[\[video type="youtube" id="y0sF5xhGreA" title="Everybody loves little cats" /\]\]
 ```
 

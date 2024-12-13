@@ -27,7 +27,7 @@ $hooks.registerAction("system/content/shortcodes", (context) => {
 })
 ```
 
-```html
+```shortcode
 \[\[hello name="CondationCMS"\]\]
 ```
 

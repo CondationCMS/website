@@ -38,7 +38,7 @@ We’re excited to introduce a new feature we’re particularly proud of: the re
 
 Our previous parser, which relied on regular expressions, had significant limitations—only strings could be used as parameter values. The new parser overcomes these restrictions by supporting numbers and booleans as well. To make it even more powerful, it now allows the use of expressions that can access the metadata of the current page.
 
-```html
+```shortcode
 \[\[title title="${meta.title}" /\]\]
 \[\[person age=46 /\]\]
 \[\[person admin=false /\]\]
