@@ -72,6 +72,15 @@ Or import the macro in another template
 {{ hello('CondationCMS') }}
 ```
 
+## components
+
+The default template engines allow the registration of custom components.
+
+```twig
+{[component param=12 param2="text value"]}
+
+{[endcomponent]}
+```
 
 ## layouts with extends and blocks
 

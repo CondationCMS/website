@@ -5,34 +5,40 @@ template: content.html
 
 List of modules for the CMS!
 
-## Ads modules
+## Ads module
 
 [Ads Module](/modules/ads-module)
 
-## Downloads modules
+## Downloads module
 
 [Downloads Module](/modules/downloads-module)
 
-## Components modules
+## Components module
 
 [Components Module](/modules/components-module)
 
-## Forms modules
+## Forms module
 
 [Forms Module](/modules/forms-module)
 
+## Forms module
 
-## Search
+[Forms Module](/modules/forms-module)
+
+## Search module
 
 [Search module](/modules/search-module)
 
+## Redirect module
 
-## SEO
+[Redirect module](/modules/redirect-module)
+
+## SEO module
 
 [Seo module](/modules/seo-module)
 
 
-## Targeting modules
+## Targeting module
 
 [Targeting Module](/modules/targeting-module)
 
@@ -44,6 +50,6 @@ Various template engines are supported, so there is something for every preferen
 [Template engines overview](/modules/template-engines)
 
 
-## Video modules
+## Video module
 
 [Video Module](/modules/video-module)
