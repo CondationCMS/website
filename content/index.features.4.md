@@ -6,4 +6,4 @@ menu:
     position: 1
 ---
 
-Use the **template engine** of your choice. We over support for **thymeleaf**, **pebble** and **apache freemarker**. If you want another, just implement it.
+CondationCMS brings its one mature template engine. But overs support for most used open source template engines.
