@@ -123,3 +123,21 @@ content:
         key: template
         value: content.html
 ```
+
+### Alias
+
+Sometimes it's neccessary that a page is also available under another url, for this usecase you can define aliases
+
+```yaml
+aliases: 
+  - /another1
+  - /another2
+```
+
+This causes the page also to be available under _/another2_ and _/another2_. 
+You may recognize, that the browser will redirect your request to the original url.
+You can disable this behaviour:
+
+```yaml
+aliases_redirect: false
+```

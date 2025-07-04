@@ -1,6 +1,6 @@
-hljs.registerLanguage('shortcode', function (hljs) {
+hljs.registerLanguage('tag', function (hljs) {
     return {
-        name: 'Shortcode',
+        name: 'Tags',
         case_insensitive: true, // Shortcodes are often case-insensitive
         contains: [
             {

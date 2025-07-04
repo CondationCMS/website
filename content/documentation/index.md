@@ -7,6 +7,8 @@ menu:
 
 # Documentation
 
+[Developers](/documentation/developers)
+
 [Basics](/documentation/basics)
 
 [Content](/documentation/content)

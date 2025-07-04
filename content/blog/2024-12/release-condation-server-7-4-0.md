@@ -20,7 +20,7 @@ Shortcodes just got a whole lot cooler—you can now nest them inside each other
 
 Here’s a quick example to keep it chill:
 
-```shortcode
+```tag
 \[\[tag1\]\]
     \[\[tag2 atr="vale" /\]\]
 \[\[/tag1\]\]

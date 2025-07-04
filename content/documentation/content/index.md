@@ -7,9 +7,9 @@ menu:
 
 Content is created in plan text, for formatting [Markdown](/documentation/content/markdown) can be used.
 
-## ShortCodes
+## Content tags
 
-If the possibilities of Markdown are not sufficient, extensions can be created by creating your own [ShortCodes](/documentation/extensions-and-modules). These extensions should be able to cover most use cases.
+If the possibilities of Markdown are not sufficient, extensions can be created by creating your own [Tags](/documentation/extensions-and-modules). These extensions should be able to cover most use cases.
 
 ## Preview
 

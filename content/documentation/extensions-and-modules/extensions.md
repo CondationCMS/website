@@ -12,14 +12,14 @@ Extensions are written in JavaScript and stored inside the *extension/* folder o
 Due to the single threaded nature of the used [JavaScript Engine](https://www.graalvm.org/) they are loaded and executed on every request.
 
 
-## Example registering a Shortcode
+## Example registering a content tags
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
 
 
-$hooks.registerAction("system/content/shortcodes", (context) => {
-	context.arguments().get("shortCodes").put(
+$hooks.registerAction("system/content/tags", (context) => {
+	context.arguments().get("tags").put(
 			"hello",
 			(params) => `Hello ${params.get("name")}`
 	)
@@ -27,8 +27,8 @@ $hooks.registerAction("system/content/shortcodes", (context) => {
 })
 ```
 
-```shortcode
-\[\[hello name="CondationCMS"\]\]
+```tag
+\[\[hello name="CondationCMS" /\]\]
 ```
 
 

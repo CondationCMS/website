@@ -10,13 +10,13 @@ menu:
 We use a hook system to allow extensions and modules to hook into various parts of condation.
 
 
-## system/content/shortcodes
+## system/content/tags
 
 ```js
 import { $hooks } from 'system/hooks.mjs';
 
-$hooks.registerAction("system/content/shortcodes", (context) => {
-	context.arguments().get("shortCodes").put(
+$hooks.registerAction("system/content/tags", (context) => {
+	context.arguments().get("tags").put(
 			"hello",
 			(params) => `Hello ${params.get("name")}, I'm a TAG!`
 	)
@@ -25,7 +25,7 @@ $hooks.registerAction("system/content/shortcodes", (context) => {
 ```
 
 Usage in markdown content:
-```shortcode
+```tag
 \[\[hello name="CondationCMS" /\]\]
 ```
 
@@ -152,7 +152,4 @@ $hooks.registerAction("system/template/function", (context) => {
 	)
 	return null;
 })
-```
-
-```twig
 ```

@@ -19,5 +19,4 @@ width = 256
 height = 256
 format = "webp"
 compression = true
-
 ```
