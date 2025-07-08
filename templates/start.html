@@ -29,7 +29,20 @@
 	</div>
 </div>
 
-
+<div>
+	{% assign roles = nodeList.from("/roles/*").list() %}
+	{% for entry in roles.items %}
+	<div class="entry card">
+		<div class="card-body">
+			<h4 class="card-title">{{ entry.name }}</h4>
+			<h6>{{ entry.meta['publish_date'] | date('dd-MM-yyyy') }}</h6>
+			<p class="card-text">{{ entry.content}}</p>
+			<a href="{{ entry.path}}" class="btn btn-primary">read more</a>
+		</div>
+	</div>
+	<hr />
+	{% endfor %}
+</div>
 
 <div class="row row-cols-1 row-cols-md-3">
 	{% if sections.containsKey('features') %}
