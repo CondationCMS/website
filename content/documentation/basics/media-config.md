@@ -1,5 +1,5 @@
 ---
-title: Site configuration
+title: Media configuration
 template: documentation/content.html
 menu:
     position: 1

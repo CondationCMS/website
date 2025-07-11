@@ -14,6 +14,7 @@ Condation requires java version 21 installed.
 ## Installation
 
 Download the current [latest release](https://github.com/CondationCMS/cms-server/releases) and unzip the release to a folder of your choice.
+Since version 8.0.0 we create releases for linux, windows and mac, that contain the needed java version.
 
 * [Server configuration](/documentation/basics/server-config)
 * [Site configuration](/documentation/basics/site-config)
@@ -22,29 +23,29 @@ Download the current [latest release](https://github.com/CondationCMS/cms-server
 ## Starting the server
 
 ```shell
-java -jar cms-server.jar server start
+./server.sh server start
 ```
 
 ## Installing modules
 
 ```shell
-java -jar cms-server.jar module get <module>
+./server.sh module get <module>
 ```
 
 It is also possible to download all required modules
 
 ```shell
-java -jar cms-server.jar module get-all
+./server.sh module get-all
 ```
 
 ## Installing extensions
 
 ```shell
-java -jar cms-server.jar extension install <extension> <host>
+./server.sh extension install <extension> <host>
 ```
 
 ## Installing themes
 
 ```shell
-java -jar cms-server.jar theme get <theme>
+./server.sh theme get <theme>
 ```
