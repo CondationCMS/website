@@ -1,6 +1,6 @@
 ---
 title: Plugin & Theme developers
-template: documentation/index.html
+template: content.html
 menu:
     position: 2
 ---

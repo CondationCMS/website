@@ -3,31 +3,17 @@
 {% block title %} {{ meta.title }} {% endblock %}
 
 {% block content %}
-<div class="why row">
-	<div class="p-5 text-center">
-		<div class="container py-5">
-			<h1 >The foundation for effortless content creation</h1>
-			<p class="col-lg-8 mx-auto lead">
-				"We believe that great content is the foundation for successful communication and lasting connections.
-				With Condation, we aim to create the base where ideas can grow and thrive. Our goal is to provide a
-				solid, reliable platform that enables everyone to easily create, manage, and share their content—helping
-				to change the world, one idea at a time."
-			</p>
-		</div>
-	</div>
+
+<div
+{{ ui.toolbar("content", "sections", ["addSection", "orderSections"], { "sectionName": "content"}) | raw }}
+>
+	{% if sections.containsKey('content') %}
+		{% for content in sections.get('content') %}
+			{{ content.content | raw }}
+		{% endfor %}
+	{% endif %}
 </div>
 
-<hr class="mb-5" />
-
-<div class="row row-cols-1 row-cols-md-1 text-center">
-	<h2>Power-packed Java flat-file CMS</h2>
-	<div class="container">
-		Our CMS merges the simplicity of a flat-file system with the power and flexibility of a modern Java-based architecture. 
-		Designed to empower developers, it delivers innovative features and lightning-fast performance. 
-		Whether for small websites or complex applications, this CMS is the perfect solution for every challenge.
-		<hr style="width: 50%; text-align: center;" class="mx-auto mt-5 mb-5" />
-	</div>
-</div>
 
 <div>
 	{% assign roles = nodeList.from("/roles/*").list() %}
@@ -44,7 +30,9 @@
 	{% endfor %}
 </div>
 
-<div class="row row-cols-1 row-cols-md-3">
+<div class="row row-cols-1 row-cols-md-3"
+{{ ui.toolbar("features", "sections", ["addSection", "orderSections"], { "sectionName": "features"}) | raw }}
+>
 	{% if sections.containsKey('features') %}
 		{% for feature in sections.get('features') %}
 			{{ feature.content | raw }}
