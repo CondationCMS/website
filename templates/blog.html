@@ -8,14 +8,14 @@
 	{% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
 	{% assign page = nodeList.from("/blog/*").sort("publish_date").reverse(true).page(pageNumber).size(3).list() %}
 	{% for entry in page.items %}
-	<div class="entry card">
+	<section class="entry card">
 		<div class="card-body">
 			<h4 class="card-title">{{ entry.name }}</h4>
 			<h6>{{ entry.meta['publish_date'] | date('dd-MM-yyyy') }}</h6>
 			<p class="card-text">{{ entry.content}}</p>
 			<a href="{{ entry.path}}" class="btn btn-primary">read more</a>
 		</div>
-	</div>
+	</section>
 	<hr />
 	{% endfor %}
 	<nav>

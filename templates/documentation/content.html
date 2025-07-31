@@ -3,5 +3,7 @@
 {% block title %} {{ meta.title }} {% endblock %}
 
 {% block content %}
-{{ content | raw }}
+<div {{ ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+    {{ content | raw }}
+</div>
 {% endblock %}

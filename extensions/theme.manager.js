@@ -57,6 +57,15 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 			]
 		}
 	});
+	contentTypes.registerPageTemplate({
+		name: "Blog (entry)",
+		template: "blog-entry.html",
+		forms: {
+			settings: [
+				...defaultPageSettingsForm
+			]
+		}
+	});
 	contentTypes.registerSectionTemplate({
 		section: "features",
 		name: "Feature",
