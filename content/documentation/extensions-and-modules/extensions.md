@@ -2,7 +2,7 @@
 title: Extensions
 template: documentation/content.html
 menu:
-    position: 30
+  position: 30
 ---
 
 # Extensions
@@ -27,9 +27,26 @@ $hooks.registerAction("system/content/tags", (context) => {
 })
 ```
 
+### Usage in markdown content
 ```tag
 \[\[hello name="CondationCMS" /\]\]
 ```
 
 
-## Site globals
+## Registering a template component
+```javascript
+import { $hooks } from 'system/hooks.mjs';
+
+$hooks.registerAction("system/template/component", (context) => {
+	context.arguments().get("components").put(
+			"component",
+			(params) => `<div style="color: ${params.color}">${params.message}</div>`
+	)
+	return null;
+})
+```
+
+### Usage in template code
+```twig
+{[ component color="#6FA8DC" message="Attention" ]}
+```

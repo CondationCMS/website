@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} {{ meta.title }} {% endblock %}
+
+{% block content %}
+<div style="min-height: 50px;" {{ ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+{{ content | raw }}
+</div>
+<div>
+    <div>
+        <h5>Supporting via Ko-Fi</h5>
+        <a href='https://ko-fi.com/{{ node.meta.get("kofi.id") }}' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='{{ node.meta.get("kofi.text") }}' /></a>
+    </div>
+    <div>
+        <h5>Supporting via github sponsoring</h5>
+        <a href='https://github.com/sponsoring/{{ node.meta.get("github.id") }}' target='_blank'>{{ node.meta.get("github.text") }}</a>
+    </div>
+</div>
+{% endblock %}

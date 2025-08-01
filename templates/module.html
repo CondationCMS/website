@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %} {{ meta.title }} {% endblock %}
+
+{% block content %}
+<div style="min-height: 50px;" {{ ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+{{ content | raw }}
+</div>
+{% endblock %}
