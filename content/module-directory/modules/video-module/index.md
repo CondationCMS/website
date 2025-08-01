@@ -19,11 +19,11 @@ This example integrates a youtube video in markdown.
 
 ### In Template code
 
-This example integrates a youtube video template code via calling the shortcode. 
+This example integrates a youtube video template code via calling the tags. 
 For the example thymleaf template was uses.
 
 ```html
-[(${shortCodes.call('video', #{'type' : 'youtube', 'id': 'y0sF5xhGreA', 'title' : 'Everybody loves little cats'})})]
+[(${tags.call('video', #{'type' : 'youtube', 'id': 'y0sF5xhGreA', 'title' : 'Everybody loves little cats'})})]
 ```
 
 ### Use an thumbnail and click to play
@@ -32,10 +32,10 @@ This example integrates a youtube video template code with and thumbnail preview
 The youtube iframe is created on click via javascript.
 
 ```html
-[(${shortCodes.call('video', #{'type' : 'youtube', 'id': 'y0sF5xhGreA', 'title' : 'Everybody loves little cats', 'overlay' : true, 'thumbnail': '/assets/thumbnails/mountains.jpg', 'autoplay': 'true'})})]
+[(${tags.call('video', #{'type' : 'youtube', 'id': 'y0sF5xhGreA', 'title' : 'Everybody loves little cats', 'overlay' : true, 'thumbnail': '/assets/thumbnails/mountains.jpg', 'autoplay': 'true'})})]
 ```
 
-## ShortCode parameters
+## Tag parameters
 
 | Parameter | Possible values | Default value |
 | ------------- | ------------- | ------------- |

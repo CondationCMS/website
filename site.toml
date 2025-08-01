@@ -10,9 +10,3 @@ active = [ "seo-module" ]
 
 [cache]
 content = true
-
-[ui.manager]
-enabled = true
-
-[ui]
-force2fa = false
