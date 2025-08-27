@@ -16,4 +16,4 @@ publish_date: null
 
 Operators are responsible to setup and running the system.
 
-[basics](/documentation/basics)
+[Basics](/documentation/basics)

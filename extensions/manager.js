@@ -17,11 +17,6 @@ $hooks.registerFilter("manager/media/forms", (context) => {
 const defaultPageSettingsForm = [
 	{
 		type: "text",
-		name: "title",
-		title: "Titel"
-	},
-	{
-		type: "text",
 		name: "seo.description",
 		title: "Seo-Description"
 	},
