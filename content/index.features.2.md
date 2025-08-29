@@ -8,4 +8,4 @@ unpublish_date: null
 publish_date: null
 ---
 
-Is markdown not enough use **shortcodes** to extend the content rendering process.
+Is markdown not enough, define and use custom **tags** to extend the content rendering process.
