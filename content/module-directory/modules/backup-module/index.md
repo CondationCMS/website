@@ -10,15 +10,19 @@ title: Backup-module
 
 This modules provides a simple backup solution
 
+## Step by step
+
+First activate thhe module inside the _server.toml_
 ```toml
 # add the backup to the list of active modules
 [modules]
 active = ["backup-module"]
+```
 
-# config the backup
-[backup]
-enabled = true
-# run backup every night at 2 o'clock
-cron = "0 0 2 * * ?"
-target = "/temp/backups"
+Then configure you backups inside _config/backup.yaml_
+```yaml
+target: /tmp
+backups:
+  - id: site-id
+    cron: cron
 ```
