@@ -11,3 +11,22 @@ title: developers
 As a developer for themes, extensions or modules, you need to know the [basics](/documentation/basics) and how to [get started](/documentation/getting-started).
 
 With the basic knowledge, you can dive into [templates and themes](/documentation/templates-and-themes) and [extensions and modules](/documentation/extensions-and-modules)
+
+
+## Module developer
+API
+Hooks
+ExtensionPoints
+
+## Theme developer
+Settings
+Parent-Theme
+Template
+Extensions
+Hooks
+
+## Project developer
+Settings
+Template
+Extensions
+Hooks

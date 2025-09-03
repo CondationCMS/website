@@ -17,3 +17,11 @@ publish_date: null
 Operators are responsible to setup and running the system.
 
 [Basics](/documentation/basics)
+
+## Installation
+
+## Setup
+
+### Security
+### Server modules
+### Performance

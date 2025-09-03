@@ -12,7 +12,7 @@ First of all, we have to clarify some basic concepts, which makes it easier to u
 
 ## Server
 
-The condation-server ist the base server application, which runs all the sites
+The condation-server is the base server application, which runs all the sites.
 
 ## Host or site
 A host or site is a single website. 
@@ -27,7 +27,10 @@ Assets are file managed by CondationCMS. These can be medias, javascripts, style
 ## Templates
 
 ## Sections
+CondationCMS allows you to build content from fragments, these fragments are called sections
 
 ## Modules
+Modules are created in Java and can provider different functionality to server or site.
 
 ## Extensions
+Extensions are made in javascript. They are mainly used from Project- and Theme developers to provide custom content tags and template components. But its also possible to register custom routes.

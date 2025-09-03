@@ -17,3 +17,7 @@ publish_date: null
 As content editor, you should have a basic knowledge about how CondationCMS works.
 
 As most of your time is creating and managing content, the [manager](/documentation/manager) application documentation is the most interesting part for you.
+
+## Managing Content
+
+## Managing Medias
