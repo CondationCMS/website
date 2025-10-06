@@ -8,11 +8,11 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="canonical" href="{{site.get('baseurl')}}/{{requestContext.uri}}" />
 
-    <title>{% block title %}My Website{% endblock %}</title>
+    <title>{% block title %}condation.com{% endblock %}</title>
 
-    <meta name="description" content="{{ meta.getOrDefault('seo.description', '') }}" />
-    <meta name="keywords" content="{{ meta.getOrDefault('seo.keywords', '') }}" />
-    <meta name="author" content="{{ meta.getOrDefault('seo.author', 'CondationCMS') }}" />
+    <meta name="description" content="{{ node.meta.getOrDefault('seo.description', '') }}" />
+    <meta name="keywords" content="{{ node.meta.getOrDefault('seo.keywords', '') }}" />
+    <meta name="author" content="{{ node.meta.getOrDefault('seo.author', 'CondationCMS') }}" />
 
     <link href="/assets/bootstrap-5.3.7/css/bootstrap.sandstone.min.css" rel="stylesheet" defer />
     <link href="/assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet" defer />
@@ -40,8 +40,8 @@
     {% endif %}
 
     {% if PREVIEW_MODE %}
-        <script  src="{{ links.createUrl('/manager/js/manager-inject.js') }}" type="module"></script>
-        <link rel="stylesheet" href="{{ links.createUrl('/manager/css/manager-inject.css') }}" />
+        <script  src="{{ cms.links.createUrl('/manager/js/manager-inject.js') }}" type="module"></script>
+        <link rel="stylesheet" href="{{ cms.links.createUrl('/manager/css/manager-inject.css') }}" />
     {% endif %}
 
     {% block header_contrib %}{% endblock %}

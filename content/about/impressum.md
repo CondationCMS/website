@@ -1,6 +1,7 @@
 ---
 title: Impressum
 template: content.html
+published: true
 menu:
     position: 2
 ---

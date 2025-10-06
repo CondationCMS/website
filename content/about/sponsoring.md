@@ -1,6 +1,7 @@
 ---
 title: Sponsoring
 template: sponsoring.html
+published: true
 menu:
     position: 10
 ---

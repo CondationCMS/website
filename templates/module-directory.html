@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} {{ meta.title }} {% endblock %}
+{% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
 <div style="min-height: 50px;" {{ ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row">
         {% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
-        {% assign modules = nodeList.from("/module-directory/modules/*").sort("title").size(6).page(pageNumber).list() %}
+        {% assign modules = cms.nodeList.from("/module-directory/modules/*").sort("title").size(6).page(pageNumber).list() %}
         {% for entry in modules.items %}
         <div class="col-12 col-md-6 mb-4">
             <div class="entry card h-100">
@@ -34,7 +34,7 @@
 			{% else %}
 				<li class="page-item">
                     {% assign prevLink = requestContext.uri + "?page=" + (modules.page - 1) %}
-                    <a class="page-link" href="{{ links.createUrl(prevLink) }}" aria-label="Previous">
+                    <a class="page-link" href="{{ cms.links.createUrl(prevLink) }}" aria-label="Previous">
 						<span aria-hidden="true">&laquo;</span>
 					</a>
 				</li>
@@ -48,7 +48,7 @@
 			{% else %}
 				<li class="page-item">
                     {% assign nextLink = requestContext.uri + "?page=" + (modules.page + 1) %}
-					<a class="page-link" href="{{ links.createUrl(nextLink) }}" aria-label="Next">
+					<a class="page-link" href="{{ cms.links.createUrl(nextLink) }}" aria-label="Next">
 						<span aria-hidden="true">&raquo;</span>
 					</a>
 				</li>

@@ -7,7 +7,13 @@ menu:
 
 # Default template engine
 
-The default template engine has simple intuitive syntax inspired by twig and liquid.
+The default template engine has a simple, intuitive syntax inspired by twig. We do not provide complete compatibility to twig.
+
+## Reserved word
+
+Some names are used to provide default functionality and are not allowed to be used.
+
+*node*, *cms*
 
 ## Variables
 
