@@ -6,4 +6,4 @@ menu:
     position: 1
 ---
 
-CondationCMS brings its one mature template engine. But overs support for most used open source template engines.
+CondationCMS brings its own mature template engine. Via custom modules it's possible to integrate any template engine.

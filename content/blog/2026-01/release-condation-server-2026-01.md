@@ -1,18 +1,18 @@
 ---
-title: '[Release] CondationCMS server version v2025.8'
+title: '[Release] CondationCMS server version v2026.01'
 seo:
-  description: Today, we released CondationCMS version v2025.8
+  description: Today, we released CondationCMS version v2026.01
   keywords: ''
   author: ''
-publish_date: 2025-12-10T00:00:00Z
+publish_date: 2026-01-01T00:00:00Z
 template: blog-entry.html
 unpublish_date: null
 published: false
 ---
 
-Today we released version v2025.8 of the CondationCMS server.
+Today we released version v2026.01 of the CondationCMS server.
 
-[Download](https://github.com/CondationCMS/distribution/releases/tag/v2025.8)
+[Download](https://github.com/CondationCMS/distribution/releases/tag/v2025.01)
 
 * **BREAKING CHANGE** Sorted sections now use the _layout.order_ meta attribute for sorting
 * **BREAKING CHANGE** ShortCodes are renamed to tags
@@ -34,11 +34,11 @@ Today we released version v2025.8 of the CondationCMS server.
 * **FEATURE** UI to manage content [PR-446](https://github.com/CondationCMS/cms-server/pull/446)
 * **FEATURE** Simple solution for backups [492](https://github.com/CondationCMS/cms-server/pull/492)
 
-### Developer experience
+## Developer experience
 
 In this release we introduced some features to make life of developers easier.
 
-#### Registering hooks via annotations
+### Registering hooks via annotations
 
 It is now possible to pass an object with annotated hook definitions to the HookSystem.register method.
 
@@ -54,7 +54,7 @@ public void action1 (ActionContext<?> context) {
 }
 ```
 
-#### HTTP-Controllers
+### HTTP-Controllers
 
 The RoutesExtensionPoint is an extension point for defining HTTP routes. 
 It allows developers to provide a list of objects whose methods can be registered as routes using annotations.
@@ -66,7 +66,7 @@ public boolean handle2 (Request request, Response response, Callback callback) {
 }
 ```
 
-#### ShortCodes
+### ShortCodes
 
 The RegisterShortCodesExtensionPoint interface now includes a new method, shortCodeDefinitions, which returns a list of objects that contain shortcode definitions provided through annotations.
 
@@ -77,7 +77,7 @@ public String printHello (Parameter parameter) {
 }
 ```
 
-#### TemplateComponents
+### TemplateComponents
 
 A new method, componentDefinitions, has been added to the RegisterTemplateComponentExtensionPoint interface. It returns a list of objects that define template components using annotations.
 
@@ -89,8 +89,27 @@ public String tag3 (Parameter parameter) {
 
 ```
 
+```condation
+{[ tag2 ]}
+This is the content
+{[ endtag2 ]} 
+```
 
+### Template functions
 
+A new 
+
+```java
+@TemplateFunction("testfn")
+public Object testfn (Parameter params) {
+	return "hi I'm testfn";
+}  
+```
+
+Usage in template code
+```condation
+{{ testfn()  }}
+```
 
 Have fun trying it out!
 
