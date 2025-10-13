@@ -27,9 +27,24 @@ The other use is directly in the html templates, to provide content related form
 	title: "Title of the page"
 }
 ```
-```html
+```condation
 {% if PREVIEW_MODE %}
 <div style="display: none;" {{ ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
+{% endif %}
+```
+
+## multiline text field type
+
+```json
+{
+	type: "textarea",
+	name: "description",
+	title: "Description of the page"
+}
+```
+```html
+{% if PREVIEW_MODE %}
+<div style="display: none;" {{ ui.editMeta("textarea", "description" , node.uri, node.uri) | raw }}></div>
 {% endif %}
 ```
 
