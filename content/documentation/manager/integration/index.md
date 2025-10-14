@@ -45,4 +45,4 @@ Use the **ui** helper to add the edit sections toolbar, with actions to add and 
 
 
 For more information about forms read the [forms documentation](forms/). 
-For more information about form fields read the [forms documentation](field-types/)
+For more information about form fields read the [field types documentation](field-types/)

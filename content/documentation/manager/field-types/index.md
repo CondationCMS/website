@@ -42,7 +42,7 @@ The other use is directly in the html templates, to provide content related form
 	title: "Description of the page"
 }
 ```
-```html
+```condation
 {% if PREVIEW_MODE %}
 <div style="display: none;" {{ ui.editMeta("textarea", "description" , node.uri, node.uri) | raw }}></div>
 {% endif %}
@@ -50,26 +50,154 @@ The other use is directly in the html templates, to provide content related form
 
 ## number field type
 
+```json
+{
+	type: "number",
+	name: "number_field",
+	title: "A number field"
+}
+```
+
+```condation
+{% if PREVIEW_MODE %}
+<div style="display: none;" {{ ui.editMeta("number", "description" , node.uri, node.uri) | raw }}></div>
+{% endif %}
+```
+
 ## mail field type
 
+```json
+{
+	type: "mail",
+	name: "mail",
+	title: "A Mail"
+}
+```
+
 ## select field type
+```json
+{
+	type: "media",
+	name: "media_url",
+	title: "Media"
+}
+```
 
 ## radio field type
 
+```json
+{
+	type: "radio",
+	name: "choose_color",
+	title: "Choose the color",
+	options: {
+		choices: [
+			{ label: "Red", value: "red" },
+			{ label: "Green", value: "green" },
+			{ label: "Blue", value: "blue" }
+		]
+	}
+}
+```
+
 ## range field type
+
+```json
+{
+	type: "range",
+	name: "range_test",
+	title: "RangField",
+	options: {
+		min: 1,
+		max: 100,
+		step: 1
+	}
+}
+```
 
 ## markdown field type
 
+```json
+{
+	type: "markdown",
+	name: "some_content",
+	title: "A markdown field"
+}
+```
+
 ## color field type
+
+```json
+{
+	type: "color",
+	name: "background_color",
+	title: "Background Color"
+}
+```
 
 ## date field type
 
+```json
+{
+	type: "date",
+	name: "date_field",
+	title: "A date field"
+}
+```
+
 ## datetime field type
+
+```json
+{
+	type: "datetime",
+	name: "datetime_field",
+	title: "Date & time field"
+}
+```
 
 ## media field type
 
+```json
+{
+	type: "media",
+	name: "media_url",
+	title: "Media"
+}
+```
+
 ## checkbox field type
+
+```json
+{
+	name: "features",
+	title: "Select feature",
+	type: "checkbox",
+	options: {
+		choices: [
+			{ label: "Search", value: "search" },
+			{ label: "Filter", value: "filter" },
+			{ label: "Export", value: "export" }
+		]
+	}
+}
+```
 
 ## divider field type
 
+```json
+{
+	type: "divider",
+	name: "divider",
+	title: "Custom attributes",
+}
+```
+
 ## list field type
+
+```json
+{
+	name: "object.values",
+	title: "Objekt-Liste",
+	type: "list"
+}
+```
