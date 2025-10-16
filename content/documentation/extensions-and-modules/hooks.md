@@ -144,12 +144,41 @@ $hooks.registerAction("system/template/supplier", (context) => {
 
 ## system/template/function
 
+Define new functions to be used in templates.
+
 ```js
 $hooks.registerAction("system/template/function", (context) => {
 	context.arguments().get("functions").add(
-			"getHello",
-		(name) => "Hello " + name + "!!"
+			"fn_message",
+			(params) => `<div style="color: ${params.color}">${params.message}</div>`
 	)
 	return null;
 })
+```
+
+**Usage:**
+
+```condation
+{{ fn_message({'message': "Hello", 'color': "red"}) | raw }}
+```
+
+## system/template/component
+
+Define a new component to be used in templates.
+
+```js
+$hooks.registerAction("system/template/component", (context) => {
+	context.arguments().get("components").add(
+			"hello",
+		(params) => "Hello " + params.name + "!!"
+	)
+	return null;
+})
+```
+
+**Usage:**
+
+```condation
+{[ hello name="CondationCMS"]}
+{[ endhello ]}
 ```
