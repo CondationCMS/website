@@ -6,3 +6,5 @@ menu:
 ---
 
 # MultiSite
+
+The multisite feature is not intended for multitenant setups.
