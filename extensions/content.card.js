@@ -1,4 +1,5 @@
 import { $hooks } from 'system/hooks.mjs';
+import { $links } from 'system/links.mjs';
 
 
 $hooks.registerAction("system/content/tags", (context) => {
@@ -14,7 +15,7 @@ $hooks.registerAction("system/content/tags", (context) => {
 						<div class="card-body">
 							<h5 class="card-title">${params.get('title')}</h5>
 							<p class="card-text">${params.get('_content')}</p>
-							<a href="${params.get('link')}" class="btn btn-primary">Read more</a>
+							<a href="${$links.createUrl(params.get('link'))}" class="btn btn-primary">Read more</a>
 						</div>
 					</div>
 				</div>
