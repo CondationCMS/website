@@ -88,6 +88,12 @@ The default template engines allow the registration of custom components.
 {[ endcomponent ]}
 ```
 
+## comments
+
+```condation
+{# this is a comment #}
+```
+
 ## layouts with extends and blocks
 
 in base template
