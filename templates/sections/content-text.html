@@ -1,11 +1,11 @@
 <hr class="mb-5" />
 <div class="row row-cols-1 row-cols-md-1 text-center"
-{{ ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri}) | raw }}
+{{ ext.ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri}) | raw }}
 >
 {% if PREVIEW_MODE %}
-<div style="display: none;" {{ ui.editMeta("datetime", "publish_date" , node.uri, node.uri) | raw }}></div>
-<div style="display: none;" {{ ui.editMeta("datetime", "unpublish_date" , node.uri, node.uri) | raw }}></div>
-<div style="display: none;" {{ ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "publish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "unpublish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
 {% endif %}
 	<h2>{{ node.meta.getOrDefault("title", "-no title-") }}</h2>
 	<div class="container">

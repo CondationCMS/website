@@ -1,11 +1,11 @@
 <div class="col pb-1"
-{{ ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri}) | raw }}
+{{ ext.ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri}) | raw }}
 >
 {% if PREVIEW_MODE %}
-<div style="display: none;" {{ ui.editMeta("datetime", "publish_date" , node.uri, node.uri) | raw }}></div>
-<div style="display: none;" {{ ui.editMeta("datetime", "unpublish_date" , node.uri, node.uri) | raw }}></div>
-<div style="display: none;" {{ ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
-<div style="display: none;" {{ ui.editMeta("text", "link" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "publish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "unpublish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("text", "link" , node.uri, node.uri) | raw }}></div>
 {% endif %}
     <div class="card text-center border-0">
         <div class="card-body">

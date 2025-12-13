@@ -1,7 +1,7 @@
 ---
 template: sections/content-text.html
 layout:
-  order: 1000
+  order: 1
 unpublish_date: null
 title: Power-packed Java flat-file CMS
 publish_date: null

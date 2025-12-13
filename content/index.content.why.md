@@ -1,7 +1,7 @@
 ---
 template: sections/content-teaser.html
 layout:
-  order: 1000
+  order: 0
 link: ''
 unpublish_date: null
 title: The foundation for effortless content creation

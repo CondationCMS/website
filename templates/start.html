@@ -5,7 +5,7 @@
 {% block content %}
 
 <div
-{{ ui.toolbar("content", "sections", ["addSection", "orderSections"], { "sectionName": "content"}) | raw }}
+{{ ext.ui.toolbar("content", "sections", ["addSection", "orderSections"], { "sectionName": "content"}) | raw }}
 >
 	{% if node.sections.containsKey('content') %}
 		{% for content in node.sections.get('content') %}
@@ -15,7 +15,7 @@
 </div>
 
 <div class="row row-cols-1 row-cols-md-3"
-{{ ui.toolbar("features", "sections", ["addSection", "orderSections"], { "sectionName": "features"}) | raw }}
+{{ ext.ui.toolbar("features", "sections", ["addSection", "orderSections"], { "sectionName": "features"}) | raw }}
 >
 	{% if node.sections.containsKey('features') %}
 		{% for feature in node.sections.get('features') %}

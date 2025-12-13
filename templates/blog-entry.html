@@ -3,7 +3,7 @@
 {% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
-<article style="min-height: 50px;" {{ ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+<article style="min-height: 50px;" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
 <h2>{{ node.meta.title }}</h2>
 <hr/>
 {{ content | raw }}
