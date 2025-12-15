@@ -19,6 +19,8 @@ Hooks
 ExtensionPoints
 
 ## Theme developer
+Learn more about how to [develop themes](/documentation/developers/theme-developers).
+
 Settings
 Parent-Theme
 Template
