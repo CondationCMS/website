@@ -43,7 +43,7 @@ Toolbars are a set of action buttons, place in a top corner of the div they are 
 
 Basic usage:
 ```javascript
-ui.toolbar("<id>", "<type>", ["<actions>"])
+ext.ui.toolbar("<id>", "<type>", ["<actions>"])
 ```
 **id**: a unique id for every toolbar.  
 **type**: the toolbar type, available **main**, **sections**, **sections** And **media**.  
@@ -53,7 +53,7 @@ ui.toolbar("<id>", "<type>", ["<actions>"])
 
 Use the **ui** helper to add the _main_ toolbar definition to edit the content and attributes to you main div.
 ```condation
-<div {{ ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+<div {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
 ...
 </div>
 ```
@@ -62,7 +62,7 @@ Use the **ui** helper to add the _main_ toolbar definition to edit the content a
 
 Use the **ui** helper to add the edit sections toolbar, with actions to add and order sections.
 ```condation
-<div {{ ui.toolbar("content", "sections", ["addSection", "orderSections"], { "sectionName": "content"}) | raw }}>
+<div {{ ext.ui.toolbar("content", "sections", ["addSection", "orderSections"], { "sectionName": "content"}) | raw }}>
 ...
 </div>
 ```
@@ -74,7 +74,7 @@ Actions are **editContent**, **editAttributes** and **deleteSection**, as option
 
 ```condation
 <div
-{{ ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri}) | raw }}
+{{ ext.ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri}) | raw }}
 >
 ...
 </div>
@@ -89,5 +89,5 @@ For more information about form fields read the [field types documentation](fiel
 For templates that are not part of the markdown but configured in the meta
 
 ```condation
-<img {{ ui.mediaToolbar(["select", "meta", "focalPoint"], {"uri": node.uri, "element": "media_url" }) | raw }} />
+<img {{ ext.ui.mediaToolbar(["select", "meta", "focalPoint"], {"uri": node.uri, "element": "media_url" }) | raw }} />
 ```

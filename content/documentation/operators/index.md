@@ -20,8 +20,30 @@ Operators are responsible to setup and running the system.
 
 ## Installation
 
+### Starting & Stopping
+
+
+```console
+server.sh server start
+...
+server.sh server stop
+```
+
+
 ## Setup
 
+If you're looking for information about server configuration look [here](/documentation/basics/server-config)
+
+### Add user
+
+```console
+server.sh server add_user -r <realm> -ro <roles> <username> <password> <email>
+```
+
+
+
 ### Security
+
 ### Server modules
+
 ### Performance

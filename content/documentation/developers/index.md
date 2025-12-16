@@ -32,3 +32,4 @@ Settings
 Template
 Extensions
 Hooks
+Integrate the [manager](/documentation/manager)

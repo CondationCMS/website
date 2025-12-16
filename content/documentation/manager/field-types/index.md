@@ -29,7 +29,7 @@ The other use is directly in the html templates, to provide content related form
 ```
 ```condation
 {% if PREVIEW_MODE %}
-<div style="display: none;" {{ ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
 {% endif %}
 ```
 
@@ -44,7 +44,7 @@ The other use is directly in the html templates, to provide content related form
 ```
 ```condation
 {% if PREVIEW_MODE %}
-<div style="display: none;" {{ ui.editMeta("textarea", "description" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("textarea", "description" , node.uri, node.uri) | raw }}></div>
 {% endif %}
 ```
 
@@ -60,7 +60,7 @@ The other use is directly in the html templates, to provide content related form
 
 ```condation
 {% if PREVIEW_MODE %}
-<div style="display: none;" {{ ui.editMeta("number", "description" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("number", "description" , node.uri, node.uri) | raw }}></div>
 {% endif %}
 ```
 
