@@ -8,29 +8,47 @@ title: concepts.md
 
 # Concepts
 
-First of all, we have to clarify some basic concepts, which makes it easier to understand why thinks are done like they are done.
+Before diving in, let’s clarify some fundamental concepts.  
+This will make it easier to understand why things in CondationCMS work the way they do.
 
 ## Server
+The **Condation Server** is the core application that powers and manages all hosted sites.
 
-The condation-server is the base server application, which runs all the sites.
+## Host or Site
+A **host** or **site** is an individual website.  
+One server can host and manage multiple sites at the same time.
 
-## Host or site
-A host or site is a single website. 
-A server supports multiple sites.
-
-## Page
-A page is a content page inside a site.
+## Page or Node
+A **page** (or **node**) represents a single content page within a site.
 
 ## Assets
-Assets are file managed by CondationCMS. These can be medias, javascripts, stylesheets and more.
+**Assets** are files managed by CondationCMS.  
+These can include:
+
+- Media files (images, videos, documents)  
+- JavaScript scripts  
+- Stylesheets  
+- Other static resources
 
 ## Templates
+**Templates** define reusable layouts that can be applied across different sites.
 
 ## Sections
-CondationCMS allows you to build content from fragments, these fragments are called sections
-
-## Modules
-Modules are created in Java and can provider different functionality to server or site.
+CondationCMS structures content using smaller building blocks called **sections**.  
+These allow flexible and modular content creation.
 
 ## Extensions
-Extensions are made in javascript. They are mainly used from Project- and Theme developers to provide custom content tags and template components. But its also possible to register custom routes.
+**Extensions** are built in JavaScript.  
+They are primarily used by project and theme developers to:
+
+- Add custom content tags  
+- Create reusable template components  
+- Register custom routes  
+
+## Modules
+**Modules** are developed in Java.  
+They can extend the functionality of the server or individual sites by providing additional features or services.
+
+## Hooks
+**Hooks** allow developers to integrate with various parts of the core system  
+without modifying the core classes directly.
