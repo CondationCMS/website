@@ -11,6 +11,8 @@ Creating custom modules allows you the register custom template and markdown eng
 And everything possible via extension is also possible within a module.
 As a good starting point for your own development, we provide some basic implemetations in our [example-module](https://github.com/CondationCMS/cms-server/tree/main/modules/example-module)
 
+Following we provide some examples, to see what is possible by implementing modules.
+
 ## Template component
 
 ```java
