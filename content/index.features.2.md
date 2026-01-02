@@ -1,11 +1,12 @@
 ---
 title: Tags
 template: sections/feature.html
-link: /features/tags
+link: /features#tags
 menu:
   position: 1
 unpublish_date: null
 publish_date: null
+published: true
 ---
 
-Is markdown not enough, define and use custom **tags** to extend the content rendering process.
+Standard Markdown not sufficient for your needs? Easily define custom **tags** to enhance the content rendering process with specialized features, enabling rich content creation while maintaining simple authoring workflows.
