@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Smooth transitions für Mobile Menu */
+.mobile-menu {
+    transition: all 300ms ease-in-out;
+}
+
+.mobile-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+}
+
+.mobile-menu:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+}
+
+/* Hamburger Icon Animation */
+.hamburger-line {
+    transition: all 300ms ease-in-out;
+    transform-origin: center;
+}
+
+.hamburger-line:nth-child(1) {
+    transform: translateY(0);
+}
+
+.hamburger-line:nth-child(3) {
+    transform: translateY(0);
+}
+
+.menu-open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
