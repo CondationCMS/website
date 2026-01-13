@@ -14,14 +14,19 @@
 	{% endif %}
 </div>
 
-<div class="row row-cols-1 row-cols-md-3"
+<div
 {{ ext.ui.toolbar("features", "sections", ["addSection", "orderSections"], { "sectionName": "features"}) | raw }}
 >
-	{% if node.sections.containsKey('features') %}
-		{% for feature in node.sections.get('features') %}
-			{{ feature.content | raw }}
-		{% endfor %}
-	{% endif %}
+	<section id="about" class="mb-12">
+		<h2 class="text-3xl font-bold text-gray-900 mb-4">Features</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			{% if node.sections.containsKey('features') %}
+				{% for feature in node.sections.get('features') %}
+					{{ feature.content | raw }}
+				{% endfor %}
+			{% endif %}
+		</div>
+	</section>
 </div>
 
 
