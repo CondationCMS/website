@@ -1,11 +1,15 @@
 ---
-title: "[Release] Announcing the Components Module for CondationCMS"
+title: '[Release] Announcing the Components Module for CondationCMS'
 seo:
-    description: "This is the first release of the components module, that brings reusable components to CondationCMS"
-publish_date: 2024-11-15
+  description: This is the first release of the components module, that brings reusable
+    components to CondationCMS
+  keywords: ''
+  author: ''
+publish_date: 2024-11-15T00:00:00Z
 template: blog-entry.html
+unpublish_date: null
+published: true
 ---
-
 
 We’re excited to announce the release of the Components Module for CondationCMS! 🎉 This new module introduces reusable components, providing a streamlined way for developers to create and manage modular elements across a site.
 

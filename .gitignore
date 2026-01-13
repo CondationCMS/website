@@ -2,3 +2,4 @@ modules_data/*/
 modules_data/moduleconfiguration.json
 temp/
 data/
+source/test/node_modules/

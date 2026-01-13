@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <!-- Logo / Projekt Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        MyProject
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex md:items-center md:gap-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button 
+                    id="hamburger-btn"
+                    class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors"
+                    aria-label="Navigation öffnen"
+                    aria-expanded="false">
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div 
+                id="mobile-menu"
+                class="mobile-menu hidden md:hidden border-t border-gray-200">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#home" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <!-- Portfolio Header -->
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Unser Portfolio</h1>
+            <p class="text-lg text-gray-700">Entdecken Sie unsere neuesten und erfolgreichsten Projekte</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+            <button class="filter-btn active border border-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-filter="all">
+                Alle Projekte
+            </button>
+            <button class="filter-btn border border-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-filter="web-design">
+                Web Design
+            </button>
+            <button class="filter-btn border border-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-filter="e-commerce">
+                E-Commerce
+            </button>
+            <button class="filter-btn border border-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-filter="mobile-app">
+                Mobile Apps
+            </button>
+            <button class="filter-btn border border-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-filter="branding">
+                Branding
+            </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item group relative bg-white rounded-lg shadow-md overflow-hidden" data-category="web-design">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=400&fit=crop" alt="Modern E-Commerce Platform" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
+                            <p class="text-sm mb-4">Web Design | Frontend</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Details ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">E-Commerce Platform</h3>
+                    <p class="text-sm text-gray-600">Eine moderne, responsive E-Commerce-Lösung mit Tailwind CSS</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item group relative bg-white rounded-lg shadow-md overflow-hidden" data-category="web-design">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop" alt="Corporate Website" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">Corporate Website</h3>
+                            <p class="text-sm mb-4">Web Design | Branding</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Details ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Corporate Website</h3>
+                    <p class="text-sm text-gray-600">Professionelle Website für ein internationales Unternehmen</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item group relative bg-white rounded-lg shadow-md overflow-hidden" data-category="mobile-app">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=400&fit=crop" alt="Fitness App" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">Fitness Mobile App</h3>
+                            <p class="text-sm mb-4">Mobile App | UI/UX Design</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Details ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Fitness Mobile App</h3>
+                    <p class="text-sm text-gray-600">App für Fitness-Tracking mit modernem Design</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item group relative bg-white rounded-lg shadow-md overflow-hidden" data-category="e-commerce">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1460925895917-adf4e565db17?w=500&h=400&fit=crop" alt="Online Shop" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">Online Fashion Shop</h3>
+                            <p class="text-sm mb-4">E-Commerce | Responsive Design</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Details ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Online Fashion Shop</h3>
+                    <p class="text-sm text-gray-600">E-Commerce-Plattform für Fashion-Produkte</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-item group relative bg-white rounded-lg shadow-md overflow-hidden" data-category="branding">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=400&fit=crop" alt="Brand Identity" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">Startup Branding</h3>
+                            <p class="text-sm mb-4">Branding | Logo Design</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Details ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Startup Branding</h3>
+                    <p class="text-sm text-gray-600">Vollständiges Branding für ein Tech-Startup</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div class="portfolio-item group relative bg-white rounded-lg shadow-md overflow-hidden" data-category="mobile-app">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop" alt="Social Media App" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-center text-white">
+                            <h3 class="text-xl font-bold mb-2">Social Media App</h3>
+                            <p class="text-sm mb-4">Mobile App | React Native</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Details ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Social Media App</h3>
+                    <p class="text-sm text-gray-600">Social-Netzwerk-App mit React Native</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Statistics Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 md:p-12 text-white mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Unsere Erfolge in Zahlen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-4xl font-bold mb-2">150+</p>
+                    <p class="text-lg">Projekte abgeschlossen</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold mb-2">98%</p>
+                    <p class="text-lg">Client Zufriedenheit</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold mb-2">50+</p>
+                    <p class="text-lg">Zufriedene Kunden</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold mb-2">12+</p>
+                    <p class="text-lg">Jahre Erfahrung</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-white rounded-lg shadow-md p-8 md:p-12 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Bereit für Ihr nächstes Projekt?</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                Wir helfen Ihnen, Ihre Vision in ein erfolgreiches Projekt zu verwandeln. Kontaktieren Sie uns noch heute für ein kostenloses Beratungsgespräch.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    Jetzt Kontakt aufnehmen
+                </button>
+                <button class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
+                    Portfolio Download
+                </button>
+            </div>
+        </section>
+
+    </main>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>

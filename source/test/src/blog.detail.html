@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <!-- Logo / Projekt Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        MyProject
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex md:items-center md:gap-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button 
+                    id="hamburger-btn"
+                    class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors"
+                    aria-label="Navigation öffnen"
+                    aria-expanded="false">
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div 
+                id="mobile-menu"
+                class="mobile-menu hidden md:hidden border-t border-gray-200">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#home" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm text-gray-600 mb-8">
+            <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
+            <span>/</span>
+            <a href="#" class="hover:text-blue-600 transition-colors">Blog</a>
+            <span>/</span>
+            <span class="text-gray-900 font-medium">Die Zukunft des responsiven Web Designs</span>
+        </div>
+
+        <!-- Article Header -->
+        <article>
+            <header class="mb-8">
+                <div class="mb-4">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Web Design</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Die Zukunft des responsiven Web Designs
+                </h1>
+                
+                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-6 text-gray-600 py-6 border-t border-b border-gray-200">
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" alt="Anna Schmidt" class="w-10 h-10 rounded-full">
+                        <div>
+                            <p class="font-semibold text-gray-900">Anna Schmidt</p>
+                            <p class="text-sm text-gray-500">Web Design Expertin</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 sm:gap-6 text-sm">
+                        <span>15. Januar 2026</span>
+                        <span>8 min Lesezeit</span>
+                        <span>2.450 Aufrufe</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Featured Image -->
+            <figure class="mb-8">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=600&fit=crop" alt="Web Design" class="w-full rounded-lg shadow-md">
+                <figcaption class="text-sm text-gray-600 mt-3 text-center">Modernes Responsive Web Design mit Tailwind CSS</figcaption>
+            </figure>
+
+            <!-- Article Content -->
+            <div class="article-content prose prose-sm max-w-none mb-12">
+                <p>
+                    Responsive Web Design ist nicht mehr optional — es ist ein absolutes Muss in der modernen Webentwicklung. Mit der kontinuierlichen Zunahme von Mobile-Geräten und verschiedenen Bildschirmgrößen müssen Designer und Entwickler sicherstellen, dass ihre Websites auf allen Geräten optimal funktionieren.
+                </p>
+
+                <h2>Warum Responsive Design wichtig ist</h2>
+                <p>
+                    Die Zeiten, in denen man nur für Desktop-Bildschirme entwickelt hat, sind längst vorbei. Heute greifen über 60% der Internetnutzer über Mobile-Geräte auf Websites zu. Das bedeutet, dass ein nicht-responsive Design zu einer schlechten Nutzer-Experience und einem Verlust von potentiellen Kunden führt.
+                </p>
+
+                <p>
+                    Responsive Design bietet mehrere Vorteile:
+                </p>
+
+                <ul>
+                    <li>Verbesserte Nutzer-Experience auf allen Geräten</li>
+                    <li>Bessere SEO-Rankings durch Google-bevorzugte Mobile-Optimierung</li>
+                    <li>Einfachere Wartung mit nur einer Website statt mehreren</li>
+                    <li>Höhere Konversionsraten und Nutzer-Engagement</li>
+                </ul>
+
+                <h2>Tailwind CSS: Die Revolution im Responsive Design</h2>
+                <p>
+                    Tailwind CSS hat die Art und Weise verändert, wie wir Websites gestalten. Mit seinem Utility-First-Ansatz und den eingebauten Breakpoints können Entwickler schneller responsive Designs erstellen als je zuvor.
+                </p>
+
+                <blockquote>
+                    "Tailwind CSS ermöglicht es mir, responsive Designs in Minutenschnelle zu erstellen, ohne CSS-Dateien zu verlassen. Das ist ein Game-Changer für meine Produktivität." — Frontend-Entwickler
+                </blockquote>
+
+                <h3>Mobile-First Ansatz</h3>
+                <p>
+                    Der Mobile-First-Ansatz ist ein Best Practice in der responsiven Webentwicklung. Sie beginnen mit dem Design für Mobile-Geräte und erweitern es dann für größere Bildschirme. Tailwind CSS unterstützt dies nativ mit Breakpoints wie <code>md:</code>, <code>lg:</code> und <code>xl:</code>.
+                </p>
+
+                <h2>Best Practices für 2026</h2>
+                <ol>
+                    <li><strong>Breakpoints strategisch einsetzen:</strong> Nutzen Sie Breakpoints nicht zu häufig. Fokussieren Sie sich auf die wichtigsten Übergangspunkte.</li>
+                    <li><strong>Flexible Layouts:</strong> Verwenden Sie Flexbox und Grid statt fester Breiten für maximale Flexibilität.</li>
+                    <li><strong>Performance optimieren:</strong> Minimieren Sie CSS und nutzen Sie Picture-Elemente für responsive Bilder.</li>
+                    <li><strong>Testen Sie gründlich:</strong> Testen Sie Ihre Website auf verschiedenen Geräten und Browsern.</li>
+                    <li><strong>Accessibility nicht vergessen:</strong> Responsive Design sollte auch zugänglich sein für Menschen mit Behinderungen.</li>
+                </ol>
+
+                <h2>Fazit</h2>
+                <p>
+                    Responsive Web Design ist die Zukunft der Webentwicklung. Mit Tools wie Tailwind CSS können Sie schneller und effizienter responsive Websites erstellen. Der Mobile-First-Ansatz sollte bei jedem neuen Projekt eine Priorität sein, um sicherzustellen, dass Ihre Website auf allen Geräten großartig aussieht und funktioniert.
+                </p>
+
+                <p>
+                    Beginnen Sie noch heute mit responsivem Design und sehen Sie, wie sich Ihre Nutzer-Experience und Ihre Conversion-Raten verbessern!
+                </p>
+            </div>
+
+            <!-- Article Meta -->
+            <div class="py-6 border-t border-b border-gray-200 mb-8">
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-sm font-semibold text-gray-700">Tags:</span>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 hover:underline">Responsive Design</a>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 hover:underline">Tailwind CSS</a>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 hover:underline">Web Design</a>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 hover:underline">Frontend</a>
+                </div>
+            </div>
+
+            <!-- Share Buttons -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
+                <span class="text-sm font-semibold text-gray-700">Artikel teilen:</span>
+                <div class="flex gap-3">
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">
+                        Facebook
+                    </button>
+                    <button class="px-4 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors font-medium text-sm">
+                        Twitter
+                    </button>
+                    <button class="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors font-medium text-sm">
+                        LinkedIn
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Posts Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Ähnliche Artikel</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Related Post 1 -->
+                <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop" alt="JavaScript" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mb-2">JavaScript</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">ES2025: Die wichtigsten neuen Features</a>
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">Ein tiefer Blick auf die neuen Features von ECMAScript 2025...</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">Mehr lesen →</a>
+                    </div>
+                </article>
+
+                <!-- Related Post 2 -->
+                <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop" alt="Performance" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded mb-2">Performance</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">Web Performance: Core Web Vitals optimieren</a>
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">Optimieren Sie Ihre Website für die neuen Core Web Vitals...</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">Mehr lesen →</a>
+                    </div>
+                </article>
+
+                <!-- Related Post 3 -->
+                <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460925895917-adf4e565db17?w=400&h=250&fit=crop" alt="SEO" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded mb-2">SEO</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">SEO in 2026: Was ändert sich wirklich?</a>
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">Google´s neueste Updates haben die SEO-Landschaft verändert...</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">Mehr lesen →</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Kommentare (3)</h2>
+
+            <!-- Comments List -->
+            <div class="space-y-6 mb-8">
+                
+                <!-- Comment 1 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex items-start gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" alt="User" class="w-10 h-10 rounded-full flex-shrink-0">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-semibold text-gray-900">Thomas Schmidt</h3>
+                                <span class="text-xs text-gray-500">vor 2 Tagen</span>
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                Großartiger Artikel! Tailwind CSS hat meine Produktivität wirklich verbessert. Ich kann responsive Designs jetzt viel schneller umsetzen.
+                            </p>
+                            <button class="text-blue-600 hover:text-blue-700 font-semibold text-sm mt-2">Antworten</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comment 2 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex items-start gap-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop" alt="User" class="w-10 h-10 rounded-full flex-shrink-0">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-semibold text-gray-900">Maria Müller</h3>
+                                <span class="text-xs text-gray-500">vor 1 Tag</span>
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                Könnten Sie mehr über CSS Grid vs. Flexbox schreiben? Ich bin mir nicht sicher, wann ich welches verwenden sollte.
+                            </p>
+                            <button class="text-blue-600 hover:text-blue-700 font-semibold text-sm mt-2">Antworten</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comment 3 -->
+                <div class="pb-6">
+                    <div class="flex items-start gap-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop" alt="User" class="w-10 h-10 rounded-full flex-shrink-0">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-semibold text-gray-900">Peter Weber</h3>
+                                <span class="text-xs text-gray-500">heute</span>
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                Exzellente Zusammenfassung! Der Mobile-First-Ansatz ist wirklich der Schlüssel zu modernem Web Design.
+                            </p>
+                            <button class="text-blue-600 hover:text-blue-700 font-semibold text-sm mt-2">Antworten</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Comment Form -->
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Hinterlasse einen Kommentar</h3>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input type="text" id="name" placeholder="Ihr Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-Mail</label>
+                    <input type="email" id="email" placeholder="ihre@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label for="comment" class="block text-sm font-medium text-gray-700 mb-2">Kommentar</label>
+                    <textarea id="comment" rows="4" placeholder="Schreiben Sie Ihren Kommentar..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    Kommentar posten
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

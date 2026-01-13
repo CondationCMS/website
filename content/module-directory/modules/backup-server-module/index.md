@@ -2,8 +2,14 @@
 template: module.html
 createdAt: 2025-08-01T06:43:57.286Z
 createdBy: thorsten
-published: false
+published: true
 title: Backup-server-module
+seo:
+  keywords: ''
+  author: ''
+  description: ''
+unpublish_date: null
+publish_date: null
 ---
 
 # Backup module

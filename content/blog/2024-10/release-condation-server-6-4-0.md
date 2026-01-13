@@ -1,9 +1,14 @@
 ---
-title: "[Release] CondationCMS server version 6.4.0"
+title: '[Release] CondationCMS server version 6.4.0'
 seo:
-    description: "Today, we released the first version of the new video module to integrate videos from youtube and vimeo."
-publish_date: 2024-10-11
+  description: Today, we released the first version of the new video module to integrate
+    videos from youtube and vimeo.
+  keywords: ''
+  author: ''
+publish_date: 2024-10-11T00:00:00Z
 template: blog-entry.html
+unpublish_date: null
+published: true
 ---
 
 Today we released version 6.4.0 of the CondationCMS server.
