@@ -32,3 +32,34 @@ mediaQuery.addEventListener('change', (e) => {
         hamburgerBtn.setAttribute('aria-expanded', 'false');
     }
 });
+
+// Portfolio Filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+            if (filter === 'all') {
+                item.classList.remove('hidden');
+                item.style.display = 'block';
+            } else {
+                const category = item.getAttribute('data-category');
+                if (category === filter) {
+                    item.classList.remove('hidden');
+                    item.style.display = 'block';
+                } else {
+                    item.classList.add('hidden');
+                    item.style.display = 'none';
+                }
+            }
+        });
+    });
+});
