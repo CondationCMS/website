@@ -37,6 +37,15 @@
 <!-- Main Content -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" {{ ext.ui.toolbar("main", "main" ,
     ["editContent", "editAttributes" ]) | raw }}>
+
+    {% if PREVIEW_MODE %}
+    <div style="display: none;" {{ ext.ui.editMeta("text", "module.description") | raw }}></div>
+    <div style="display: none;" {{ ext.ui.editMeta("markdown", "module.features") | raw }}></div>
+    <div style="display: none;" {{ ext.ui.editMeta("markdown", "module.installation") | raw }}></div>
+    <div style="display: none;" {{ ext.ui.editMeta("text", "module.author") | raw }}></div>
+    <div style="display: none;" {{ ext.ui.editMeta("text", "module.license") | raw }}></div>
+    {% endif %}
+
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Main Content -->
         <div class="lg:col-span-2">
@@ -46,7 +55,7 @@
                     <button
                         class="tab-btn active flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors"
                         data-tab="overview">
-                        Übersicht
+                        Overview
                     </button>
                     <button
                         class="tab-btn flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors"
