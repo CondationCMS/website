@@ -3,58 +3,66 @@
 {% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
-<div style="min-height: 50px;" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
-{{ content | raw }}
-</div>
+<section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h1 class="text-4xl font-bold text-gray-900 mb-4">{{ node.meta.title }}</h1>
+		<p class="text-lg text-gray-700" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+			{{ node.content | raw }}
+		</p>
+	</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        {% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+	<!-- Plugin Grid -->
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+		{% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
         {% assign modules = cms.nodeList.from("/module-directory/modules/*").sort("title").size(6).page(pageNumber).list() %}
         {% for entry in modules.items %}
-        <div class="col-12 col-md-6 mb-4">
-            <div class="entry card h-100">
-                <div class="card-body">
-                    <h4 class="card-title">{{ entry.name }}</h4>
-                    <p class="card-text">{{ entry.content}}</p>
-                    <a href="{{ entry.path}}" class="btn btn-primary  btn-sm">read more</a>
-                </div>
-            </div>
-        </div>
+		<div
+			class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+			<div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+				<i class="bi {{ entry.meta['icon'] }} text-white" style="font-size: 3rem;"></i>
+			</div>
+			<div class="p-6">
+				<div class="flex items-start justify-between mb-2">
+					<h3 class="text-xl font-bold text-gray-900">{{ entry.name }}</h3>
+				</div>
+				<p class="text-gray-600 text-sm mb-4">
+					{{ entry.content}}
+				</p>
+				<a href="{{ entry.path}}"
+					class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+					read more
+				</a>
+			</div>
+		</div>
         {% endfor %}
-    </div>
-    <nav>
-		<ul class="pagination justify-content-center">
-			{% if modules.page == 1 %}
-				<li class="page-item disabled">
-					<a class="page-link" href="#" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					</a>
-				</li>
+	</div>
+	<!-- Pagination -->
+	<nav class="flex justify-center items-center gap-2 py-8 border-t border-gray-200">
+		{% if modules.page == 1 %}
+			<p class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 transition-colors" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</p>
 			{% else %}
-				<li class="page-item">
-                    {% assign prevLink = requestContext.uri + "?page=" + (modules.page - 1) %}
-                    <a class="page-link" href="{{ cms.links.createUrl(prevLink) }}" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					</a>
-				</li>
+			{% assign prevLink = requestContext.uri + "?page=" + (modules.page - 1) %}
+			<a class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" href="{{ cms.links.createUrl(prevLink) }}" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</a>
 			{% endif %}
 			{% if modules.page == modules.totalPages %}
-				<li class="page-item disabled">
-					<a class="page-link" href="#" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				</li>
+			<p class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 transition-colors"  aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</p>
 			{% else %}
-				<li class="page-item">
-                    {% assign nextLink = requestContext.uri + "?page=" + (modules.page + 1) %}
-					<a class="page-link" href="{{ cms.links.createUrl(nextLink) }}" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				</li>
-			{% endif %}
-		</ul>
+			{% assign nextLink = requestContext.uri + "?page=" + (modules.page + 1) %}
+			<a class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" href="{{ cms.links.createUrl(nextLink) }}" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</a>
+		{% endif %}
 	</nav>
-</div>
+</main>
 
 {% endblock %}

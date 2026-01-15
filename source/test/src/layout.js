@@ -63,3 +63,21 @@ filterBtns.forEach(btn => {
         });
     });
 });
+
+// Tab Functionality
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const tabName = btn.getAttribute('data-tab');
+
+        // Remove active from all tabs and buttons
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(tc => tc.classList.remove('active'));
+
+        // Add active to clicked button and corresponding tab
+        btn.classList.add('active');
+        document.getElementById(tabName).classList.add('active');
+    });
+});

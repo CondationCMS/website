@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+
+/* cutsom start */
+@layer components {
+    .link-disabled {
+        @apply pointer-events-none opacity-50 grayscale cursor-not-allowed select-none;
+        /* Du kannst hier auch normales CSS mischen */
+        text-decoration: none;
+    }
+}
+
+/* custom end*/
+
 /* Smooth transitions für Mobile Menu */
 .mobile-menu {
     transition: all 300ms ease-in-out;
@@ -117,4 +129,52 @@
 
 .portfolio-item:hover .portfolio-overlay {
     opacity: 1;
+}
+
+/* Sidebar Mobile Menu */
+.doc-nav-mobile {
+    transition: all 300ms ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.doc-nav-mobile.open {
+    max-height: 800px;
+}
+
+/* Submenu Toggle */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in-out;
+}
+
+.submenu.open {
+    max-height: 500px;
+}
+
+.submenu-toggle.active svg {
+    transform: rotate(180deg);
+}
+
+/* Plugin Card Hover */
+.plugin-card {
+    transition: all 300ms ease-in-out;
+}
+
+.plugin-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Tabs */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-btn.active {
+    @apply border-b-2 border-blue-600 text-blue-600;
 }

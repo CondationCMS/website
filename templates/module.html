@@ -3,6 +3,118 @@
 {% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
+
+<!-- Plugin Header -->
+<section class="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+            <div>
+                <a href="/module-directory" class="inline-flex items-center gap-2 text-blue-100 hover:text-white mb-4 text-sm">
+                    <i class="bi bi-chevron-left"></i>
+                    Back to Module Directory
+                </a>
+                <h1 class="text-4xl font-bold mb-2">{{ node.meta.title }}</h1>
+                <p class="text-blue-100 text-lg">{{ node.meta.module.description }}</p>
+            </div>
+            <!--div class="flex flex-col items-start md:items-end gap-3">
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-lg font-semibold">{{ node.meta.module.version }}</span>
+                <div class="flex gap-2">
+                    <button class="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold flex items-center gap-2">
+                        <i class="bi bi-download"></i>
+                        Installieren
+                    </button>
+                    <button class="border-2 border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors font-semibold flex items-center gap-2">
+                        <i class="bi bi-star"></i>
+                        Favorit
+                    </button>
+                </div>
+            </div-->
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Tabs -->
+                <div class="bg-white rounded-lg border border-gray-200 mb-8">
+                    <div class="border-b border-gray-200 flex overflow-x-auto">
+                        <button class="tab-btn active flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors" data-tab="overview">
+                            Übersicht
+                        </button>
+                        <button class="tab-btn flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors" data-tab="features">
+                            Features
+                        </button>
+                        <button class="tab-btn flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors" data-tab="installation">
+                            Installation
+                        </button>
+                    </div>
+
+                    <!-- Overview Tab -->
+                    <div id="overview" class="tab-content active p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Übersicht</h2>
+                        <div class="text-gray-700 leading-relaxed mb-4">
+                            {{ node.content | raw }}
+                        </div>
+                        
+                    </div>
+
+                    <!-- Features Tab -->
+                    <div id="features" class="tab-content p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Features</h2>
+                        <div class="space-y-4">
+                           {{ node.meta.module.features | raw }}
+                        </div>
+                    </div>
+
+                    <!-- Installation Tab -->
+                    <div id="installation" class="tab-content p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Installation</h2>
+                        <div class="text-gray-700 leading-relaxed mb-4">
+                            {{ node.meta.module.installation | raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Info Card -->
+                <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6 sticky top-20">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Module Info</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Author</p>
+                            <p class="font-semibold text-gray-900">{{ node.meta.module.author }}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">License</p>
+                            <p class="font-semibold text-gray-900">{{ node.meta.module.license }}</p>
+                        </div>
+                    </div>
+
+                    <hr class="mb-6">
+
+                    <h4 class="font-semibold text-gray-900 mb-3">Links</h4>
+                    <div class="space-y-2">
+                        <a href="{{ node.meta.module.github }}" class="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+                        <a href="{{ node.meta.module.issues }}" class="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                            <i class="bi bi-bug"></i>
+                            Issue Tracker
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
 <div style="min-height: 50px;" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
 {{ content | raw }}
 </div>

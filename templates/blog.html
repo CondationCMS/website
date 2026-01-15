@@ -3,52 +3,69 @@
 {% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
-{{ content | raw }}
-<div class="blog-entries">
-	{% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
-	{% assign page = cms.nodeList.from("/blog/*").sort("publish_date").reverse(true).page(pageNumber).size(3).list() %}
-	{% for entry in page.items %}
-	<section class="entry card">
-		<div class="card-body">
-			<h4 class="card-title">{{ entry.name }}</h4>
-			<h6>{{ entry.meta['publish_date'] | date('dd-MM-yyyy') }}</h6>
-			<p class="card-text">{{ entry.content}}</p>
-			<a href="{{ entry.path}}" class="btn btn-primary">read more</a>
-		</div>
-	</section>
-	<hr />
-	{% endfor %}
-	<nav>
-		<ul class="pagination justify-content-center">
-			{% if page.page == 1 %}
-				<li class="page-item disabled">
-					<a class="page-link" href="#" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					</a>
-				</li>
+<!-- Blog Header -->
+<section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h1 class="text-4xl font-bold text-gray-900 mb-4">{{ node.meta.title }}</h1>
+		<p class="text-lg text-gray-700">{{ content | raw }}</p>
+	</div>
+</section>
+
+<!-- Blog Posts Grid -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 mb-12">
+	
+		{% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
+		{% assign page = cms.nodeList.from("/blog/*").sort("publish_date").reverse(true).page(pageNumber).size(3).list() %}
+		{% for entry in page.items %}
+		<article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+			<div class="flex flex-col md:flex-row">
+				<!--div class="flex-shrink-0 w-full md:w-48">
+					<img class="h-48 w-full object-cover md:h-full" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=300&fit=crop" alt="Web Design">
+				</div-->
+				<div class="p-6 md:flex md:flex-col md:justify-between flex-1">
+					<div>
+						<div class="flex items-center gap-3 mb-3">
+							<!--span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Web Design</span-->
+							<time class="text-sm text-gray-500">{{ entry.meta['publish_date'] | date('dd-MM-yyyy') }}</time>
+						</div>
+						<h2 class="text-2xl font-bold text-gray-900 mb-2">
+							<a href="{{ entry.path}}" class="hover:text-blue-600 transition-colors">{{ entry.name }}</a>
+						</h2>
+						<p class="text-gray-600 mb-4">{{ entry.content }}</p>
+					</div>
+					<div class="flex items-center justify-between">
+						<!--span class="text-sm text-gray-500">Von <strong>Anna Schmidt</strong></span-->
+						<a href="{{ entry.path}}" class="text-blue-600 hover:text-blue-700 font-semibold">read more →</a>
+					</div>
+				</div>
+			</div>
+		</article>
+		{% endfor %}
+	</div>
+	<!-- Pagination -->
+	<nav class="flex justify-center items-center gap-2 py-8 border-t border-gray-200">
+		{% if page.page == 1 %}
+			<p class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 transition-colors" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</p>
 			{% else %}
-				<li class="page-item">
-					{% assign prevLink = requestContext.uri + "?page=" + (page.page - 1) %}
-                    <a class="page-link" href="{{ cms.links.createUrl(prevLink) }}" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					</a>
-				</li>
+			{% assign prevLink = requestContext.uri + "?page=" + (page.page - 1) %}
+			<a class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" href="{{ cms.links.createUrl(prevLink) }}" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</a>
 			{% endif %}
 			{% if page.page == page.totalPages %}
-				<li class="page-item disabled">
-					<a class="page-link" href="#" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				</li>
+			<p class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 transition-colors"  aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</p>
 			{% else %}
-				<li class="page-item">
-					{% assign nextLink = requestContext.uri + "?page=" + (page.page + 1) %}
-					<a class="page-link" href="{{ cms.links.createUrl(nextLink) }}" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				</li>
-			{% endif %}
-		</ul>
+			{% assign nextLink = requestContext.uri + "?page=" + (page.page + 1) %}
+			<a class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" href="{{ cms.links.createUrl(nextLink) }}" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</a>
+		{% endif %}
 	</nav>
-</div>
+</main>
+
 {% endblock %}

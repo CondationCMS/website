@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./layout.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo / Projekt Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        MyProject
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex md:items-center md:gap-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button id="hamburger-btn"
+                    class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors"
+                    aria-label="Navigation öffnen" aria-expanded="false">
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden md:hidden border-t border-gray-200">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#home"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button
+                        class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Plugin Header -->
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Plugin Verzeichnis</h1>
+            <p class="text-lg text-gray-700">Erweitern Sie MyProject mit unseren umfangreichen Plugins</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Plugin Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+            <!-- Plugin Card 1 -->
+            <div
+                class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+                <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                    <i class="bi bi-lock-fill text-white" style="font-size: 3rem;"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-2">
+                        <h3 class="text-xl font-bold text-gray-900">Auth Plugin</h3>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Authentication</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Vollständige Authentifizierung mit JWT, OAuth2 und Social Login Support.
+                    </p>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <span>★★★★★ (128 Bewertungen)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span class="font-semibold">v2.1.0</span>
+                        <span>25K+ Downloads</span>
+                    </div>
+                    <a href="plugin-detail.html?id=auth-plugin"
+                        class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Details ansehen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plugin Card 2 -->
+            <div
+                class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+                <div class="h-32 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                    <i class="bi bi-database-fill text-white" style="font-size: 3rem;"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-2">
+                        <h3 class="text-xl font-bold text-gray-900">Database Plugin</h3>
+                        <span
+                            class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Database</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">
+                        ORM & Query Builder für PostgreSQL, MySQL und SQLite Datenbanken.
+                    </p>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <span>★★★★☆ (96 Bewertungen)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span class="font-semibold">v3.0.5</span>
+                        <span>18K+ Downloads</span>
+                    </div>
+                    <a href="plugin-detail.html?id=database-plugin"
+                        class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Details ansehen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plugin Card 3 -->
+            <div
+                class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+                <div class="h-32 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                    <i class="bi bi-coin text-white" style="font-size: 3rem;"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-2">
+                        <h3 class="text-xl font-bold text-gray-900">Payment Plugin</h3>
+                        <span
+                            class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Payment</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Integration mit Stripe, PayPal und anderen Zahlungsanbietern.
+                    </p>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <span>★★★★★ (152 Bewertungen)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span class="font-semibold">v1.8.2</span>
+                        <span>32K+ Downloads</span>
+                    </div>
+                    <a href="plugin-detail.html?id=payment-plugin"
+                        class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Details ansehen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plugin Card 4 -->
+            <div
+                class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+                <div class="h-32 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                    <i class="bi bi-envelope-fill text-white" style="font-size: 3rem;"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-2">
+                        <h3 class="text-xl font-bold text-gray-900">Email Plugin</h3>
+                        <span
+                            class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Email</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">
+                        E-Mail-Versand mit Templates, Scheduler und Analytics Support.
+                    </p>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <span>★★★★☆ (87 Bewertungen)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span class="font-semibold">v1.5.1</span>
+                        <span>14K+ Downloads</span>
+                    </div>
+                    <a href="plugin-detail.html?id=email-plugin"
+                        class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Details ansehen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plugin Card 5 -->
+            <div
+                class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+                <div class="h-32 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                    <i class="bi bi-cloud-arrow-down-fill text-white" style="font-size: 3rem;"></i>
+                </div>
+
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-2">
+                        <h3 class="text-xl font-bold text-gray-900">Storage Plugin</h3>
+                        <span
+                            class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">Storage</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Cloud Storage Integration für AWS S3, Google Cloud und Azure.
+                    </p>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <span>★★★★★ (113 Bewertungen)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span class="font-semibold">v2.3.0</span>
+                        <span>21K+ Downloads</span>
+                    </div>
+                    <a href="plugin-detail.html?id=storage-plugin"
+                        class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Details ansehen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plugin Card 6 -->
+            <div
+                class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+                <div class="h-32 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                    <i class="bi bi-lightning-fill text-white" style="font-size: 3rem;"></i>
+                </div>
+
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-2">
+                        <h3 class="text-xl font-bold text-gray-900">Cache Plugin</h3>
+                        <span
+                            class="bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full">Performance</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Redis & Memcached Integration für optimale Anwendungs-Performance.
+                    </p>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <span>★★★★☆ (64 Bewertungen)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span class="font-semibold">v1.2.1</span>
+                        <span>9K+ Downloads</span>
+                    </div>
+                    <a href="plugin-detail.html?id=cache-plugin"
+                        class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Details ansehen →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav class="flex justify-center items-center gap-2 py-8 border-t border-gray-200">
+            <button
+                class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors font-medium"
+                aria-label="Vorherige Seite">
+                ← Zurück
+            </button>
+
+            <div class="flex gap-1">
+                <button
+                    class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center font-semibold hover:bg-blue-700 transition-colors">
+                    1
+                </button>
+                <button
+                    class="w-10 h-10 rounded-lg border border-gray-300 text-gray-600 flex items-center justify-center font-semibold hover:bg-gray-100 transition-colors">
+                    2
+                </button>
+                <button
+                    class="w-10 h-10 rounded-lg border border-gray-300 text-gray-600 flex items-center justify-center font-semibold hover:bg-gray-100 transition-colors">
+                    3
+                </button>
+                <span class="w-10 h-10 flex items-center justify-center text-gray-500">...</span>
+                <button
+                    class="w-10 h-10 rounded-lg border border-gray-300 text-gray-600 flex items-center justify-center font-semibold hover:bg-gray-100 transition-colors">
+                    8
+                </button>
+            </div>
+
+            <button
+                class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors font-medium"
+                aria-label="Nächste Seite">
+                Weiter →
+            </button>
+        </nav>
+    </main>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>
