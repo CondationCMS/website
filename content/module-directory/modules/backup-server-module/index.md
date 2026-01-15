@@ -17,6 +17,8 @@ module:
   issues: https://github.com/CondationCMS/backup-server-module/issues
   features: "scheduled backeup, s3 or ftp backup" 
   installation: "simple installation via cli"
+  author: Condation
+  license: GPLv3
 ---
 
 # Backup module
