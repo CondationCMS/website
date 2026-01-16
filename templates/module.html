@@ -44,6 +44,8 @@
     <div style="display: none;" {{ ext.ui.editMeta("markdown", "module.installation") | raw }}></div>
     <div style="display: none;" {{ ext.ui.editMeta("text", "module.author") | raw }}></div>
     <div style="display: none;" {{ ext.ui.editMeta("text", "module.license") | raw }}></div>
+    <div style="display: none;" {{ ext.ui.editMeta("text", "module.github") | raw }}></div>
+    <div style="display: none;" {{ ext.ui.editMeta("text", "module.issues") | raw }}></div>
     {% endif %}
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -82,7 +84,7 @@
                 <div id="features" class="tab-content p-6">
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">Features</h2>
                     <div class="space-y-4">
-                        {{ node.meta.module.features | raw }}
+                        {{ node.meta.module.features | raw | markdown }}
                     </div>
                 </div>
 
@@ -90,7 +92,7 @@
                 <div id="installation" class="tab-content p-6">
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">Installation</h2>
                     <div class="text-gray-700 leading-relaxed mb-4">
-                        {{ node.meta.module.installation | raw }}
+                        {{ node.meta.module.installation | raw | markdown }}
                     </div>
                 </div>
             </div>

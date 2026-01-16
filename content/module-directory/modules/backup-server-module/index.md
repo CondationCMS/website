@@ -16,7 +16,19 @@ module:
   github: https://github.com/CondationCMS/backup-server-module
   issues: https://github.com/CondationCMS/backup-server-module/issues
   features: scheduled backeup, s3 or ftp backup
-  installation: simple installation via cli
+  installation: |
+    Installation using the cli
+
+    ```shell
+    server.sh module get backup-server-module
+    ```
+
+    After the module is downloaded use it in the server.tom
+
+    ```toml
+    [modules]
+    active = ["backup-server-module"]
+    ```
   author: Condation
   license: GPLv3
 ---
