@@ -2,7 +2,7 @@
 title: Site Configuration
 template: documentation/documentation.html
 menu:
-    position: 1
+    position: 2
 ---
 
 # Site Configuration

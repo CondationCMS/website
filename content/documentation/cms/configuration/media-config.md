@@ -2,7 +2,7 @@
 title: Media configuration
 template: documentation/documentation.html
 menu:
-    position: 1
+    position: 3
 ---
 
 # Media Configuration

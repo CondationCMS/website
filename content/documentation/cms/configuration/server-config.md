@@ -1,6 +1,6 @@
 ---
 title: Server Configuration
-template: documentation/content.html
+template: documentation/documentation.html
 menu:
   position: 1
 ---

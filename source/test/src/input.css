@@ -178,3 +178,12 @@
 .tab-btn.active {
     @apply border-b-2 border-blue-600 text-blue-600;
 }
+
+/* Active Navigation Link */
+.nav-link.active {
+    @apply bg-blue-100 text-blue-600 font-semibold;
+}
+
+.nav-link {
+    transition: all 300ms ease-in-out;
+}

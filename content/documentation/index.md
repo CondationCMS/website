@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Documentations
 template: documentation/index.html
 menu:
   position: 2
