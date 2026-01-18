@@ -3,17 +3,26 @@
 {% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
-<div style="min-height: 50px;" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
-{{ content | raw }}
-</div>
-<div>
+
+<section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h1 class="text-4xl font-bold text-gray-900 mb-4">{{ node.meta.title }}</h1>
+		<p class="text-lg text-gray-700" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+			{{ node.content | raw }}
+		</p>
+	</div>
+</section>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div>
         <h5>Supporting via Ko-Fi</h5>
-        <a href='https://ko-fi.com/{{ node.meta.get("kofi.id") }}' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='{{ node.meta.get("kofi.text") }}' /></a>
+        <a href='https://ko-fi.com/{{ node.meta.get("kofi.id") }}' target='_blank'><img height='36'
+                style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0'
+                alt='{{ node.meta.get("kofi.text") }}' /></a>
     </div>
     <div>
         <h5>Supporting via github sponsoring</h5>
         <a href='https://github.com/sponsoring/{{ node.meta.get("github.id") }}' target='_blank'>{{ node.meta.get("github.text") }}</a>
     </div>
-</div>
+</main>
 {% endblock %}

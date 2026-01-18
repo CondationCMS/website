@@ -2,8 +2,15 @@
 
 {% block title %} {{ node.meta.title }} {% endblock %}
 
+{% block header_contrib %}
+<link rel="stylesheet" href="{{ cms.links.createUrl('/assets/documentation.css') }}" />
+{% endblock %}
+
 {% block content %}
-<div style="min-height: 50px;" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+<!-- Main Content -->
+<main class="main-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+{{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}
+>
 {{ content | raw }}
 </div>
 {% endblock %}
