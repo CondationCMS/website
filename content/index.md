@@ -1,5 +1,5 @@
 ---
-title: Startseite
+title: Startpage
 template: start.html
 menu:
   position: 1
