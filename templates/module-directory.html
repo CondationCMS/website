@@ -24,7 +24,7 @@
 		<div
 			class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
 			<div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-				<i class="bi {{ entry.meta['icon'] }} text-white" style="font-size: 3rem;"></i>
+				<i class="bi {{ entry.meta.getOrDefault('icon', 'bi-plugin') }} text-white" style="font-size: 3rem;"></i>
 			</div>
 			<div class="p-6">
 				<div class="flex items-start justify-between mb-2">
