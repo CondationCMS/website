@@ -22,7 +22,9 @@
     </div>
     <div>
         <h5>Supporting via github sponsoring</h5>
-        <a href='https://github.com/sponsoring/{{ node.meta.get("github.id") }}' target='_blank'>{{ node.meta.get("github.text") }}</a>
+        <a href='https://github.com/sponsoring/{{ node.meta.get("github.id") }}' target='_blank'>
+            <img style="border:0px;height:36px;" src="{{ cms.links.createUrl('/assets/images/github.png') }}" alt='{{ node.meta.get("github.text") }}' />
+        </a>
     </div>
 </main>
 {% endblock %}
