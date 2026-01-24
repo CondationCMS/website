@@ -28,9 +28,9 @@ Since version 8.0.0, ConditionCMS provides pre-built releases for all major oper
 
 After installation, you will need to configure three main configuration files to customize your ConditionCMS deployment:
 
-- [Server configuration](/documentation/basics/server-config) - Configure server settings such as port, IP address, IPC, and performance management
-- [Site configuration](/documentation/basics/site-config) - Configure individual site settings including hostname, theme, caching, and content processing
-- [Media configuration](/documentation/basics/media-config) - Configure media formats, image transformations, and compression settings
+- [Server configuration](/documentation/cms/configuration/server-config) - Configure server settings such as port, IP address, IPC, and performance management
+- [Site configuration](/documentation/cms/configuration/site-config) - Configure individual site settings including hostname, theme, caching, and content processing
+- [Media configuration](/documentation/cms/configuration/media-config) - Configure media formats, image transformations, and compression settings
 
 ## Starting the Server
 
