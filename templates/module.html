@@ -36,7 +36,7 @@
 
 <!-- Main Content -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" {{ ext.ui.toolbar("main", "main" ,
-    ["editContent", "editAttributes" ]) | raw }}>
+    ["editContent", "editAttributes" ], {"form": "attributes"}) | raw }}>
 
     {% if PREVIEW_MODE %}
     <div style="display: none;" {{ ext.ui.editMeta("text", "module.description") | raw }}></div>

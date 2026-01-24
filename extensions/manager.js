@@ -14,12 +14,21 @@ $hooks.registerFilter("manager/media/forms", (context) => {
 	return mediaForms;
 })
 
+const TextField = (overrides = {}) => ({
+    type: "text",
+    ...overrides
+});
+
+const DateTimeField = (overrides = {}) => ({
+	type: "datetime",
+	...overrides
+});
+
 const defaultPageSettingsForm = [
-	{
-		type: "text",
+	TextField({
 		name: "seo.description",
 		title: "Seo-Description"
-	},
+	}),
 	{
 		type: "text",
 		name: "seo.keywords",
@@ -67,6 +76,43 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 		forms: {
 			settings: [
 				...defaultPageSettingsForm
+			],
+			attributes: [
+				{
+					name: "module.descirption",
+					type: "text",
+					title: "Module Description"
+				},
+				{
+					name: "module.features",
+					type: "markdown",
+					title: "Module Features"
+				},
+				{
+					name: "module.installation",
+					type: "markdown",
+					title: "Module Installation"
+				},
+				{
+					name: "module.author",
+					type: "text",
+					title: "Module Author"
+				},
+				{
+					name: "module.license",
+					type: "text",
+					title: "Module License"
+				},
+				{
+					name: "module.github",
+					type: "text",
+					title: "Module GitHub Repository"
+				},
+				{
+					name: "module.issues",
+					type: "text",
+					title: "Module Issues"
+				}
 			]
 		}
 	});
@@ -91,17 +137,69 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 	contentTypes.registerSectionTemplate({
 		section: "features",
 		name: "Feature",
-		template: "sections/feature.html"
+		template: "sections/feature.html",
+		forms: {
+			attributes: [
+				TextField({
+					name: "title",
+					title: "Title"
+				}),
+				TextField({
+					name: "link",
+					title: "Link"
+				}),
+				DateTimeField({
+					name: "publish_date",
+					title: "Publish Date"
+				}),
+				DateTimeField({
+					name: "unpublish_date",
+					title: "Unpublish Date"
+				})
+			]
+		}
 	});
 	contentTypes.registerSectionTemplate({
 		section: "content",
 		name: "Text",
-		template: "sections/content-text.html"
+		template: "sections/content-text.html",
+		forms: {
+			attributes: [
+				TextField({
+					name: "title",
+					title: "Title"
+				}),
+				DateTimeField({
+					name: "publish_date",
+					title: "Publish Date"
+				}),
+				DateTimeField({
+					name: "unpublish_date",
+					title: "Unpublish Date"
+				})
+			]
+		}
 	});
 	contentTypes.registerSectionTemplate({
 		section: "content",
 		name: "Teaser",
-		template: "sections/content-teaser.html"
+		template: "sections/content-teaser.html",
+		forms: {
+			attributes: [
+				TextField({
+					name: "title",
+					title: "Title"
+				}),
+				DateTimeField({
+					name: "publish_date",
+					title: "Publish Date"
+				}),
+				DateTimeField({
+					name: "unpublish_date",
+					title: "Unpublish Date"
+				})
+			]
+		}
 	});
 	return contentTypes;
 })
