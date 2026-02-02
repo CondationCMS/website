@@ -72,7 +72,7 @@ Sections are accessed in templates through the `node.sections` object, which is 
 
 ### Basic Template Syntax
 
-```cms
+```condation
 {% if node.sections.containsKey('sectionname') %}
     {% for section in node.sections.get('sectionname') %}
         {{ section.content() | raw }}
@@ -90,7 +90,7 @@ Sections are accessed in templates through the `node.sections` object, which is 
 
 ### Example: Rendering a Hero Section
 
-```cms
+```condation
 {% if node.sections.containsKey('hero') %}
     <div class="hero">
         {% for section in node.sections.get('hero') %}
@@ -102,7 +102,7 @@ Sections are accessed in templates through the `node.sections` object, which is 
 
 ### Example: Rendering Multiple Testimonials
 
-```cms
+```condation
 <div class="testimonials">
     {% if node.sections.containsKey('testimonial') %}
         {% for section in node.sections.get('testimonial') %}

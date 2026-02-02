@@ -134,6 +134,18 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 			]
 		}
 	});
+	contentTypes.registerPageTemplate({
+		name: "Globals (technical)",
+		template: "globals.html",
+		forms: {
+			attributes: [
+				TextField({
+					name: "cms.version",
+					title: "CMS Version"
+				})
+			]
+		}
+	});
 	contentTypes.registerSectionTemplate({
 		section: "features",
 		name: "Feature",
