@@ -23,7 +23,7 @@ module:
     server.sh module get backup-server-module
     ```
 
-    After the module is downloaded use it in the server.tom
+    After the module is downloaded use it in the server.toml
 
     ```toml
     [modules]
@@ -31,6 +31,7 @@ module:
     ```
   author: Condation
   license: GPLv3
+  descirption: ''
 ---
 
 # Backup module

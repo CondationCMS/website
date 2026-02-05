@@ -47,18 +47,22 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 		name: "StartPage",
 		template: "start.html",
 		forms: {
-			settings: [
-				...defaultPageSettingsForm
-			]
+			settings: {
+				fields: [
+					...defaultPageSettingsForm
+				]
+			}
 		}
 	});
 	contentTypes.registerPageTemplate({
 		name: "Content",
 		template: "content.html",
 		forms: {
-			settings: [
-				...defaultPageSettingsForm
-			]
+			settings: {
+				fields: [
+					...defaultPageSettingsForm
+				]
+			}
 		}
 	});
 	contentTypes.registerPageTemplate({
@@ -74,76 +78,86 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 		name: "Module",
 		template: "module.html",
 		forms: {
-			settings: [
-				...defaultPageSettingsForm
-			],
-			attributes: [
-				{
-					name: "module.descirption",
-					type: "text",
-					title: "Module Description"
-				},
-				{
-					name: "module.features",
-					type: "markdown",
-					title: "Module Features"
-				},
-				{
-					name: "module.installation",
-					type: "markdown",
-					title: "Module Installation"
-				},
-				{
-					name: "module.author",
-					type: "text",
-					title: "Module Author"
-				},
-				{
-					name: "module.license",
-					type: "text",
-					title: "Module License"
-				},
-				{
-					name: "module.github",
-					type: "text",
-					title: "Module GitHub Repository"
-				},
-				{
-					name: "module.issues",
-					type: "text",
-					title: "Module Issues"
-				}
-			]
+			settings: {
+				fields: [
+					...defaultPageSettingsForm
+				]
+			},
+			attributes: {
+				fields: [
+					{
+						name: "module.descirption",
+						type: "text",
+						title: "Module Description"
+					},
+					{
+						name: "module.features",
+						type: "markdown",
+						title: "Module Features"
+					},
+					{
+						name: "module.installation",
+						type: "markdown",
+						title: "Module Installation"
+					},
+					{
+						name: "module.author",
+						type: "text",
+						title: "Module Author"
+					},
+					{
+						name: "module.license",
+						type: "text",
+						title: "Module License"
+					},
+					{
+						name: "module.github",
+						type: "text",
+						title: "Module GitHub Repository"
+					},
+					{
+						name: "module.issues",
+						type: "text",
+						title: "Module Issues"
+					}
+				]
+			}
 		}
 	});
 	contentTypes.registerPageTemplate({
 		name: "Documentation (content)",
 		template: "documentation/content.html",
 		forms: {
-			settings: [
-				...defaultPageSettingsForm
-			]
+			settings: {
+				fields: [
+					...defaultPageSettingsForm
+				]
+			}
 		}
 	});
 	contentTypes.registerPageTemplate({
 		name: "Documentation (index)",
 		template: "documentation/index.html",
 		forms: {
-			settings: [
-				...defaultPageSettingsForm
-			]
+			settings: {
+				fields: [
+					...defaultPageSettingsForm
+				]
+			}
 		}
 	});
 	contentTypes.registerPageTemplate({
 		name: "Globals (technical)",
 		template: "globals.html",
 		forms: {
-			attributes: [
-				TextField({
-					name: "cms.version",
-					title: "CMS Version"
-				})
-			]
+			attributes: {
+				fields: [
+					TextField({
+						name: "cms.version",
+						title: "CMS Version"
+					})
+				]
+			}
 		}
 	});
 	contentTypes.registerSectionTemplate({
@@ -151,24 +165,26 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 		name: "Feature",
 		template: "sections/feature.html",
 		forms: {
-			attributes: [
-				TextField({
-					name: "title",
-					title: "Title"
-				}),
-				TextField({
-					name: "link",
-					title: "Link"
-				}),
-				DateTimeField({
-					name: "publish_date",
-					title: "Publish Date"
-				}),
-				DateTimeField({
-					name: "unpublish_date",
-					title: "Unpublish Date"
-				})
-			]
+			attributes: {
+				fields: [
+					TextField({
+						name: "title",
+						title: "Title"
+					}),
+					TextField({
+						name: "link",
+						title: "Link"
+					}),
+					DateTimeField({
+						name: "publish_date",
+						title: "Publish Date"
+					}),
+					DateTimeField({
+						name: "unpublish_date",
+						title: "Unpublish Date"
+					})
+				]
+			}
 		}
 	});
 	contentTypes.registerSectionTemplate({
@@ -176,20 +192,22 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 		name: "Text",
 		template: "sections/content-text.html",
 		forms: {
-			attributes: [
-				TextField({
-					name: "title",
-					title: "Title"
-				}),
-				DateTimeField({
-					name: "publish_date",
-					title: "Publish Date"
-				}),
-				DateTimeField({
-					name: "unpublish_date",
-					title: "Unpublish Date"
-				})
-			]
+			attributes: {
+				fields : [
+					TextField({
+						name: "title",
+						title: "Title"
+					}),
+					DateTimeField({
+						name: "publish_date",
+						title: "Publish Date"
+					}),
+					DateTimeField({
+						name: "unpublish_date",
+						title: "Unpublish Date"
+					})
+				]
+			}
 		}
 	});
 	contentTypes.registerSectionTemplate({
@@ -197,20 +215,22 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 		name: "Teaser",
 		template: "sections/content-teaser.html",
 		forms: {
-			attributes: [
-				TextField({
-					name: "title",
-					title: "Title"
-				}),
-				DateTimeField({
-					name: "publish_date",
-					title: "Publish Date"
-				}),
-				DateTimeField({
-					name: "unpublish_date",
-					title: "Unpublish Date"
-				})
-			]
+			attributes: {
+				fields : [
+					TextField({
+						name: "title",
+						title: "Title"
+					}),
+					DateTimeField({
+						name: "publish_date",
+						title: "Publish Date"
+					}),
+					DateTimeField({
+						name: "unpublish_date",
+						title: "Unpublish Date"
+					})
+				]
+			}
 		}
 	});
 	return contentTypes;
