@@ -10,6 +10,11 @@ seo:
   description: ''
 unpublish_date: null
 publish_date: null
+module:
+  description: Git integration
+  version: v1.0.0
+  github: https://github.com/CondationCMS/git-server-module
+  issues: https://github.com/CondationCMS/git-server-module/issues
 ---
 
 The Git module is a server module

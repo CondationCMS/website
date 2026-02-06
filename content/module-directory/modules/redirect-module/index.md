@@ -1,6 +1,11 @@
 ---
 title: Redirect Module
 template: module.html
+module:
+  description: Redirect solution
+  version: v1.0.0
+  github: https://github.com/CondationCMS/redirect-module
+  issues: https://github.com/CondationCMS/redirect-module/issues
 ---
 
 # Redirect Module

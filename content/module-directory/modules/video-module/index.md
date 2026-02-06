@@ -1,6 +1,11 @@
 ---
 title: Video Module
 template: module.html
+module:
+  description: Video solution
+  version: v2.0.1
+  github: https://github.com/CondationCMS/video-module
+  issues: https://github.com/CondationCMS/video-module/issues
 ---
 
 # Video module

@@ -1,6 +1,11 @@
 ---
 title: Forms Module
 template: module.html
+module:
+  description: Forms solution
+  version: v4.1.0
+  github: https://github.com/CondationCMS/forms-module
+  issues: https://github.com/CondationCMS/forms-module/issues
 ---
 
 # Forms module

@@ -1,6 +1,11 @@
 ---
 title: Downloads Module
 template: module.html
+module:
+  description: File download solution
+  version: v3.1.1
+  github: https://github.com/CondationCMS/downloads-module
+  issues: https://github.com/CondationCMS/downloads-module/issues
 ---
 
 # Downloads Module

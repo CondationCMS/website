@@ -8,6 +8,11 @@ seo:
 unpublish_date: null
 published: true
 publish_date: null
+module:
+  description: Seo solution
+  version: v4.0.0
+  github: https://github.com/CondationCMS/seo-module
+  issues: https://github.com/CondationCMS/seo-module/issues
 ---
 
 # Seo Module
