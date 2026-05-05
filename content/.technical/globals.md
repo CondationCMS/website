@@ -2,6 +2,7 @@
 title: Content not found!
 template: globals.html
 cms:
-    version: v2026.01-S12
+  version: v2026.05
 ---
+
 Edit the Globals

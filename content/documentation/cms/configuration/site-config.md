@@ -2,7 +2,7 @@
 title: Site Configuration
 template: documentation/documentation.html
 menu:
-    position: 2
+  position: 2
 ---
 
 # Site Configuration
@@ -20,18 +20,15 @@ context_path = "/"                        # (5)
 content = true                            # (6.1)
 engine = "local"                          # (6.2)
 
-[index.query]
-mode = "MEMORY"                           # (7)
-
 [modules]
-active = ["seo-module"]             # (8)
+active = ["seo-module"]             # (7)
 
 [content]
-type = "text/html"                        # (9.1)
-pipeline = ["markdown", "shortcode"]      # (9.2)
+type = "text/html"                        # (8.1)
+pipeline = ["markdown", "shortcode"]      # (8.2)
 
 [template]
-engine = "system"                      # (10)
+engine = "system"                      # (9)
 ```
 
 ## Site Identity
@@ -74,18 +71,10 @@ When enabled (true), the caching system stores all generated content for a durat
 
 The caching implementation to use. Currently, `local` is the only available implementation, which stores cached content in the local server's memory. As additional cache engines are developed, they can be configured here.
 
-## Index and Query Configuration
-
-**(7) Index Query Mode**
-
-Determines how metadata indexing is handled for the query system. Two modes are available:
-
-- **MEMORY** - Stores all metadata in memory, providing faster query performance but consuming more RAM. Suitable for smaller to medium-sized sites.
-- **PERSISTENT** - Stores metadata persistently on disk, reducing memory consumption. Recommended for large sites where memory consumption from metadata indexing could become problematic.
 
 ## Module Configuration
 
-**(8) Active Modules**
+**(7) Active Modules**
 
 A list of server modules that are required or desired for this site's functionality. Each module provides specific capabilities. At minimum, you must include the module corresponding to your configured template engine (e.g., `thymeleaf-module` for Thymeleaf). Additional modules can be added to extend site functionality with features like advanced content processing, caching strategies, or custom handlers.
 
@@ -93,11 +82,11 @@ A list of server modules that are required or desired for this site's functional
 
 Content configuration defines how your content is processed and what format it is served in.
 
-**(9.1) Default Content Type**
+**(8.1) Default Content Type**
 
 The MIME type used as the default content type when rendering content. The default value is `text/html`, which is appropriate for web-based HTML content. You can specify alternative content types if your site serves different content formats.
 
-**(9.2) Content Pipeline**
+**(8.2) Content Pipeline**
 
 The ordered sequence of processing steps applied to content during the rendering process. Available pipeline processors include:
 
@@ -109,8 +98,8 @@ If you include `template` in the pipeline, it must be the first step in the sequ
 
 ## Template Engine Configuration
 
-**(10) Template Engine**
+**(9) Template Engine**
 
-The template engine used to render dynamic content and templates on the site. The configured engine processes template syntax and generates the final HTML output. Available template engines are documented in the [template engines module documentation](/modules/template-engines). The default template engine is *system*.
+The template engine used to render dynamic content and templates on the site. The configured engine processes template syntax and generates the final HTML output. The default template engine is *system*. At this moment all other implementations are not supported any more but public available at [github](https://github.com/orgs/CondationCMS/repositories)
 
 **Important Note:** If the selected theme has a pre-configured template engine, that engine cannot be overridden with a different one. The theme's template engine takes precedence and must be used.

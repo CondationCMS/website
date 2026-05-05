@@ -73,9 +73,9 @@ Or import the macro in another template
 
 The default template engines allow the registration of custom components.
 ```condation
-{[ component param=12 param2="text value" ]}
+{[ ext:component param=12 param2="text value" ]}
 
-{[ endcomponent ]}
+{[ /ext:component ]}
 ```
 
 ## comments
