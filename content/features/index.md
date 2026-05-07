@@ -1,12 +1,12 @@
 ---
-title: Features
+title: Features - Powerful & Flexible Content Management
 template: content.html
 menu:
   position: 2
 seo:
-  keywords: ''
-  author: ''
-  description: ''
+  keywords: java cms features, flat-file benefits, multisite cms
+  author: CondationCMS
+  description: Explore the powerful features of Condation CMS - from multisite support and flexible templating to its lightning-fast flat-file architecture.
 unpublish_date: null
 published: true
 publish_date: null
