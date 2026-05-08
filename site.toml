@@ -9,4 +9,4 @@ mode = "PERSISTENT"
 active = [ "seo-module" ]
 
 [cache]
-content = true
+content = false
