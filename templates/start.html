@@ -1,55 +1,32 @@
 {% extends "base.html" %}
 
-{% block title %} {{ meta.title }} {% endblock %}
+{% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
-<div class="why row">
-	<div class="p-5 text-center">
-		<div class="container py-5">
-			<h1 >The foundation for effortless content creation</h1>
-			<p class="col-lg-8 mx-auto lead">
-				"We believe that great content is the foundation for successful communication and lasting connections.
-				With Condation, we aim to create the base where ideas can grow and thrive. Our goal is to provide a
-				solid, reliable platform that enables everyone to easily create, manage, and share their content—helping
-				to change the world, one idea at a time."
-			</p>
-		</div>
-	</div>
-</div>
 
-<hr class="mb-5" />
-
-<div class="row row-cols-1 row-cols-md-1 text-center">
-	<h2>Power-packed Java flat-file CMS</h2>
-	<div class="container">
-		Our CMS merges the simplicity of a flat-file system with the power and flexibility of a modern Java-based architecture. 
-		Designed to empower developers, it delivers innovative features and lightning-fast performance. 
-		Whether for small websites or complex applications, this CMS is the perfect solution for every challenge.
-		<hr style="width: 50%; text-align: center;" class="mx-auto mt-5 mb-5" />
-	</div>
-</div>
-
-<div>
-	{% assign roles = nodeList.from("/roles/*").list() %}
-	{% for entry in roles.items %}
-	<div class="entry card">
-		<div class="card-body">
-			<h4 class="card-title">{{ entry.name }}</h4>
-			<h6>{{ entry.meta['publish_date'] | date('dd-MM-yyyy') }}</h6>
-			<p class="card-text">{{ entry.content}}</p>
-			<a href="{{ entry.path}}" class="btn btn-primary">read more</a>
-		</div>
-	</div>
-	<hr />
-	{% endfor %}
-</div>
-
-<div class="row row-cols-1 row-cols-md-3">
-	{% if sections.containsKey('features') %}
-		{% for feature in sections.get('features') %}
-			{{ feature.content | raw }}
+<div
+{{ ext.ui.toolbar("content", "sections", ["addSection", "orderSections"], { "sectionName": "content"}) | raw }}
+>
+	{% if node.sections.containsKey('content') %}
+		{% for content in node.sections.get('content') %}
+			{{ content.content | raw }}
 		{% endfor %}
 	{% endif %}
+</div>
+
+<div
+{{ ext.ui.toolbar("features", "sections", ["addSection", "orderSections"], { "sectionName": "features"}) | raw }}
+>
+	<section id="about" class="mb-12">
+		<h2 class="text-3xl font-bold text-gray-900 mb-4">Features</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			{% if node.sections.containsKey('features') %}
+				{% for feature in node.sections.get('features') %}
+					{{ feature.content | raw }}
+				{% endfor %}
+			{% endif %}
+		</div>
+	</section>
 </div>
 
 

@@ -1,0 +1,143 @@
+<!-- Sidebar Navigation (Desktop) -->
+<aside
+    class="hidden lg:flex lg:flex-col w-80 border-r border-gray-200 bg-white sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+    <div class="px-6 py-6 border-b border-gray-200">
+        <h2 class="text-lg font-bold text-gray-900">Documentation</h2>
+        <p class="text-xs text-gray-500 mt-1">
+            {% assign globals = select_node("/.technical/globals") %} 
+            {% if !empty(globals) %} Version: {{ globals.meta.get('cms.version') }} 
+            {% else %} Version: undefined 
+            {% endif %} 
+        </p>
+    </div>
+
+    <nav class="flex-1 px-4 py-6 space-y-6 text-sm">
+        <!-- Dynamic Navigation Items -->
+        {% for item in cms.navigation.list("/documentation/cms", 2) %}
+        <div>
+            <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                {{ item.name }}
+            </p>
+            <ul class="space-y-1">
+                {% for child in item.children() %}
+                <li>
+                    <a href="{{ child.path }}"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium nav-link {% if child.current %}active{% endif %}">
+                        {{ child.name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}    
+    </nav>
+</aside>
+
+<!-- Mobile Sidebar Toggle Button (Mobile only) -->
+<button id="doc-nav-toggle"
+    class="lg:hidden fixed bottom-6 left-6 z-40 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+    aria-label="Dokumentations-Navigation öffnen">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+</button>
+
+<!-- Mobile Sidebar Navigation -->
+<div id="doc-nav-mobile"
+    class="doc-nav-mobile lg:hidden fixed inset-0 top-16 bg-white border-r border-gray-200 w-72 overflow-y-auto z-30">
+    <nav class="flex-1 px-4 py-6 space-y-6 text-sm">
+
+        <!-- Dynamic Navigation Items -->
+        {% for item in cms.navigation.list("/documentation/cms", 2) %}
+        <div>
+            <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                {{ item.name }}
+            </p>
+            <ul class="space-y-1">
+                {% for child in item.children() %}
+                <li>
+                    <a href="{{ child.path }}"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        {{ child.name }}
+                    </a>
+                </li>
+                {% endfor %}
+        </div>
+        {% endfor %}
+
+        <!-- Section: Grundlagen -->
+        <div>
+            <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                Grundlagen
+            </p>
+            <ul class="space-y-1">
+                <li>
+                    <a href="#einleitung"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Einleitung
+                    </a>
+                </li>
+                <li>
+                    <a href="#installation"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Installation
+                    </a>
+                </li>
+                <li>
+                    <a href="#struktur"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Projektstruktur
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Section: Komponenten -->
+        <div>
+            <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                Komponenten
+            </p>
+            <ul class="space-y-1">
+                <li>
+                    <a href="#buttons"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Buttons
+                    </a>
+                </li>
+                <li>
+                    <a href="#cards"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Cards
+                    </a>
+                </li>
+                <li>
+                    <a href="#forms"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Formulare
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Section: Erweiterte Themen -->
+        <div>
+            <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                Erweitert
+            </p>
+            <ul class="space-y-1">
+                <li>
+                    <a href="#theming"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Theming
+                    </a>
+                </li>
+                <li>
+                    <a href="#deployment"
+                        class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                        Deployment
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

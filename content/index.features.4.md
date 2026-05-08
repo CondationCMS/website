@@ -1,9 +1,14 @@
 ---
 title: Templates
 template: sections/feature.html
-link: /features/templates
+link: /features#templates
 menu:
-    position: 1
+  position: 1
+unpublish_date: null
+publish_date: null
+published: true
+layout:
+  order: 0
 ---
 
-CondationCMS brings its one mature template engine. But overs support for most used open source template engines.
+ConditionCMS comes equipped with a powerful, production-ready template engine. If your project demands a different templating approach, the modular architecture allows you to integrate any template engine through custom Java modules.

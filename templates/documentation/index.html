@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %} {{ meta.title }} {% endblock %}
+{% block title %} {{ node.meta.title }} {% endblock %}
 
 {% block content %}
-{{ content | raw }}
+<div style="min-height: 50px;" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"], {"form": "attributes"}) | raw }}>
+    {{ content | raw }}
+</div>
 {% endblock %}

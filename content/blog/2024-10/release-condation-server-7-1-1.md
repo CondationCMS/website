@@ -1,9 +1,13 @@
 ---
-title: "[Release] CondationCMS server version 7.1.1"
+title: '[Release] CondationCMS server version 7.1.1'
 seo:
-    description: "Today, we released CondationCMS version 7.1.1"
-publish_date: 2024-10-24
+  description: Today, we released CondationCMS version 7.1.1
+  keywords: ''
+  author: ''
+publish_date: 2024-10-24T00:00:00Z
 template: blog-entry.html
+unpublish_date: null
+published: true
 ---
 
 Today we released version 7.1.1 of the CondationCMS server.

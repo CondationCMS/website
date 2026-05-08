@@ -1,6 +1,6 @@
 ---
 title: Content creators
-template: documentation/index.html
+template: content.html
 menu:
     position: 2
 ---

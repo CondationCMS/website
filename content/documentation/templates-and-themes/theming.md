@@ -23,32 +23,26 @@ Support for themes allows the reuse of templates, extensions, assets and message
 name = "test"
 
 \[template\]
-engine = "thymeleaf"
+engine = "system"
 
 \[modules\]
-active = \[ "thymeleaf-module", "search-module" \]
+active = \[ "search-module" \]
 ```
 
-### Name
-
+### required configuration
+#### Name
 Each theme requires a unique name. It can then be referenced in a site using this name.
 
-### Parent theme name
+### optional configuration
+#### Parent theme name
+A theme can have a parent theme. If the parent is defined, everything (style, assets, templates, properties) are inherited from that parent. It is possible to override parts in the child theme.
 
-A theme can have a parent theme.
+#### Template-Engine
+Each theme can define a template engine. If an engine is defined, it cannot be changed for a site. If no template engine is configured, the default twig like system template engine (*system*) is used.
 
-### Template-Engine
-
-Each theme can define a template engine. If an engine is defined, it cannot be changed for a site
-
-### Active modules
-
+#### Active modules
 List of modules that are required for this theme. This list can be extended in the respective site.
 
-### Media formats
-
-A list of media formats that are required in the theme can be configured here. This list can be extended in the site.
-
-## Overwrite templates in a site
-
-To overwrite a template in a site, a template with the same name must be created in the *host/templates* folder. If the template is in a subfolder, the subfolder must also be created accordingly.
+## Overwrite templates
+It is possible to override single template files in a child theme or in the site.
+A template with the same name must be created in the */templates* folder of the theme or site. If the template is in a subfolder, the subfolder must also be created accordingly.

@@ -1,6 +1,7 @@
 ---
 title: In open source we trust
 template: content.html
+published: true
 menu:
     position: 2
 ---

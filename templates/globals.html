@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} {{ node.meta.title }} {% endblock %}
+
+{% block header_contrib %}
+<link rel="stylesheet" href="{{ cms.links.createUrl('/assets/documentation.css') }}" />
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+<main class="main-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+{{ ext.ui.toolbar("main", "main", ["editAttributes"], {"form": "attributes"}) | raw }}
+>
+{{ content | raw }}
+</main>
+{% endblock %}

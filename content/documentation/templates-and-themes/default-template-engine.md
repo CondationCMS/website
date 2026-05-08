@@ -2,37 +2,43 @@
 title: Default template engine
 template: documentation/content.html
 menu:
-    position: 20
+  position: 20
 ---
 
 # Default template engine
 
-The default template engine has simple intuitive syntax inspired by twig an liquid.
+The default template engine has a simple, intuitive syntax inspired by twig. We do not provide complete compatibility to twig.
+
+## Reserved word
+
+Some names are used to provide default functionality and are not allowed to be used.
+
+*node*, *cms*
 
 ## Variables
 
 Variables are escaped by default
 
-```twig
+```condation
 {{ variable }}
 {{ node.meta.title }}
 ```
 
 Printing the unescaped content of a variable.
 
-```twig
+```condation
 {{ variable | raw }}
 ```
 
 ## assign variables
 
-```twig
+```condation
 {% assign variable = 5 %}
 ```
 
 ## if-elseif-else
 
-```twig
+```condation
 {% if <expression> %}
 {% elseif <expression> %}
 {% else %}
@@ -41,14 +47,14 @@ Printing the unescaped content of a variable.
 
 ## for
 
-```twig
+```condation
 {% for item in items %}
     {{ look.index }}
 {% endfor %}
 ```
 ## include
 
-```twig
+```condation
 {% include 'fragement.html' %}
 ```
 
@@ -56,7 +62,7 @@ Printing the unescaped content of a variable.
 
 Definition and usage of a macro
 
-```twig
+```condation
 {% macro hello(name) %}
     Hello {{ name }}
 {% endmacro %}
@@ -66,7 +72,7 @@ Definition and usage of a macro
 
 Or import the macro in another template
 
-```twig
+```condation
 {% import 'macros.html' %}
 
 {{ hello('CondationCMS') }}
@@ -76,16 +82,22 @@ Or import the macro in another template
 
 The default template engines allow the registration of custom components.
 
-```twig
-{[component param=12 param2="text value"]}
+```condation
+{[ component param=12 param2="text value" ]}
 
-{[endcomponent]}
+{[ endcomponent ]}
+```
+
+## comments
+
+```condation
+{# this is a comment #}
 ```
 
 ## layouts with extends and blocks
 
 in base template
-```twig
+```condation
 {% block header %}
 {% endblock %}
 
@@ -94,7 +106,7 @@ in base template
 ```
 
 in child template
-```twig
+```condation
 
 {% extends 'base.html' %}
 

@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./layout.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo / Projekt Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        MyProject
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex md:items-center md:gap-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button id="hamburger-btn"
+                    class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors"
+                    aria-label="Navigation öffnen" aria-expanded="false">
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden md:hidden border-t border-gray-200">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#home"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html"
+                        class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button
+                        class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Plugin Header -->
+    <section class="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+                <div>
+                    <a href="plugins.html" class="inline-flex items-center gap-2 text-blue-100 hover:text-white mb-4 text-sm">
+                        <i class="bi bi-chevron-left"></i>
+                        Zurück zu Plugins
+                    </a>
+                    <h1 class="text-4xl font-bold mb-2">Auth Plugin</h1>
+                    <p class="text-blue-100 text-lg">Vollständige Authentifizierung mit JWT, OAuth2 und Social Login Support</p>
+                </div>
+                <div class="flex flex-col items-start md:items-end gap-3">
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-lg font-semibold">v2.1.0</span>
+                    <div class="flex gap-2">
+                        <button class="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold flex items-center gap-2">
+                            <i class="bi bi-download"></i>
+                            Installieren
+                        </button>
+                        <button class="border-2 border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors font-semibold flex items-center gap-2">
+                            <i class="bi bi-star"></i>
+                            Favorit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-white rounded-lg p-4 text-center border border-gray-200">
+                        <p class="text-3xl font-bold text-blue-600">128</p>
+                        <p class="text-sm text-gray-600">Bewertungen</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center border border-gray-200">
+                        <p class="text-3xl font-bold text-yellow-500">★★★★★</p>
+                        <p class="text-sm text-gray-600">Bewertung</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center border border-gray-200">
+                        <p class="text-3xl font-bold text-green-600">25K+</p>
+                        <p class="text-sm text-gray-600">Downloads</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center border border-gray-200">
+                        <p class="text-3xl font-bold text-purple-600">98%</p>
+                        <p class="text-sm text-gray-600">Kompatibilität</p>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="bg-white rounded-lg border border-gray-200 mb-8">
+                    <div class="border-b border-gray-200 flex overflow-x-auto">
+                        <button class="tab-btn active flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors" data-tab="overview">
+                            Übersicht
+                        </button>
+                        <button class="tab-btn flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors" data-tab="features">
+                            Features
+                        </button>
+                        <button class="tab-btn flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors" data-tab="installation">
+                            Installation
+                        </button>
+                        <button class="tab-btn flex-1 px-4 py-3 text-center font-semibold text-gray-700 hover:text-blue-600 transition-colors" data-tab="reviews">
+                            Bewertungen
+                        </button>
+                    </div>
+
+                    <!-- Overview Tab -->
+                    <div id="overview" class="tab-content active p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Übersicht</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Das Auth Plugin bietet eine vollständige, produktionsreife Authentifizierungslösung für Ihre Anwendungen. Es unterstützt multiple Authentifizierungsmethoden und ist einfach zu integrieren.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Mit diesem Plugin können Sie Benutzer-Management, Session-Handling und API-Authentifizierung in wenigen Minuten implementieren.
+                        </p>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Unterstützte Systeme</h3>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-700">
+                                <i class="bi bi-check-circle-fill text-green-600"></i>
+                                Node.js 16.0+
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-700">
+                                <i class="bi bi-check-circle-fill text-green-600"></i>
+                                Python 3.8+
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-700">
+                                <i class="bi bi-check-circle-fill text-green-600"></i>
+                                PHP 7.4+
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-700">
+                                <i class="bi bi-check-circle-fill text-green-600"></i>
+                                Java 11+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Features Tab -->
+                    <div id="features" class="tab-content p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Features</h2>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-shield-check text-blue-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900">JWT & OAuth2 Support</h3>
+                                    <p class="text-gray-600 text-sm">Sichere Token-basierte Authentifizierung mit modernen Standards</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-facebook text-blue-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900">Social Login</h3>
+                                    <p class="text-gray-600 text-sm">Integration mit Google, Facebook, GitHub und mehr</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-key-fill text-blue-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900">2FA & MFA</h3>
+                                    <p class="text-gray-600 text-sm">Zwei-Faktor und Multi-Faktor-Authentifizierung</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-person-lock text-blue-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900">Role-Based Access Control</h3>
+                                    <p class="text-gray-600 text-sm">Flexible Berechtigungsverwaltung mit Rollen und Scopes</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-graph-up text-blue-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900">Analytics & Logging</h3>
+                                    <p class="text-gray-600 text-sm">Detaillierte Logs und Metriken für alle Authentifizierungsvorgänge</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Installation Tab -->
+                    <div id="installation" class="tab-content p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Installation</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Installieren Sie das Auth Plugin mit npm:
+                        </p>
+                        <div class="bg-gray-900 text-gray-100 p-4 rounded-lg mb-6 overflow-x-auto">
+                            <pre class="text-sm font-mono">npm install @myproject/auth-plugin</pre>
+                        </div>
+
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Konfiguration</h3>
+                        <div class="bg-gray-900 text-gray-100 p-4 rounded-lg mb-6 overflow-x-auto">
+                            <pre class="text-sm font-mono">const Auth = require('@myproject/auth-plugin');
+
+const auth = new Auth({
+  secret: 'your-secret-key',
+  jwtExpiry: '24h',
+  providers: {
+    google: {
+      clientId: 'your-client-id',
+      clientSecret: 'your-client-secret'
+    }
+  }
+});</pre>
+                        </div>
+
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Weitere Ressourcen</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2">
+                                    <i class="bi bi-book"></i>
+                                    Komplette Dokumentation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2">
+                                    <i class="bi bi-github"></i>
+                                    GitHub Repository
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2">
+                                    <i class="bi bi-question-circle"></i>
+                                    FAQ & Support
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div id="reviews" class="tab-content p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Bewertungen</h2>
+
+                        <!-- Review 1 -->
+                        <div class="border-b border-gray-200 pb-6 mb-6">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <p class="font-semibold text-gray-900">John Developer</p>
+                                    <p class="text-sm text-gray-500">vor 2 Wochen</p>
+                                </div>
+                                <span class="text-yellow-500">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700">
+                                Absolut großartig! Dieses Plugin hat meine Entwicklungszeit um 50% reduziert. Die Dokumentation ist ausgezeichnet und der Support ist sehr responsiv.
+                            </p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="border-b border-gray-200 pb-6 mb-6">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <p class="font-semibold text-gray-900">Sarah Designer</p>
+                                    <p class="text-sm text-gray-500">vor 1 Monat</p>
+                                </div>
+                                <span class="text-yellow-500">★★★★☆</span>
+                            </div>
+                            <p class="text-gray-700">
+                                Sehr solides Plugin mit guten Features. Wäre perfekt, wenn es noch bessere Customization-Optionen für die Login-UI gäbe.
+                            </p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="pb-6">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <p class="font-semibold text-gray-900">Mike Backend</p>
+                                    <p class="text-sm text-gray-500">vor 3 Wochen</p>
+                                </div>
+                                <span class="text-yellow-500">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700">
+                                Die beste Auth-Lösung, die ich je verwendet habe. OAuth2-Integration war noch nie so einfach. Empfehle ich allen meinen Kollegen!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Info Card -->
+                <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6 sticky top-20">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Plugin Info</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Autor</p>
+                            <p class="font-semibold text-gray-900">MyProject Team</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Lizenz</p>
+                            <p class="font-semibold text-gray-900">MIT</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Letzte Aktualisierung</p>
+                            <p class="font-semibold text-gray-900">15. Januar 2026</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Paketgröße</p>
+                            <p class="font-semibold text-gray-900">125 KB</p>
+                        </div>
+                    </div>
+
+                    <hr class="mb-6">
+
+                    <h4 class="font-semibold text-gray-900 mb-3">Abhängigkeiten</h4>
+                    <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="bi bi-box text-gray-400"></i>
+                            jsonwebtoken ^9.0.0
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="bi bi-box text-gray-400"></i>
+                            bcryptjs ^2.4.3
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="bi bi-box text-gray-400"></i>
+                            passport ^0.6.0
+                        </li>
+                    </ul>
+
+                    <hr class="mb-6">
+
+                    <h4 class="font-semibold text-gray-900 mb-3">Links</h4>
+                    <div class="space-y-2">
+                        <a href="#" class="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                            <i class="bi bi-globe"></i>
+                            Website
+                        </a>
+                        <a href="#" class="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+                        <a href="#" class="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                            <i class="bi bi-bug"></i>
+                            Issue Tracker
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Plugins -->
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Ähnliche Plugins</h3>
+                    
+                    <div class="space-y-3">
+                        <a href="#" class="block p-3 border border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors">
+                            <p class="font-semibold text-gray-900 text-sm">Database Plugin</p>
+                            <p class="text-xs text-gray-600 mt-1">ORM & Query Builder</p>
+                        </a>
+                        <a href="#" class="block p-3 border border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors">
+                            <p class="font-semibold text-gray-900 text-sm">Cache Plugin</p>
+                            <p class="text-xs text-gray-600 mt-1">Redis & Memcached</p>
+                        </a>
+                        <a href="#" class="block p-3 border border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors">
+                            <p class="font-semibold text-gray-900 text-sm">Payment Plugin</p>
+                            <p class="text-xs text-gray-600 mt-1">Stripe, PayPal Integration</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>

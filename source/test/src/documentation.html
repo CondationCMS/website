@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./layout.css" rel="stylesheet">
+  <link href="./documentation.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <!-- Logo / Projekt Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        MyProject
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex md:items-center md:gap-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button 
+                    id="hamburger-btn"
+                    class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors"
+                    aria-label="Navigation öffnen"
+                    aria-expanded="false">
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                    <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div 
+                id="mobile-menu"
+                class="mobile-menu hidden md:hidden border-t border-gray-200">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#home" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Home
+                    </a>
+                    <a href="#about" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Über uns
+                    </a>
+                    <a href="#services" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Services
+                    </a>
+                    <a href="#portfolio" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Portfolio
+                    </a>
+                    <a href="blog.overview.html" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
+                        Blog
+                    </a>
+                    <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Buchen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Layout -->
+    <div class="min-h-screen flex">
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="hidden lg:flex lg:flex-col w-80 border-r border-gray-200 bg-white sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+            <div class="px-6 py-6 border-b border-gray-200">
+                <h2 class="text-lg font-bold text-gray-900">Dokumentation</h2>
+                <p class="text-xs text-gray-500 mt-1">Version 1.0.0</p>
+            </div>
+
+            <nav class="flex-1 px-4 py-6 space-y-6 text-sm">
+                <!-- Section: Grundlagen -->
+                <div>
+                    <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                        Grundlagen
+                    </p>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#einleitung" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium nav-link active">
+                                Einleitung
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#installation" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium nav-link">
+                                Installation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#struktur" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Projektstruktur
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section: Komponenten -->
+                <div>
+                    <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                        Komponenten
+                    </p>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#buttons" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Buttons
+                            </a>
+                        </li>
+
+                        <!-- Submenu: Navigation -->
+                        <li>
+                            <button 
+                                class="submenu-toggle w-full flex items-center justify-between px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 transition-colors font-medium group"
+                                data-toggle="nav-submenu">
+                                <span>Navigation</span>
+                                <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="nav-submenu" class="submenu ml-3 mt-1 border-l-2 border-gray-200 pl-3 space-y-1">
+                                <li>
+                                    <a href="#nav-basic" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm">
+                                        Basis Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#nav-responsive" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm">
+                                        Responsive Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#nav-mobile" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm">
+                                        Mobile Menu
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#cards" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Cards
+                            </a>
+                        </li>
+
+                        <!-- Submenu: Forms -->
+                        <li>
+                            <button 
+                                class="submenu-toggle w-full flex items-center justify-between px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 transition-colors font-medium group"
+                                data-toggle="forms-submenu">
+                                <span>Formulare</span>
+                                <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="forms-submenu" class="submenu ml-3 mt-1 border-l-2 border-gray-200 pl-3 space-y-1">
+                                <li>
+                                    <a href="#form-inputs" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm">
+                                        Eingabefelder
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#form-select" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm">
+                                        Select Felder
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#form-textarea" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm">
+                                        Textbereiche
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section: Erweiterte Themen -->
+                <div>
+                    <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                        Erweitert
+                    </p>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#theming" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Theming
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#performance" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Performance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#deployment" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Deployment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Mobile Sidebar Toggle Button (Mobile only) -->
+        <button 
+            id="doc-nav-toggle"
+            class="lg:hidden fixed bottom-6 left-6 z-40 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+            aria-label="Dokumentations-Navigation öffnen">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Mobile Sidebar Navigation -->
+        <div id="doc-nav-mobile" class="doc-nav-mobile lg:hidden fixed inset-0 top-16 bg-white border-r border-gray-200 w-72 overflow-y-auto z-30">
+            <nav class="flex-1 px-4 py-6 space-y-6 text-sm">
+                <!-- Section: Grundlagen -->
+                <div>
+                    <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                        Grundlagen
+                    </p>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#einleitung" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Einleitung
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#installation" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Installation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#struktur" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Projektstruktur
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section: Komponenten -->
+                <div>
+                    <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                        Komponenten
+                    </p>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#buttons" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Buttons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cards" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Cards
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#forms" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Formulare
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section: Erweiterte Themen -->
+                <div>
+                    <p class="uppercase text-xs font-semibold text-gray-400 tracking-wide mb-3 px-2">
+                        Erweitert
+                    </p>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#theming" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Theming
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#deployment" class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                                Deployment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                
+                <!-- Breadcrumb -->
+                <div class="flex items-center gap-2 text-sm text-gray-600 mb-8">
+                    <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-gray-900 font-medium">Dokumentation</span>
+                </div>
+
+                <!-- Header -->
+                <div class="mb-12">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Dokumentation</h1>
+                    <p class="text-lg text-gray-600 max-w-2xl">
+                        Vollständige Anleitung für die Verwendung von MyProject. Von der Installation bis zu erweiterten Konzepten.
+                    </p>
+                </div>
+
+                <!-- Content Sections -->
+                <article class="space-y-12">
+                    
+                    <!-- Section 1 -->
+                    <section id="einleitung">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Einleitung</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            MyProject ist ein modernes Frontend-Starterkit, das auf Tailwind CSS v4 basiert. Es bietet Ihnen eine vollständige Sammlung von responsiven Komponenten und Best Practices für schnelle Webentwicklung.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Diese Dokumentation führt Sie durch alle Features und zeigt Ihnen, wie Sie MyProject in Ihren Projekten einsetzen.
+                        </p>
+                    </section>
+
+                    <!-- Section 2 -->
+                    <section id="installation">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Installation</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Um mit MyProject zu starten, folgen Sie diesen einfachen Schritten:
+                        </p>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+                            <li>Laden Sie das neueste Release herunter</li>
+                            <li>Entpacken Sie die Dateien in Ihr Projektverzeichnis</li>
+                            <li>Installieren Sie die Abhängigkeiten mit npm install</li>
+                            <li>Starten Sie die Entwicklungsserver mit npm run dev</li>
+                        </ol>
+                        <div class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6">
+                            <pre class="text-sm font-mono"><code>npm install
+npm run dev</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Section 3 -->
+                    <section id="struktur">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Projektstruktur</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            MyProject folgt einer klaren Verzeichnisstruktur:
+                        </p>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                            <div class="space-y-2 font-mono text-sm">
+                                <div class="text-gray-800">myproject/</div>
+                                <div class="ml-4 text-gray-700">├── src/</div>
+                                <div class="ml-8 text-gray-700">│   ├── components/</div>
+                                <div class="ml-8 text-gray-700">│   ├── pages/</div>
+                                <div class="ml-8 text-gray-700">│   └── styles/</div>
+                                <div class="ml-4 text-gray-700">├── public/</div>
+                                <div class="ml-4 text-gray-700">├── tailwind.config.js</div>
+                                <div class="ml-4 text-gray-700">└── package.json</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 4 -->
+                    <section id="buttons">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Buttons</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            MyProject bietet verschiedene Button-Varianten für unterschiedliche Zwecke.
+                        </p>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Primärer Button</h3>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                                Primärer Button
+                            </button>
+                        </div>
+
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Sekundärer Button</h3>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                            <button class="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold">
+                                Sekundärer Button
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Section 5 -->
+                    <section id="cards">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Cards</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Cards sind vielseitige Container für verschiedene Inhaltstypen.
+                        </p>
+                        
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Card Titel</h3>
+                            <p class="text-gray-600">
+                                Dies ist ein Beispiel für eine Card-Komponente. Sie können sie für verschiedene Inhalte verwenden.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Section 6 -->
+                    <section id="theming">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Theming</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            MyProject unterstützt einfaches Theming durch die tailwind.config.js Datei. Sie können Farben, Fonts und andere Design-Token anpassen.
+                        </p>
+                    </section>
+
+                </article>
+
+                <!-- Pagination / Navigation -->
+                <div class="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
+                    <button class="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2">
+                        ← Vorherige Seite
+                    </button>
+                    <button class="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2">
+                        Nächste Seite →
+                    </button>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./layout.js"></script>
+    <script src="documentation.js"></script>
+</body>
+</html>

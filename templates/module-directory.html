@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %} {{ node.meta.title }} {% endblock %}
+
+{% block content %}
+<section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h1 class="text-4xl font-bold text-gray-900 mb-4">{{ node.meta.title }}</h1>
+		<p class="text-lg text-gray-700" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"], {"form": "attributes"}) | raw }}>
+			{{ node.content | raw }}
+		</p>
+	</div>
+</section>
+
+
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+	<!-- Plugin Grid -->
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+		{% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
+        {% assign modules = cms.nodeList.from("/module-directory/modules/*").sort("title").size(6).page(pageNumber).list() %}
+        {% for entry in modules.items %}
+		<div
+			class="plugin-card bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden border border-gray-200">
+			<div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+				<i class="bi {{ entry.meta.getOrDefault('icon', 'bi-plugin') }} text-white" style="font-size: 3rem;"></i>
+			</div>
+			<div class="p-6">
+				<div class="flex items-start justify-between mb-2">
+					<h3 class="text-xl font-bold text-gray-900">{{ entry.name }}</h3>
+				</div>
+				<p class="text-gray-600 text-sm mb-4">
+					{{ entry.content}}
+				</p>
+				<a href="{{ entry.path}}"
+					class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+					read more
+				</a>
+			</div>
+		</div>
+        {% endfor %}
+	</div>
+	<!-- Pagination -->
+	<nav class="flex justify-center items-center gap-2 py-8 border-t border-gray-200">
+		{% if modules.page == 1 %}
+			<p class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 transition-colors" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</p>
+			{% else %}
+			{% assign prevLink = requestContext.uri + "?page=" + (modules.page - 1) %}
+			<a class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" href="{{ cms.links.createUrl(prevLink) }}" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</a>
+			{% endif %}
+			{% if modules.page == modules.totalPages %}
+			<p class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 transition-colors"  aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</p>
+			{% else %}
+			{% assign nextLink = requestContext.uri + "?page=" + (modules.page + 1) %}
+			<a class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" href="{{ cms.links.createUrl(nextLink) }}" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</a>
+		{% endif %}
+	</nav>
+</main>
+
+{% endblock %}

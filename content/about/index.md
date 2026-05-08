@@ -1,6 +1,7 @@
 ---
 title: About
 template: content.html
+published: true
 menu:
     position: 1
 ---

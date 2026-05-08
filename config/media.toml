@@ -1,0 +1,35 @@
+[[formats]]
+name = "small"
+width = 256
+height = 256
+format = "webp"
+compression = true
+
+[[formats]]
+name = "128"
+width = 128
+height = 128
+format = "webp"
+compression = true
+
+[[formats]]
+name = "64"
+width = 64
+height = 64
+format = "webp"
+compression = true
+
+[[formats]]
+name = "big"
+width = 512
+height = 512
+format = "webp"
+compression = true
+
+[[formats]]
+name = "test2"
+width = 72
+height = 72
+format = "webp"
+compression = true
+

@@ -5,17 +5,20 @@ menu:
     position: 20
 ---
 
-Next to our [default template engine](/documentation/templates-and-themes/default-template-engine), we provide modules for the most commonly used java template engines.
-
-Various template engines are available for creating templates.
-You can find information about the available engines here: [module](/modules/template-engines)
-
+Next to our [default template engine](/documentation/templates-and-themes/default-template-engine), it is possible to implement a custom module to use the template of your choice.
 
 ## Template functions
 
-Template functions are handy helpers to
+Template functions are handy helpers.
+Also core template functions are in the cms namespace.
 
-### Link function
+### Links function
+
+The **links** helper 
+
+```condation
+{{ cms.links.createUrl("/about") }}
+```
 
 ### Navigation function
 

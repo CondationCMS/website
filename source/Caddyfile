@@ -1,0 +1,13 @@
+condation.com {
+    # SSE benötigt oft deaktiviertes Response-Buffering, 
+    # damit Nachrichten sofort beim Client ankommen.
+    reverse_proxy localhost:2020 {
+        # Verhindert, dass Caddy die Antwort zwischenspeichert
+        flush_interval -1
+    }
+
+    # Optional: Sicherheitshalber die Timeouts für lange Streams erhöhen
+    request_header {
+        Connection keep-alive
+    }
+}

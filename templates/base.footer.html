@@ -1,26 +1,20 @@
-<div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 CondationCMS</span>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Copyright Bottom Bar -->
+        <div class="border-t border-gray-800 pt-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-gray-400">
+                <div class="order-2 md:order-1">
+                    <p>&copy; 2026 Condation</p>
+                </div>
+                <div class="flex flex-wrap gap-6 order-1 md:order-2">
+                    {% assign nodes = cms.navigation.list("/about/") %}
+                    {% for item in nodes %}
+                        <a href="{{ item.path }}" class="hover:text-white transition-colors">{{ item.name }}</a>
+                    {% endfor %}
+                    <a href="https://github.com/CondationCMS" class="hover:text-white transition-colors"><i class="bi-github"></i></a>
+                </div>
+            </div>
         </div>
-
-
-        <ul class="nav justify-content-center ">
-            {% assign nodes = navigation.list("/about/") %}
-            {% for node in nodes %}
-            <li class="nav-item">
-                <a href="{{ node.path }}" class="nav-link px-2 text-body-secondary">{{node.name}}</a>
-            </li>
-            {% endfor %}
-        </ul>
-
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
-                <a class="text-body-secondary" href="https://github.com/CondationCMS">
-                    <i class="bi-github"></i>
-                </a>
-            </li>
-        </ul>
-    </footer>
-</div>
+    </div>
+</footer>

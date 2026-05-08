@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+
+/* cutsom start */
+@layer components {
+    .link-disabled {
+        @apply pointer-events-none opacity-50 grayscale cursor-not-allowed select-none;
+        /* Du kannst hier auch normales CSS mischen */
+        text-decoration: none;
+    }
+}
+
+/* custom end*/
+
+/* Smooth transitions für Mobile Menu */
+.mobile-menu {
+    transition: all 300ms ease-in-out;
+}
+
+.mobile-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+}
+
+.mobile-menu:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+}
+
+/* Hamburger Icon Animation */
+.hamburger-line {
+    transition: all 300ms ease-in-out;
+    transform-origin: center;
+}
+
+.hamburger-line:nth-child(1) {
+    transform: translateY(0);
+}
+
+.hamburger-line:nth-child(3) {
+    transform: translateY(0);
+}
+
+.menu-open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Artikel Content Styling */
+.article-content h2 {
+    @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+}
+
+.article-content h3 {
+    @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+}
+
+.article-content p {
+    @apply text-gray-700 leading-relaxed mb-4;
+}
+
+.article-content ul {
+    @apply list-disc list-inside text-gray-700 mb-4 space-y-2;
+}
+
+.article-content ol {
+    @apply list-decimal list-inside text-gray-700 mb-4 space-y-2;
+}
+
+.article-content blockquote {
+    @apply border-l-4 border-blue-600 pl-4 italic text-gray-600 my-6 py-2;
+}
+
+.article-content code {
+    @apply bg-gray-100 text-red-600 px-2 py-1 rounded text-sm font-mono;
+}
+
+.article-content pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.article-content pre code {
+    @apply bg-transparent text-gray-100 p-0;
+}
+
+/* Portfolio Filter */
+.filter-btn {
+    transition: all 300ms ease-in-out;
+}
+
+.filter-btn.active {
+    @apply bg-blue-600 text-white border-blue-600;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    transition: all 300ms ease-in-out;
+    opacity: 1;
+    display: block;
+}
+
+.portfolio-item.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(37, 99, 235, 0.9);
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* Sidebar Mobile Menu */
+.doc-nav-mobile {
+    transition: all 300ms ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.doc-nav-mobile.open {
+    max-height: 800px;
+}
+
+/* Submenu Toggle */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in-out;
+}
+
+.submenu.open {
+    max-height: 500px;
+}
+
+.submenu-toggle.active svg {
+    transform: rotate(180deg);
+}
+
+/* Plugin Card Hover */
+.plugin-card {
+    transition: all 300ms ease-in-out;
+}
+
+.plugin-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Tabs */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-btn.active {
+    @apply border-b-2 border-blue-600 text-blue-600;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    @apply bg-blue-100 text-blue-600 font-semibold;
+}
+
+.nav-link {
+    transition: all 300ms ease-in-out;
+}
