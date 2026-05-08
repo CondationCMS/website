@@ -7,7 +7,7 @@ seo:
 publish_date: 2026-01-01T00:00:00Z
 template: blog-entry.html
 unpublish_date: null
-published: false
+published: true
 ---
 
 Today we released version v2026.01 of the CondationCMS server.
