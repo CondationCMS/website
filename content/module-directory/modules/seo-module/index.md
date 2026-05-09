@@ -15,7 +15,7 @@ module:
   issues: https://github.com/CondationCMS/seo-module/issues
   license: GPLv3
   author: ''
-  descirption: ''
+  description: ''
   installation: |-
     Installation using the cli
 

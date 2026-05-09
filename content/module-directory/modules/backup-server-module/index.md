@@ -31,7 +31,7 @@ module:
     ```
   author: Condation
   license: GPLv3
-  descirption: ''
+  description: ''
 ---
 
 # Backup module

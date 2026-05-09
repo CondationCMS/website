@@ -86,7 +86,7 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 			attributes: {
 				fields: [
 					{
-						name: "module.descirption",
+						name: "module.description",
 						type: "text",
 						title: "Module Description"
 					},
