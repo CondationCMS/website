@@ -3,6 +3,9 @@ title: Site Configuration
 template: documentation/documentation.html
 menu:
   position: 2
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 # Site Configuration

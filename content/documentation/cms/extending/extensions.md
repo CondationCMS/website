@@ -3,6 +3,9 @@ title: Extensions
 template: documentation/documentation.html
 menu:
   position: 1
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 CondationCMS offers different ways add new features to the cms. One of them are extensions.

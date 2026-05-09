@@ -3,6 +3,9 @@ title: Manager
 template: documentation/documentation.html
 menu:
   position: 1
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 The manager is a new way to create content. 

@@ -1,6 +1,9 @@
 ---
 title: Theming
 template: documentation/documentation.html
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 Support for themes allows the reuse of templates, extensions, assets and messages in different sites.

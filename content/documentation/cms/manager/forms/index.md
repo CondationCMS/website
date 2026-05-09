@@ -2,7 +2,7 @@
 template: documentation/documentation.html
 createdAt: 2025-10-08T12:03:44.905Z
 createdBy: thorsten
-published: false
+published: true
 title: Forms
 seo:
   keywords: ''
@@ -11,7 +11,7 @@ seo:
 unpublish_date: null
 publish_date: null
 menu:
-    position: 4
+  position: 4
 ---
 
 # Manager forms

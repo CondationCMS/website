@@ -2,7 +2,10 @@
 title: Create Content
 template: documentation/documentation.html
 menu:
-    position: 1
+  position: 1
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 # Create Content

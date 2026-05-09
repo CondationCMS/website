@@ -3,6 +3,9 @@ title: Default template engine
 template: documentation/documentation.html
 menu:
   position: 20
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 # Default template engine

@@ -2,7 +2,10 @@
 title: Template functions
 template: documentation/documentation.html
 menu:
-    position: 2
+  position: 2
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 Next to our [default template engine](/documentation/cms/templates-and-themes/default-template-engine), it is possible to implement a custom module to use the template of your choice.

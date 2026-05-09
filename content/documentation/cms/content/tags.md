@@ -3,6 +3,9 @@ title: Tags
 template: documentation/documentation.html
 menu:
   position: 4
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 With Tags it is possible to extend the rendering of the markdown content. 

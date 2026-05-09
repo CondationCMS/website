@@ -3,6 +3,9 @@ title: Getting started
 template: documentation/documentation.html
 menu:
   position: 1
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 # Getting started

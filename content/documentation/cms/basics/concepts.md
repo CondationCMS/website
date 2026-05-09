@@ -2,10 +2,12 @@
 template: documentation/documentation.html
 createdAt: 2025-08-07T13:07:33.770Z
 createdBy: thorsten
-published: false
+published: true
 title: Concepts
 menu:
   position: 2
+unpublish_date: null
+publish_date: null
 ---
 
 # Concepts

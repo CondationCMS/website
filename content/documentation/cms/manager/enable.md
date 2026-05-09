@@ -2,7 +2,10 @@
 title: Enable
 template: documentation/documentation.html
 menu:
-    position: 2
+  position: 2
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 Activate the manager in *site.toml*

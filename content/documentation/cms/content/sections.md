@@ -2,7 +2,10 @@
 title: Sections
 template: documentation/documentation.html
 menu:
-    position: 5
+  position: 5
+unpublish_date: null
+published: true
+publish_date: null
 ---
 
 # Sections
