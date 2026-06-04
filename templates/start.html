@@ -2,10 +2,15 @@
 
 {% block title %} {{ node.meta.title }} {% endblock %}
 
+{% block header_contrib %}
+	<link href="/assets/code.tabs.css" rel="stylesheet" />
+	<script src="/assets/code.tabs.js" defer></script>
+{% endblock %}
+
 {% block content %}
 
 <div
-{{ ext.ui.toolbar("content", "sections", ["addSection", "orderSections"], { "sectionName": "content"}) | raw }}
+{{ ext.ui.toolbar("content", "sections", ["addSectionEntry", "orderSectionEntries"], { "section": "content"}) | raw }}
 >
 	{% if node.sections.containsKey('content') %}
 		{% for content in node.sections.get('content') %}
@@ -15,7 +20,7 @@
 </div>
 
 <div
-{{ ext.ui.toolbar("features", "sections", ["addSection", "orderSections"], { "sectionName": "features"}) | raw }}
+{{ ext.ui.toolbar("features", "sections", ["addSectionEntry", "orderSectionEntries"], { "section": "features"}) | raw }}
 >
 	<section id="about" class="mb-12">
 		<h2 class="text-3xl font-bold text-gray-900 mb-4">Features</h2>

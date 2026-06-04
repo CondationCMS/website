@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="code-tabs.css">
+    <script src="code-tabs.js"></script>
+</head>
+
+<body>
+    <div class="code-tabs">
+        <div class="code-tabs-nav">
+            <button class="tab active" data-tab="markdown">Markdown</button>
+            <button class="tab" data-tab="java">Java</button>
+            <button class="tab" data-tab="html">HTML</button>
+        </div>
+
+        <div class="code-content active" data-content="markdown">
+            <pre><code># Hello CondationCMS
+
+title: My First Page
+
+Welcome to **CondationCMS**
+</code></pre>
+        </div>
+
+        <div class="code-content" data-content="java">
+            <pre><code>@Plugin
+public class HelloPlugin {
+
+    @Hook("page.render")
+    public void render() {
+        System.out.println("Hello CMS");
+    }
+}
+</code></pre>
+        </div>
+
+        <div class="code-content" data-content="html">
+            <pre><code>&lt;cms:collection name="articles"&gt;
+    &lt;h2&gt;{{ title }}&lt;/h2&gt;
+&lt;/cms:collection&gt;
+</code></pre>
+        </div>
+    </div>
+    <hr />
+    <div class="code-tabs">
+        <div class="code-tabs-nav">
+            <button class="tab active" data-tab="markdown">Markdown</button>
+            <button class="tab" data-tab="java">Java</button>
+            <button class="tab" data-tab="html">HTML</button>
+        </div>
+
+        <div class="code-content active" data-content="markdown">
+            <pre><code># Hello CondationCMS
+
+title: My First Page
+
+Welcome to **CondationCMS**
+</code></pre>
+        </div>
+
+        <div class="code-content" data-content="java">
+            <pre><code>@Plugin
+public class HelloPlugin {
+
+    @Hook("page.render")
+    public void render() {
+        System.out.println("Hello CMS");
+    }
+}
+</code></pre>
+        </div>
+
+        <div class="code-content" data-content="html">
+            <pre><code>&lt;cms:collection name="articles"&gt;
+    &lt;h2&gt;{{ title }}&lt;/h2&gt;
+&lt;/cms:collection&gt;
+</code></pre>
+        </div>
+    </div>
+</body>
+
+</html>

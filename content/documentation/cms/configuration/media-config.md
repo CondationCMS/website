@@ -15,7 +15,9 @@ Media configuration settings are stored in the **config/media.toml** file. This 
 ## Configuration Format
 
 ```toml
-[[media.formats]]       # (1)
+processor = "imageio"   # (1)
+bin_path = "/to/vips"   # (1.1)
+[[media.formats]]       # (2)
 name = "small"          # (2.1)
 width = 256             # (2.2)
 height = 256            # (2.3)
@@ -25,7 +27,21 @@ compression = true      # (2.5)
 
 ## Configuration Parameters
 
-**(1) Media Format Definition**
+**(1) Processor for image manipulation**
+
+CondationCMS supports three processor implementations to scale image.
+
+- **imageio**: the default in java implemeted image processor
+- **libvips**: implementation using [vips](https://www.libvips.org/)
+- **imagemagick**: another implementation using [imagemagick](https://imagemagick.org)
+
+The last to processor implementations need the binary to be installed.
+
+**(1.2) bin_path of processor**
+
+If CondationCMS is not able to find your local installed binary of **vips** or **magick**, please add the absolut path to the required binary here.
+
+**(2) Media Format Definition**
 
 This section defines the required media formats for your site. These formats are used when images are accessed through the media handler endpoint. Multiple format definitions can be added by repeating the `[[media.formats]]` block.
 

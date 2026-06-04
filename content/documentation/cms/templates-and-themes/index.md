@@ -3,6 +3,7 @@ title: Templates & Themes
 template: documentation/documentation.html
 menu:
     position: 5
+published: true
 ---
 
 Next to our [default template engine](/documentation/templates-and-themes/default-template-engine), it is possible to implement a custom module to use the template of your choice.

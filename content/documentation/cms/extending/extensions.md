@@ -16,8 +16,8 @@ Extension are created via Javascript, supported by the awesome graal-js project.
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
-$hooks.registerAction("system/content/tags", (context) => {
-	context.arguments().get("tags").put(
+$hooks.registerAction("system/content/tags", ({tags}) => {
+	tags.put(
 			"theme_name",
 			(params) => `Hello, I'm your <b>demo</b> theme.`
 	)
@@ -36,10 +36,10 @@ To avoid conflicts, the tag is registered under the *ext:* namespace.
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
-$hooks.registerAction("system/template/function", (context) => {
-	context.arguments().get("functions").put(
+$hooks.registerAction("system/template/function", ({functions}) => {
+	$hooks.registerAction("system/template/function", ({functions.put(
 			"fn_message",
-			(params) => `<div style="color: ${params.color}">${params.message}</div>`
+			({color, message}) => `<div style="color: ${color}">${message}</div>`
 	)
 	return null;
 })
@@ -54,10 +54,10 @@ Template functions are registered under the *ext:* namespace.
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
-$hooks.registerAction("system/template/component", (context) => {
-	context.arguments().get("components").put(
+$hooks.registerAction("system/template/component", ({components}) => {
+	components.put(
 			"component",
-			(params) => `<div style="color: ${params.color}">${params.message}</div>`
+			({color, message}) => `<div style="color: ${color}">${message}</div>`
 	)
 	return null;
 })

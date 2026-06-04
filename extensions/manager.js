@@ -1,7 +1,6 @@
 import { $hooks } from 'system/hooks.mjs';
 
-$hooks.registerFilter("manager/media/forms", (context) => {
-	var mediaForms = context.value();
+$hooks.registerFilter("manager/media/forms", (mediaForms) => {
 	mediaForms.registerForm("meta", {
 		fields: [
 			{
@@ -41,8 +40,7 @@ const defaultPageSettingsForm = [
 	}
 ]
 
-$hooks.registerFilter("manager/contentTypes/register", (context) => {
-	var contentTypes = context.value();
+$hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
 	contentTypes.registerPageTemplate({
 		name: "StartPage",
 		template: "start.html",
@@ -160,7 +158,7 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 			}
 		}
 	});
-	contentTypes.registerSectionTemplate({
+	contentTypes.registerSectionEntryTemplate({
 		section: "features",
 		name: "Feature",
 		template: "sections/feature.html",
@@ -187,7 +185,7 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 			}
 		}
 	});
-	contentTypes.registerSectionTemplate({
+	contentTypes.registerSectionEntryTemplate({
 		section: "content",
 		name: "Text",
 		template: "sections/content-text.html",
@@ -210,7 +208,7 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 			}
 		}
 	});
-	contentTypes.registerSectionTemplate({
+	contentTypes.registerSectionEntryTemplate({
 		section: "content",
 		name: "Teaser",
 		template: "sections/content-teaser.html",

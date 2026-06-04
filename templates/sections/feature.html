@@ -1,5 +1,5 @@
 <div class=""
-{{ ext.ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri, "form": "attributes"}) | raw }}
+{{ ext.ui.toolbar(node.uri, "sectionEntry" , ["editContent", "editAttributes" , "deleteSectionEntry" ], {"uri": node.uri, "form": "attributes"}) | raw }}
 >
 {% if PREVIEW_MODE %}
 <div style="display: none;" {{ ext.ui.editMeta("datetime", "publish_date" , node.uri, node.uri) | raw }}></div>

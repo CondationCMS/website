@@ -1,3 +1,4 @@
+processor = "libvips"
 [[formats]]
 name = "small"
 width = 256
