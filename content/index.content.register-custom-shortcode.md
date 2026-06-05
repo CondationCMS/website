@@ -2,19 +2,22 @@
 template: sections/content-text.html
 layout:
   order: 1000
-title: code
+title: Register a custom ShortCode
+unpublish_date: null
+publish_date: null
+published: true
 ---
 
-[[ext:code-tabs-container]]
+[[ext:code-tabs-container tabs="javascript:JavaScript,markdown:Markdown" ]]
 [[ext:code-tabs-item id="javascript" class="active" render-markdown=true]]
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
 
-$hooks.registerAction("system/content/shortCodes", (shortCodes) => {
+$hooks.registerAction("system/content/shortCodes", ({shortCodes}) => {
 	shortCodes.put(
 			"hello",
-			(params) => `Hello ${params.get("name")}`
+			({name}) => `Hello ${name}`
 	)
 	return null;
 })
