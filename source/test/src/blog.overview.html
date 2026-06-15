@@ -1,255 +1,142 @@
 <!doctype html>
-<html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | CondationCMS</title>
   <link href="./layout.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                
-                <!-- Logo / Projekt Name -->
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                        MyProject
-                    </a>
-                </div>
-
-                <!-- Desktop Navigation Links -->
+                <a href="index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">CondationCMS</a>
                 <div class="hidden md:flex md:items-center md:gap-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Home
-                    </a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Über uns
-                    </a>
-                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Services
-                    </a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Portfolio
-                    </a>
-                    <a href="blog.overview.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Blog
-                    </a>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                        Buchen
-                    </button>
+                    <a href="index.html#why" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Why</a>
+                    <a href="index.html#foundation" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Fundament</a>
+                    <a href="documentation.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Docs</a>
+                    <a href="plugin.overview.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Plugins</a>
+                    <a href="blog.overview.html" class="text-blue-600 font-semibold">Blog</a>
+                    <a href="index.html#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">Starten</a>
                 </div>
-
-                <!-- Hamburger Menu Button (Mobile) -->
-                <button 
-                    id="hamburger-btn"
-                    class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors"
-                    aria-label="Navigation öffnen"
-                    aria-expanded="false">
+                <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors" aria-label="Navigation oeffnen" aria-expanded="false">
                     <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
                     <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
                     <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
                 </button>
             </div>
-
-            <!-- Mobile Navigation Menu -->
-            <div 
-                id="mobile-menu"
-                class="mobile-menu hidden md:hidden border-t border-gray-200">
+            <div id="mobile-menu" class="mobile-menu hidden md:hidden border-t border-gray-200">
                 <div class="px-4 py-4 space-y-3">
-                    <a href="#home" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Home
-                    </a>
-                    <a href="#about" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Über uns
-                    </a>
-                    <a href="#services" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Services
-                    </a>
-                    <a href="#portfolio" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Portfolio
-                    </a>
-                    <a href="blog.overview.html" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Blog
-                    </a>
-                    <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                        Buchen
-                    </button>
+                    <a href="index.html#why" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Why</a>
+                    <a href="index.html#foundation" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Fundament</a>
+                    <a href="documentation.html" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Docs</a>
+                    <a href="plugin.overview.html" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Plugins</a>
+                    <a href="blog.overview.html" class="block text-blue-600 bg-blue-50 px-3 py-2 rounded-lg font-semibold">Blog</a>
+                    <a href="index.html#contact" class="block text-center w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">Starten</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    
-
-
-    <!-- Blog Header -->
-    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Unser Blog</h1>
-            <p class="text-lg text-gray-700">Entdecken Sie die neuesten Artikel und Insights von unserem Team</p>
-        </div>
-    </section>
-
-    <!-- Blog Posts Grid -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 mb-12">
-            
-            <!-- Blog Post 1 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                <div class="flex flex-col md:flex-row">
-                    <div class="flex-shrink-0 w-full md:w-48">
-                        <img class="h-48 w-full object-cover md:h-full" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=300&fit=crop" alt="Web Design">
-                    </div>
-                    <div class="p-6 md:flex md:flex-col md:justify-between flex-1">
-                        <div>
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Web Design</span>
-                                <time class="text-sm text-gray-500">15. Januar 2026</time>
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-                                <a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Die Zukunft des responsiven Web Designs</a>
-                            </h2>
-                            <p class="text-gray-600 mb-4">Erfahren Sie, wie moderne CSS-Frameworks wie Tailwind die Webentwicklung revolutionieren und warum Sie sie in Ihren nächsten Projekten nutzen sollten.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">Von <strong>Anna Schmidt</strong></span>
-                            <a href="blog.detail.html" class="text-blue-600 hover:text-blue-700 font-semibold">Mehr lesen →</a>
-                        </div>
-                    </div>
+    <header class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-14 items-end">
+                <div>
+                    <p class="text-sm font-semibold tracking-wide uppercase text-blue-600 mb-3">Blog</p>
+                    <h1 class="text-4xl sm:text-5xl font-bold text-gray-950 leading-tight">Gedanken zu Content, Architektur und CMS-Entwicklung.</h1>
                 </div>
-            </article>
-
-            <!-- Blog Post 2 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                <div class="flex flex-col md:flex-row">
-                    <div class="flex-shrink-0 w-full md:w-48">
-                        <img class="h-48 w-full object-cover md:h-full" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" alt="JavaScript">
-                    </div>
-                    <div class="p-6 md:flex md:flex-col md:justify-between flex-1">
-                        <div>
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-                                <time class="text-sm text-gray-500">12. Januar 2026</time>
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-                                <a href="blog.detail.html" class="hover:text-blue-600 transition-colors">ES2025: Die wichtigsten neuen Features</a>
-                            </h2>
-                            <p class="text-gray-600 mb-4">Ein tiefer Blick auf die neuen Features von ECMAScript 2025 und wie sie Ihre JavaScript-Entwicklung verbessern können.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">Von <strong>Max Müller</strong></span>
-                            <a href="blog.detail.html" class="text-blue-600 hover:text-blue-700 font-semibold">Mehr lesen →</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Blog Post 3 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                <div class="flex flex-col md:flex-row">
-                    <div class="flex-shrink-0 w-full md:w-48">
-                        <img class="h-48 w-full object-cover md:h-full" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop" alt="Performance">
-                    </div>
-                    <div class="p-6 md:flex md:flex-col md:justify-between flex-1">
-                        <div>
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Performance</span>
-                                <time class="text-sm text-gray-500">10. Januar 2026</time>
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-                                <a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Web Performance: Core Web Vitals optimieren</a>
-                            </h2>
-                            <p class="text-gray-600 mb-4">Optimieren Sie Ihre Website für die neuen Core Web Vitals und verbessern Sie damit Ihre SEO-Ranking und Nutzer-Experience.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">Von <strong>Lisa Weber</strong></span>
-                            <a href="blog.detail.html" class="text-blue-600 hover:text-blue-700 font-semibold">Mehr lesen →</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Blog Post 4 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                <div class="flex flex-col md:flex-row">
-                    <div class="flex-shrink-0 w-full md:w-48">
-                        <img class="h-48 w-full object-cover md:h-full" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" alt="React">
-                    </div>
-                    <div class="p-6 md:flex md:flex-col md:justify-between flex-1">
-                        <div>
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="inline-block bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">React</span>
-                                <time class="text-sm text-gray-500">8. Januar 2026</time>
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-                                <a href="blog.detail.html" class="hover:text-blue-600 transition-colors">React 19: Server Components und Transitions</a>
-                            </h2>
-                            <p class="text-gray-600 mb-4">Die neuen Server Components in React 19 revolutionieren die Art, wie wir Webanwendungen entwickeln. Hier sind die wichtigsten Änderungen.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">Von <strong>Thomas Klein</strong></span>
-                            <a href="blog.detail.html" class="text-blue-600 hover:text-blue-700 font-semibold">Mehr lesen →</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Blog Post 5 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                <div class="flex flex-col md:flex-row">
-                    <div class="flex-shrink-0 w-full md:w-48">
-                        <img class="h-48 w-full object-cover md:h-full" src="https://images.unsplash.com/photo-1460925895917-adf4e565db17?w=500&h=300&fit=crop" alt="SEO">
-                    </div>
-                    <div class="p-6 md:flex md:flex-col md:justify-between flex-1">
-                        <div>
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">SEO</span>
-                                <time class="text-sm text-gray-500">5. Januar 2026</time>
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-                                <a href="blog.detail.html" class="hover:text-blue-600 transition-colors">SEO in 2026: Was ändert sich wirklich?</a>
-                            </h2>
-                            <p class="text-gray-600 mb-4">Google´s neueste Updates haben die SEO-Landschaft verändert. Wir zeigen Ihnen, wie Sie Ihre Website auf den neuesten Stand bringen.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">Von <strong>Sandra Meyer</strong></span>
-                            <a href="blog.detail.html" class="text-blue-600 hover:text-blue-700 font-semibold">Mehr lesen →</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-        <!-- Pagination -->
-        <nav class="flex justify-center items-center gap-2 py-8 border-t border-gray-200">
-            <button class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" aria-label="Vorherige Seite">
-                ← Zurück
-            </button>
-            
-            <div class="flex gap-1">
-                <button class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center font-semibold hover:bg-blue-700 transition-colors">
-                    1
-                </button>
-                <button class="w-10 h-10 rounded-lg border border-gray-300 text-gray-600 flex items-center justify-center font-semibold hover:bg-gray-100 transition-colors">
-                    2
-                </button>
-                <button class="w-10 h-10 rounded-lg border border-gray-300 text-gray-600 flex items-center justify-center font-semibold hover:bg-gray-100 transition-colors">
-                    3
-                </button>
-                <span class="w-10 h-10 flex items-center justify-center text-gray-500">...</span>
-                <button class="w-10 h-10 rounded-lg border border-gray-300 text-gray-600 flex items-center justify-center font-semibold hover:bg-gray-100 transition-colors">
-                    10
-                </button>
+                <p class="text-lg leading-8 text-gray-600 max-w-2xl">
+                    Kuratierte Artikel fuer Teams, die Inhalte, Templates und Plugins bewusst gestalten wollen.
+                </p>
             </div>
+        </div>
+    </header>
 
-            <button class="w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors" aria-label="Nächste Seite">
-                Weiter →
-            </button>
-        </nav>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <section class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 mb-12">
+            <article class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                <img class="h-72 w-full object-cover" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=700&fit=crop" alt="Schreibtisch mit Notebook">
+                <div class="p-6 sm:p-8">
+                    <div class="flex flex-wrap items-center gap-3 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Content Architektur</span>
+                        <time class="text-sm text-gray-500">15. Januar 2026</time>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-950 mb-4">
+                        <a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Warum ein gutes CMS beim Content-Modell beginnt</a>
+                    </h2>
+                    <p class="text-gray-600 leading-7 mb-6">Strukturierte Inhalte entscheiden, ob ein System langfristig leicht bleibt. Wir zeigen, wie Collections, Felder und Templates zusammenspielen.</p>
+                    <a href="blog.detail.html" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">Artikel lesen</a>
+                </div>
+            </article>
+
+            <aside class="grid grid-cols-1 gap-4">
+                <div class="bg-slate-900 text-white rounded-lg p-6">
+                    <p class="text-sm font-semibold tracking-wide uppercase text-cyan-300 mb-3">Editorial Stack</p>
+                    <h2 class="text-2xl font-bold mb-3">Praxiswissen fuer moderne CMS-Projekte.</h2>
+                    <p class="text-slate-200 leading-7">Von Content-Modellen bis Deployments: kurze, konkrete Impulse fuer bessere Entscheidungen im Projektalltag.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h2 class="font-bold text-gray-950 mb-4">Beliebte Themen</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-sm font-semibold">Markdown</span>
+                        <span class="rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-sm font-semibold">Plugins</span>
+                        <span class="rounded-full bg-amber-50 text-amber-700 px-3 py-1 text-sm font-semibold">Templates</span>
+                        <span class="rounded-full bg-slate-100 text-slate-700 px-3 py-1 text-sm font-semibold">Performance</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full">Plugins</span>
+                <h2 class="text-xl font-bold text-gray-950 mt-4 mb-3"><a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Hooks, die Erweiterungen wartbar machen</a></h2>
+                <p class="text-gray-600 leading-7 mb-5">Wie Plugin-Schnittstellen klar bleiben, auch wenn Projekte wachsen.</p>
+                <time class="text-sm text-gray-500">12. Januar 2026</time>
+            </article>
+            <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full">Templates</span>
+                <h2 class="text-xl font-bold text-gray-950 mt-4 mb-3"><a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Komponenten statt Seiten-Denken</a></h2>
+                <p class="text-gray-600 leading-7 mb-5">Warum wiederverwendbare Bausteine Content-Teams schneller machen.</p>
+                <time class="text-sm text-gray-500">10. Januar 2026</time>
+            </article>
+            <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <span class="bg-cyan-100 text-cyan-800 text-xs font-semibold px-3 py-1 rounded-full">Performance</span>
+                <h2 class="text-xl font-bold text-gray-950 mt-4 mb-3"><a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Schnelle Seiten ohne fragile Tricks</a></h2>
+                <p class="text-gray-600 leading-7 mb-5">Caching, statische Assets und klare Build-Schritte im Zusammenspiel.</p>
+                <time class="text-sm text-gray-500">8. Januar 2026</time>
+            </article>
+            <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Workflow</span>
+                <h2 class="text-xl font-bold text-gray-950 mt-4 mb-3"><a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Redaktion und Git muessen keine Gegner sein</a></h2>
+                <p class="text-gray-600 leading-7 mb-5">Wie Content nachvollziehbar bleibt, ohne die Arbeit der Redaktion zu erschweren.</p>
+                <time class="text-sm text-gray-500">5. Januar 2026</time>
+            </article>
+            <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <span class="bg-slate-100 text-slate-800 text-xs font-semibold px-3 py-1 rounded-full">Release</span>
+                <h2 class="text-xl font-bold text-gray-950 mt-4 mb-3"><a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Was in Tailwind 4 fuer CMS-UIs zaehlt</a></h2>
+                <p class="text-gray-600 leading-7 mb-5">Ein Blick auf CSS-first Workflows und was sie im Projekt vereinfachen.</p>
+                <time class="text-sm text-gray-500">3. Januar 2026</time>
+            </article>
+            <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <span class="bg-rose-100 text-rose-800 text-xs font-semibold px-3 py-1 rounded-full">Security</span>
+                <h2 class="text-xl font-bold text-gray-950 mt-4 mb-3"><a href="blog.detail.html" class="hover:text-blue-600 transition-colors">Sichere Erweiterungen planen</a></h2>
+                <p class="text-gray-600 leading-7 mb-5">Berechtigungen, Secrets und Reviewbarkeit im Plugin-Alltag.</p>
+                <time class="text-sm text-gray-500">30. Dezember 2025</time>
+            </article>
+        </section>
+
+        <section class="bg-gray-950 text-white rounded-lg p-8 sm:p-10">
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-3">Mehr als Artikel: ein Arbeitsmodell fuer Content-Projekte.</h2>
+                    <p class="text-gray-300 leading-7">Starte mit der Dokumentation und fuehre die Patterns direkt in deinem Projekt weiter.</p>
+                </div>
+                <a href="documentation.html" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-950 hover:bg-cyan-100 transition-colors">Zur Dokumentation</a>
+            </div>
+        </section>
     </main>
 
-    <script src="app.js"></script>
+    <script src="./layout.js"></script>
 </body>
 </html>

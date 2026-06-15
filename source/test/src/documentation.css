@@ -5,7 +5,7 @@
     font-weight: 700;
     color: #111827;
     margin: 1.5rem 0 1rem 0;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 .documentation-content h2 {
@@ -14,7 +14,7 @@
     font-weight: 700;
     color: #1f2937;
     margin: 1.5rem 0 0.75rem 0;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 .documentation-content h3 {
@@ -23,7 +23,7 @@
     font-weight: 600;
     color: #374151;
     margin: 1.25rem 0 0.75rem 0;
-    letter-spacing: -0.005em;
+    letter-spacing: 0;
 }
 
 .documentation-content h4 {
@@ -213,7 +213,9 @@
 
 /* Active Navigation Link */
 .nav-link.active {
-    @apply bg-blue-100 text-blue-600 font-semibold;
+    background-color: #dbeafe;
+    color: #2563eb;
+    font-weight: 600;
 }
 
 .nav-link {
