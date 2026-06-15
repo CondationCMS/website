@@ -8,12 +8,11 @@ publish_date: null
 published: true
 ---
 
-[[ext:code-tabs-container tabs="javascript:JavaScript,markdown:Markdown" ]]
+[[ext:code-tabs-container tabs="javascript:JavaScript,java:Java,markdown:Markdown" ]]
 [[ext:code-tabs-item id="javascript" class="active" render-markdown=true]]
-
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
-
+// register component via js extensions
 $hooks.registerAction("system/content/shortCodes", ({shortCodes}) => {
 	shortCodes.put(
 			"hello",
@@ -22,7 +21,16 @@ $hooks.registerAction("system/content/shortCodes", ({shortCodes}) => {
 	return null;
 })
 ```
+[[/ext:code-tabs-item]]
 
+[[ext:code-tabs-item id="java" render-markdown=true]]
+```java
+// register component via java module
+@ShortCode("hello")
+public void hello_shortcode (String name) {
+	return "Hello " + name;
+}
+```
 [[/ext:code-tabs-item]]
 
 [[ext:code-tabs-item id="markdown" render-markdown=true]]

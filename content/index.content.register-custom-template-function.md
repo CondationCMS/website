@@ -2,7 +2,7 @@
 template: sections/content-text.html
 layout:
   order: 1000
-title: Register custom template component
+title: Register custom template function
 published: true
 ---
 
@@ -10,9 +10,9 @@ published: true
 [[ext:code-tabs-item id="javascript" class="active" render-markdown=true]]
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
-// register component via js extensions
-$hooks.registerAction("system/template/component", ({components}) => {
-	components.put(
+// register function via js extensions
+$hooks.registerAction("system/template/function", ({functions}) => {
+	functions.put(
 			"hello",
 			({name}) => `Hello ${name}`
 	)
@@ -23,9 +23,9 @@ $hooks.registerAction("system/template/component", ({components}) => {
 
 [[ext:code-tabs-item id="java" render-markdown=true]]
 ```java
-// register component via java module
-@TemplateComponent("hello")
-public void hello_compnent (String name) {
+// register function via java module
+@TemplateFunction("hello")
+public void hello_function (String name) {
 	return "Hello " + name;
 }
 ```
@@ -33,8 +33,8 @@ public void hello_compnent (String name) {
 
 [[ext:code-tabs-item id="html" render-markdown=true]]
 
-```tag
-\{\[hello name="CondationCMS" /\]\}
+```condation
+\{\{ hello({"name" : "CondationCMS"}) \}\}
 ```
 
 [[/ext:code-tabs-item]]
