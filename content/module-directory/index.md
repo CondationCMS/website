@@ -1,5 +1,6 @@
 ---
 title: Module Directory - Extend Condation CMS Functionality
+subtitle: Extend CondationCMS your way.
 template: module-directory.html
 unpublish_date: null
 published: true
@@ -9,4 +10,4 @@ seo:
   keywords: cms modules, java plugins, condation extensions
 ---
 
-# Modules directory
+Discover modules that extend CondationCMS with additional features, integrations, and tools for your projects.
