@@ -1,9 +1,10 @@
 ---
 template: sections/content-example.html
 layout:
-  order: 1000
+  order: 4
 title: Register a custom template component
-description: Template components let you create reusable building blocks that keep templates clean, consistent, and easy to maintain.
+description: Template components let you create reusable building blocks that keep
+  templates clean, consistent, and easy to maintain.
 published: true
 ---
 

@@ -1,39 +1,41 @@
-<section id="home" class="bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-                <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center">
-                    <div>
-                        <p class="text-sm font-semibold tracking-wide uppercase text-blue-600 mb-4">{{ node.meta.top_title}}</p>
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-950 leading-tight">
-                            {{ node.meta.title}}
-                        </h1>
-                        <p class="mt-6 text-lg sm:text-xl text-gray-600 leading-8 max-w-2xl">
-                            {{ node.meta.description}}
-                        </p>
-                        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                            <a href="#examples" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors">
-                                Discover how to extend it
-                            </a>
-                            <a href="#foundation" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-base font-semibold text-gray-900 hover:border-blue-300 hover:text-blue-700 transition-colors">
-                                Explore the foundation
-                            </a>
-                        </div>
-                    </div>
+<section id="home" class="bg-white"
+{{ ext.ui.toolbar(node.uri, "sectionEntry" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri, "form": "attributes"}) | raw }}
+>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center">
+            <div>
+                <p class="text-sm font-semibold tracking-wide uppercase text-blue-600 mb-4">{{ node.meta.top_title}}</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-950 leading-tight">
+                    {{ node.meta.title}}
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl text-gray-600 leading-8 max-w-2xl">
+                    {{ node.meta.description}}
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                    <a href="#examples" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors">
+                        Discover how to extend it
+                    </a>
+                    <a href="#foundation" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-base font-semibold text-gray-900 hover:border-blue-300 hover:text-blue-700 transition-colors">
+                        Explore the foundation
+                    </a>
+                </div>
+            </div>
 
-                    <div class="relative overflow-hidden rounded-lg border border-gray-200 bg-gray-950 p-5 shadow-xl">
-                        <div class="flex items-center gap-2 border-b border-white/10 pb-4">
-                            <span class="h-3 w-3 rounded-full bg-red-400"></span>
-                            <span class="h-3 w-3 rounded-full bg-amber-300"></span>
-                            <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
-                            <span class="ml-3 text-xs font-medium text-gray-400">content/condationcms.md</span>
-                        </div>
-                        <pre class="overflow-x-auto pt-5 text-sm leading-7 text-gray-100"><code>---
+            <div class="relative overflow-hidden rounded-lg border border-gray-200 bg-gray-950 p-5 shadow-xl">
+                <div class="flex items-center gap-2 border-b border-white/10 pb-4">
+                    <span class="h-3 w-3 rounded-full bg-red-400"></span>
+                    <span class="h-3 w-3 rounded-full bg-amber-300"></span>
+                    <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+                    <span class="ml-3 text-xs font-medium text-gray-400">content/condationcms.md</span>
+                </div>
+                <pre class="overflow-x-auto pt-5 text-sm leading-7 text-gray-100"><code>---
 title: "CondationCMS Landing Page"
 template: "landing.html"
 ---
 
 # Built for great content.
 </code></pre>
-                    </div>
-                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>

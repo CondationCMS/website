@@ -6,7 +6,9 @@ link: ''
 unpublish_date: null
 title: A CMS that does not slow developers down.
 top_title: CondationCMS
-description: CondationCMS combines structured content, fast templates, and extensible logic into a platform that makes editorial work easy while keeping technical teams close to the code.
+description: CondationCMS combines structured content, fast templates, and extensible
+  logic into a platform that makes editorial work easy while keeping technical teams
+  close to the code.
 publish_date: null
 published: true
 ---

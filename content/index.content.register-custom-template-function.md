@@ -1,9 +1,10 @@
 ---
 template: sections/content-example.html
 layout:
-  order: 1000
+  order: 5
 title: Register a custom template function
-description: Template functions add reusable logic and custom functionality directly to your templates.
+description: Template functions add reusable logic and custom functionality directly
+  to your templates.
 published: true
 ---
 

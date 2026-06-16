@@ -17,7 +17,7 @@
 {% block main_class %}bg-white{% endblock %}
 
 {% block content %}
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"], {"form": "attributes"}) | raw }}>
     <header class="mb-12">
         <!-- Breadcrumb -->
         <div class="flex items-center gap-2 text-sm text-gray-600 mb-8">
@@ -33,7 +33,7 @@
         </div>
     </header>
 
-    <article class="documentation-content space-y-12" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"], {"form": "attributes"}) | raw }}>
+    <article class="documentation-content space-y-12" >
         {{ node.content | raw }}
     </article>
 </div>

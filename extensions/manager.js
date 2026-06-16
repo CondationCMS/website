@@ -23,6 +23,31 @@ const DateTimeField = (overrides = {}) => ({
 	...overrides
 });
 
+const TextareaField = (overrides = {}) => ({
+	type: "textarea",
+	...overrides
+});
+
+const ListField = (overrides = {}) => ({
+	type: "list",
+	...overrides
+});
+
+const defaultSectionMetaFields = [
+	TextField({
+		name: "title",
+		title: "Title"
+	}),
+	DateTimeField({
+		name: "publish_date",
+		title: "Publish Date"
+	}),
+	DateTimeField({
+		name: "unpublish_date",
+		title: "Unpublish Date"
+	})
+]
+
 const defaultPageSettingsForm = [
 	TextField({
 		name: "seo.description",
@@ -67,9 +92,11 @@ $hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
 		name: "Blog (entry)",
 		template: "blog-entry.html",
 		forms: {
-			settings: [
-				...defaultPageSettingsForm
-			]
+			settings: {
+				fields: [
+					...defaultPageSettingsForm
+				]
+			}
 		}
 	});
 	contentTypes.registerPageTemplate({
@@ -125,6 +152,17 @@ $hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
 	contentTypes.registerPageTemplate({
 		name: "Documentation (content)",
 		template: "documentation/content.html",
+		forms: {
+			settings: {
+				fields: [
+					...defaultPageSettingsForm
+				]
+			}
+		}
+	});
+	contentTypes.registerPageTemplate({
+		name: "NEW Documentation (content)",
+		template: "documentation/documentation.html",
 		forms: {
 			settings: {
 				fields: [
@@ -192,9 +230,45 @@ $hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
 		forms: {
 			attributes: {
 				fields : [
+					...defaultSectionMetaFields
+				]
+			}
+		}
+	});
+	contentTypes.registerSectionEntryTemplate({
+		section: "content",
+		name: "Teaser",
+		template: "sections/content-teaser.html",
+		forms: {
+			attributes: {
+				fields : [
+					TextField({
+						name: "top_title",
+						title: "Top Title"
+					}),
+					...defaultSectionMetaFields
+				]
+			}
+		}
+	});
+	contentTypes.registerSectionEntryTemplate({
+		section: "content",
+		name: "Intro",
+		template: "sections/content-intro.html",
+		forms: {
+			attributes: {
+				fields : [
+					TextField({
+						name: "top_title",
+						title: "Top Title"
+					}),
 					TextField({
 						name: "title",
 						title: "Title"
+					}),
+					TextareaField({
+						name: "description",
+						title: "Description"
 					}),
 					DateTimeField({
 						name: "publish_date",
@@ -210,14 +284,77 @@ $hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
 	});
 	contentTypes.registerSectionEntryTemplate({
 		section: "content",
-		name: "Teaser",
-		template: "sections/content-teaser.html",
+		name: "Foundation",
+		template: "sections/content-foundation.html",
 		forms: {
 			attributes: {
 				fields : [
 					TextField({
 						name: "title",
 						title: "Title"
+					}),
+					TextareaField({
+						name: "description",
+						title: "Description"
+					}),
+					ListField({
+						name: "items",
+						title: "Items",
+						options: {
+							nameField: "title"
+						}
+					}),
+					DateTimeField({
+						name: "publish_date",
+						title: "Publish Date"
+					}),
+					DateTimeField({
+						name: "unpublish_date",
+						title: "Unpublish Date"
+					})
+				]
+			},
+			items: {
+				fields: [
+					TextField({
+						name: "title",
+						title: "Title"
+					}),
+				]
+			}
+		}
+	});
+	contentTypes.registerListItemType({
+		name: "items",
+		form: {
+			fields: [
+				{
+					name: "title",
+					title: "Title",
+					type: "text"
+				},
+				{
+					name: "description",
+					title: "Description",
+					type: "text"
+				}
+			]
+		}
+	});
+	contentTypes.registerSectionEntryTemplate({
+		section: "content",
+		name: "Example",
+		template: "sections/content-example.html",
+		forms: {
+			attributes: {
+				fields : [
+					TextField({
+						name: "title",
+						title: "Title"
+					}),
+					TextareaField({
+						name: "description",
+						title: "Description"
 					}),
 					DateTimeField({
 						name: "publish_date",
