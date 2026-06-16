@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="canonical" href="https://condation.com{{ node.properties['url'] }}" />
+
+    <title>{% block title %}Condation CMS - Java Flat-File CMS{% endblock %}</title>
+
+    <meta name="description" content="{{ node.meta.getOrDefault('seo.description', '') }}" />
+    <meta name="keywords" content="{{ node.meta.getOrDefault('seo.keywords', '') }}" />
+    <meta name="author" content="{{ node.meta.getOrDefault('seo.author', 'CondationCMS') }}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ node.properties['url'] }}">
+    <meta property="og:title" content="{% block og_title %}{{ node.meta.title }}{% endblock %}">
+    <meta property="og:description" content="{{ node.meta.getOrDefault('seo.description', '') }}">
+    <meta property="og:image" content="{{ cms.links.createUrl('/assets/images/og-image.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ node.properties['url'] }}">
+    <meta property="twitter:title" content="{% block twitter_title %}{{ node.meta.title }}{% endblock %}">
+    <meta property="twitter:description" content="{{ node.meta.getOrDefault('seo.description', '') }}">
+    <meta property="twitter:image" content="{{ cms.links.createUrl('/assets/images/og-image.png') }}">
+
+    <link href="/assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/assets/highlightjs/panda-syntax-dark.min.css" rel="stylesheet" />
+    <link href="/assets/layout-20260615.css" rel="stylesheet" />
+
+
+
+    {% if ENV == 'prod'%}
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "https://stats.marx-software.de/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '5']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+    {% endif %}
+
+    {% if PREVIEW_MODE %}
+        <script  src="{{ cms.links.createUrl('/manager/js/manager-inject.js') }}" type="module"></script>
+        <link rel="stylesheet" href="{{ cms.links.createUrl('/manager/css/manager-inject.css') }}" />
+    {% endif %}
+
+    {% block header_contrib %}{% endblock %}
+</head>
+
+<body class="bg-gray-50">
+
+    {% include "base.menu.html" %}
+
+    <div class="min-h-screen lg:grid lg:grid-cols-[18rem_1fr]">
+
+    {% block content_header %}{% endblock %}
+
+    <main class="{% block main_class %}max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16{% endblock %}">
+        {% block content %}{% endblock %}
+    </main>
+    </div>
+
+    {% include "base.footer.html" %}
+
+    <script src="/assets/highlightjs/highlight.min.js" defer></script>
+    <script src="/assets/highlight.tags.js" defer></script>    
+    <script src="/assets/highlight.condation.js" defer></script> 
+    <script src="/assets/layout-20260615.js" defer></script>
+    <script src="/assets/app-1.js" defer></script>
+    {% block footer_contrib %}{% endblock %}
+</body>
+
+</html>

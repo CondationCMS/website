@@ -6,6 +6,7 @@ menu:
 seo:
   description: Comprehensive documentation for Condation CMS. Guides for editors, operators, and developers to build and manage modern websites.
   keywords: cms documentation, java cms guide, developer docs
+published: true
 ---
 
 # Documentation

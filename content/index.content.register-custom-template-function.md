@@ -7,7 +7,7 @@ description: Template functions add reusable logic and custom functionality dire
 published: true
 ---
 
-[[ext:code-tabs-container tabs="javascript:JavaScript,java:Java,html:HTML" ]]
+[[ext:code-tabs-container tabs="javascript:JavaScript,java:Java,template:Template" ]]
 [[ext:code-tabs-item id="javascript" class="active" render-markdown=true]]
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
@@ -32,7 +32,7 @@ public void hello_function (String name) {
 ```
 [[/ext:code-tabs-item]]
 
-[[ext:code-tabs-item id="html" render-markdown=true]]
+[[ext:code-tabs-item id="template" render-markdown=true]]
 
 ```condation
 \{\{ hello({"name" : "CondationCMS"}) \}\}
