@@ -1,20 +1,50 @@
 <!-- Footer -->
-<footer class="bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Copyright Bottom Bar -->
-        <div class="border-t border-gray-800 pt-8">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-gray-400">
-                <div class="order-2 md:order-1">
-                    <p>&copy; 2026 Condation</p>
+<footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-[1.2fr_2fr] gap-10 lg:gap-16">
+                <div>
+                    <a href="#home" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        CondationCMS
+                    </a>
+                    <p class="mt-4 text-gray-600 leading-7 max-w-sm">
+                        A lightweight CMS foundation for structured content, clean templates, and extensible project logic.
+                    </p>
                 </div>
-                <div class="flex flex-wrap gap-6 order-1 md:order-2">
+
+                <nav class="grid grid-cols-2 sm:grid-cols-3 gap-8" aria-label="Footer">
+                    <div>
+                        <h2 class="text-sm font-semibold tracking-wide uppercase text-gray-950 mb-4">Produkt</h2>
+                        <ul class="space-y-3">
+                            <li><a href="/#why" class="text-gray-600 hover:text-blue-600 transition-colors">Why</a></li>
+                            <li><a href="/#foundation" class="text-gray-600 hover:text-blue-600 transition-colors">Fundament</a></li>
+                            <li><a href="/#examples" class="text-gray-600 hover:text-blue-600 transition-colors">Codebeispiele</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-semibold tracking-wide uppercase text-gray-950 mb-4">Ressourcen</h2>
+                        <ul class="space-y-3">
+                            <li><a href="/documentation/cms" class="text-gray-600 hover:text-blue-600 transition-colors">Dokumentation</a></li>
+                            <li><a href="/blog" class="text-gray-600 hover:text-blue-600 transition-colors">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-semibold tracking-wide uppercase text-gray-950 mb-4">Erweitern</h2>
+                        <ul class="space-y-3">
+                            <li><a href="/module-directory" class="text-gray-600 hover:text-blue-600 transition-colors">Modules</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-gray-200 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-sm text-gray-500">
+                <p>© 2026 CondationCMS. Alle Rechte vorbehalten.</p>
+                <div class="flex flex-wrap gap-4">
                     {% assign nodes = cms.navigation.list("/about/") %}
                     {% for item in nodes %}
-                        <a href="{{ item.path }}" class="hover:text-white transition-colors">{{ item.name }}</a>
+                        <a href="{{ item.path }}" class="hover:text-blue-600 transition-colors">{{ item.name }}</a>
                     {% endfor %}
-                    <a href="https://github.com/CondationCMS" class="hover:text-white transition-colors"><i class="bi-github"></i></a>
+                    <a href="https://github.com/CondationCMS" class="hover:text-blue-600 transition-colors"><i class="bi-github"></i></a>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>

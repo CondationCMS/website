@@ -2,35 +2,25 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                
-                <!-- Logo / Projekt Name -->
                 <div class="flex-shrink-0">
-                    <a href="{{cms.links.createUrl('/')}}" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                        Condation
+                    <a href="{{ cms.links.createUrl('/') }}" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        CondationCMS
                     </a>
                 </div>
 
-                <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex md:items-center md:gap-8">
-                    <a href="{{cms.links.createUrl('/features')}}" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Features
-                    </a>
-                    <a href="{{cms.links.createUrl('/documentation/cms')}}" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Documentation
-                    </a>
-                    <a href="{{cms.links.createUrl('/module-directory')}}" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Module Directory
-                    </a>
-                    <a href="{{cms.links.createUrl('/blog')}}" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Blog
-                    </a>
+                    <a href="{{ cms.links.createUrl('/') }}#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="{{ cms.links.createUrl('/') }}#why" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Why</a>
+                    <a href="{{ cms.links.createUrl('/') }}#foundation" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Fundament</a>
+                    <a href="{{ cms.links.createUrl('/') }}#examples" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Code</a>
+                    <a href="{{ cms.links.createUrl('/blog/') }}" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Blog</a>
+                    <a href="{{ cms.links.createUrl('/') }}#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">Starten</a>
                 </div>
 
-                <!-- Hamburger Menu Button (Mobile) -->
-                <button 
+                <button
                     id="hamburger-btn"
                     class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center p-1 rounded hover:bg-gray-100 transition-colors"
-                    aria-label="Navigation öffnen"
+                    aria-label="Navigation oeffnen"
                     aria-expanded="false">
                     <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
                     <span class="hamburger-line w-full h-0.5 bg-gray-700"></span>
@@ -38,23 +28,14 @@
                 </button>
             </div>
 
-            <!-- Mobile Navigation Menu -->
-            <div 
-                id="mobile-menu"
-                class="mobile-menu hidden md:hidden border-t border-gray-200">
+            <div id="mobile-menu" class="mobile-menu hidden md:hidden border-t border-gray-200">
                 <div class="px-4 py-4 space-y-3">
-                    <a href="{{cms.links.createUrl('/features')}}" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Features
-                    </a>
-                    <a href="{{cms.links.createUrl('/documentation')}}" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Documentation
-                    </a>
-                    <a href="{{cms.links.createUrl('/module-directory')}}" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Module Directory
-                    </a>
-                    <a href="{{cms.links.createUrl('/blog')}}" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">
-                        Blog
-                    </a>
+                    <a href="{{ cms.links.createUrl('/') }}#home" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Home</a>
+                    <a href="{{ cms.links.createUrl('/') }}#why" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Why</a>
+                    <a href="{{ cms.links.createUrl('/') }}#foundation" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Fundament</a>
+                    <a href="{{ cms.links.createUrl('/') }}#examples" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Code</a>
+                    <a href="{{ cms.links.createUrl('/blog/') }}" class="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-lg font-medium transition-colors">Blog</a>
+                    <a href="{{ cms.links.createUrl('/') }}#contact" class="block text-center w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">Starten</a>
                 </div>
             </div>
         </div>

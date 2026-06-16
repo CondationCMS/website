@@ -1,6 +1,7 @@
 {
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./src/layout.css",
+    "build:cms": "tailwindcss -i ./src/input.css -o ../../assets/layout-20260615.css",
     "build:prod": "tailwindcss -i ./src/input.css -o ./src/layout.css --minify",
     "dev": "tailwindcss -i ./src/input.css -o ./src/layout.css --watch",
     "watch": "npm run dev"

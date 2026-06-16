@@ -2,9 +2,11 @@
 
 {% block title %} {{ node.meta.title }} {% endblock %}
 
+{% block main_class %}{% endblock %}
+
 {% block header_contrib %}
-	<link href="/assets/code.tabs.css" rel="stylesheet" />
-	<script src="/assets/code.tabs.js" defer></script>
+	<!--link href="/assets/code.tabs.css" rel="stylesheet" />
+	<script src="/assets/code.tabs.js" defer></script-->
 {% endblock %}
 
 {% block content %}
@@ -19,20 +21,20 @@
 	{% endif %}
 </div>
 
-<div
-{{ ext.ui.toolbar("features", "sections", ["addSectionEntry", "orderSectionEntries"], { "section": "features"}) | raw }}
->
-	<section id="about" class="mb-12">
-		<h2 class="text-3xl font-bold text-gray-900 mb-4">Features</h2>
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-			{% if node.sections.containsKey('features') %}
-				{% for feature in node.sections.get('features') %}
-					{{ feature.content | raw }}
-				{% endfor %}
-			{% endif %}
-		</div>
-	</section>
-</div>
+        <section id="contact" class="bg-gray-950 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center">
+                    <div class="max-w-3xl">
+                        <p class="text-sm font-semibold tracking-wide uppercase text-cyan-300 mb-3">Naechster Schritt</p>
+                        <h2 class="text-3xl sm:text-4xl font-bold leading-tight">Baue dein naechstes Content-Projekt auf einem Fundament, das mitdenkt.</h2>
+                        <p class="mt-5 text-lg leading-8 text-gray-300">Starte mit einer schlanken Struktur und erweitere sie genau dort, wo dein Projekt es braucht.</p>
+                    </div>
+                    <a href="documentation.html" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-950 hover:bg-cyan-100 transition-colors">
+                        Dokumentation oeffnen
+                    </a>
+                </div>
+            </div>
+        </section>
 
 
 {% endblock %}

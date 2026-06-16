@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="canonical" href="https://condation.com{{ node.properties['url'] }}" />
+    <link rel="canonical" href="https://condation.com{{ node.properties['url'] }}"" />
 
     <title>{% block title %}Condation CMS - Java Flat-File CMS{% endblock %}</title>
 
@@ -30,6 +30,7 @@
 
     <link href="/assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet" />
     <link href="/assets/highlightjs/panda-syntax-dark.min.css" rel="stylesheet" />
+    <link href="/assets/app-1.css" rel="stylesheet" />
     <link href="/assets/layout-20260615.css" rel="stylesheet" />
 
 
@@ -64,9 +65,7 @@
 
     {% include "base.menu.html" %}
 
-    {% block content_header %}{% endblock %}
-
-    <main class="{% block main_class %}max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16{% endblock %}">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {% block content %}{% endblock %}
     </main>
 
@@ -75,8 +74,8 @@
     <script src="/assets/highlightjs/highlight.min.js" defer></script>
     <script src="/assets/highlight.tags.js" defer></script>    
     <script src="/assets/highlight.condation.js" defer></script> 
-    <script src="/assets/layout-20260615.js" defer></script>
     <script src="/assets/app-1.js" defer></script>
+    <script src="/assets/layout-20260615.js" defer></script>
     {% block footer_contrib %}{% endblock %}
 </body>
 

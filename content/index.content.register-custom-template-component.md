@@ -1,8 +1,9 @@
 ---
-template: sections/content-text.html
+template: sections/content-example.html
 layout:
   order: 1000
-title: Register custom template component
+title: Register a custom template component
+description: Template components let you create reusable building blocks that keep templates clean, consistent, and easy to maintain.
 published: true
 ---
 
@@ -14,7 +15,7 @@ import { $hooks } from 'system/hooks.mjs';
 $hooks.registerAction("system/template/component", ({components}) => {
 	components.put(
 			"hello",
-			({name}) => `Hello ${name}`
+			({name}) => `<div><h3>Hello</h3> <p>${name}</p></div>`
 	)
 	return null;
 })
@@ -26,15 +27,16 @@ $hooks.registerAction("system/template/component", ({components}) => {
 // register component via java module
 @TemplateComponent("hello")
 public void hello_compnent (String name) {
-	return "Hello " + name;
+	return "<div><h3>Hello</h3> <p>%s</p></div>".format(name);
 }
 ```
 [[/ext:code-tabs-item]]
 
 [[ext:code-tabs-item id="html" render-markdown=true]]
 
-```tag
-\{\[hello name="CondationCMS" /\]\}
+```condation
+\{\[hello name="CondationCMS" \]\}
+\{\[ /hello \]\}
 ```
 
 [[/ext:code-tabs-item]]

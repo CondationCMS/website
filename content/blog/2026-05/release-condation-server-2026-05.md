@@ -8,6 +8,7 @@ publish_date: 2026-05-08T00:00:00Z
 template: blog-entry.html
 unpublish_date: null
 published: true
+postType: release
 ---
 
 Today we released version v2026.05 of the CondationCMS server.

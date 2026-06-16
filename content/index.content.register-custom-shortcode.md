@@ -1,8 +1,9 @@
 ---
-template: sections/content-text.html
+template: sections/content-example.html
 layout:
   order: 1000
 title: Register a custom ShortCode
+description: Shortcodes let you extend Markdown with reusable, dynamic content elements while keeping content simple and readable.
 unpublish_date: null
 publish_date: null
 published: true

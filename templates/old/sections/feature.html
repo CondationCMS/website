@@ -1,0 +1,15 @@
+<div class=""
+{{ ext.ui.toolbar(node.uri, "sectionEntry" , ["editContent", "editAttributes" , "deleteSectionEntry" ], {"uri": node.uri, "form": "attributes"}) | raw }}
+>
+{% if PREVIEW_MODE %}
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "publish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "unpublish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("text", "link" , node.uri, node.uri) | raw }}></div>
+{% endif %}
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">{{node.meta.title}}</h3>
+        <p class="text-gray-600">{{node.content | raw}}</p>
+        <a href="{{ cms.links.createUrl(node.meta.link) }}" class="text-sky-500 hover:text-sky-700 font-semibold transition-colors">Read more</a>
+    </div>
+</div>

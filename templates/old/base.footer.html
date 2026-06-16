@@ -1,0 +1,20 @@
+<!-- Footer -->
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Copyright Bottom Bar -->
+        <div class="border-t border-gray-800 pt-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-gray-400">
+                <div class="order-2 md:order-1">
+                    <p>&copy; 2026 Condation</p>
+                </div>
+                <div class="flex flex-wrap gap-6 order-1 md:order-2">
+                    {% assign nodes = cms.navigation.list("/about/") %}
+                    {% for item in nodes %}
+                        <a href="{{ item.path }}" class="hover:text-white transition-colors">{{ item.name }}</a>
+                    {% endfor %}
+                    <a href="https://github.com/CondationCMS" class="hover:text-white transition-colors"><i class="bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

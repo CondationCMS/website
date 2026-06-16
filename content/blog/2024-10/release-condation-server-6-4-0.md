@@ -9,6 +9,7 @@ publish_date: 2024-10-11T00:00:00Z
 template: blog-entry.html
 unpublish_date: null
 published: true
+postType: release
 ---
 
 Today we released version 6.4.0 of the CondationCMS server.

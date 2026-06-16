@@ -8,6 +8,7 @@ publish_date: 2024-10-29T00:00:00Z
 template: blog-entry.html
 unpublish_date: null
 published: true
+postType: release
 ---
 
 Today we released version 7.1.2 of the CondationCMS server.

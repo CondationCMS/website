@@ -9,6 +9,7 @@ publish_date: 2024-09-23T00:00:00Z
 template: blog-entry.html
 unpublish_date: null
 published: true
+postType: module
 ---
 
 Today we released the first version of the [video-module](/modules/video-module).

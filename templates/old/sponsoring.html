@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %} {{ node.meta.title }} {% endblock %}
+
+{% block content %}
+<div style="min-height: 50px;" {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"], {"form": "attributes"}) | raw }}>
+{{ content | raw }}
+</div>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+		<section id="about" class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4">Contributors</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				{% assign pageNumber = requestContext.getQueryParameter('page', '1') %}
+				{% assign page = cms.nodeList.from("/about/developers/*").size(6).page(pageNumber).list() %}
+				{% for entry in page.items %}
+				<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">{{ entry.name }}</h3>
+					<p class="text-gray-600">{{ entry.content}}.</p>
+					<a href="{{ entry.path}}" class="text-sky-500 hover:text-sky-700 font-semibold transition-colors">Read more</a>
+				</div>
+				{% endfor %}
+			</div>
+		</section>
+    <!--nav>
+		<ul class="pagination justify-content-center">
+			{% if page.page == 1 %}
+				<li class="page-item disabled">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+			{% else %}
+				<li class="page-item">
+                    {% assign prevLink = requestContext.uri + "?page=" + (page.page - 1) %}
+                    <a class="page-link" href="{{ cms.links.createUrl(prevLink) }}" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+			{% endif %}
+			{% if page.page == page.totalPages %}
+				<li class="page-item disabled">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			{% else %}
+				<li class="page-item">
+                    {% assign nextLink = requestContext.uri + "?page=" + (page.page + 1) %}
+					<a class="page-link" href="{{ cms.links.createUrl(nextLink) }}" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+	</nav-->
+</main>
+{% endblock %}

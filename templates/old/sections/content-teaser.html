@@ -1,0 +1,13 @@
+<div class="why row"
+{{ ext.ui.toolbar(node.uri, "sectionEntry" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri, "form": "attributes"}) | raw }}
+>
+{% if PREVIEW_MODE %}
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "publish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("datetime", "unpublish_date" , node.uri, node.uri) | raw }}></div>
+<div style="display: none;" {{ ext.ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
+{% endif %}
+	<section id="home" class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-12 mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ node.meta.getOrDefault("title", "--title here--") }}</h1>
+        <p class="text-lg text-gray-700">{{ node.content | raw }}</p>
+    </section>
+</div>

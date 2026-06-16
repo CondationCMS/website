@@ -2,7 +2,7 @@ import { $hooks } from 'system/hooks.mjs';
 import { $links } from 'system/links.mjs';
 
 
-$hooks.registerAction("system/content/shortCodes", ({ shortCodes }) => {
+$hooks.registerAction("system/content/shortcode", ({ shortCodes }) => {
     shortCodes.put(
         "code-tabs-container",
         (params) => {

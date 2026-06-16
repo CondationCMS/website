@@ -1,0 +1,21 @@
+<div class="why row"
+    {{ ext.ui.toolbar(node.uri, "sectionEntry" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri, "form": "attributes"}) | raw }}
+
+>
+<section id="examples" class="bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-start">
+                    <div>
+                        <p class="text-sm font-semibold tracking-wide uppercase text-blue-600 mb-3">Extend CondationCMS</p>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-950 leading-tight">{{ node.meta.title }}</h2>
+                        <p class="mt-5 text-lg leading-8 text-gray-600">
+                            {{ node.meta.description }}
+                        </p>
+                    </div>
+                    <div>
+                        {{ node.content | raw }}
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>

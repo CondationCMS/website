@@ -1,10 +1,11 @@
 ---
 template: sections/content-teaser.html
 layout:
-  order: 0
+  order: 1
 link: ''
 unpublish_date: null
 title: Great content starts with a strong foundation.
+top_title: CondationCMS
 publish_date: null
 published: true
 ---
