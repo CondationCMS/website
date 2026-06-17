@@ -53,7 +53,7 @@ In this example:
 
 ## How Sections Are Loaded
 
-When a page is rendered, ConditionCMS automatically discovers and loads all sections associated with that page. The sections are organized by type in an associative array structure.
+When a page is rendered, CondationCMS automatically discovers and loads all sections associated with that page. The sections are organized by type in an associative array structure.
 
 **Discovery process:**
 1. The renderer looks for the page file (e.g., `index.md`)
@@ -128,7 +128,7 @@ Section files are written in Markdown and can contain any valid Markdown content
 ```markdown
 **John Smith** — CEO at TechCorp
 
-"ConditionCMS made managing our multi-language sites incredibly efficient. 
+"CondationCMS made managing our multi-language sites incredibly efficient. 
 The modular section approach saved us weeks of development time."
 ```
 
@@ -136,7 +136,7 @@ When rendered in a template with `{{ section.content() | raw }}`, this becomes:
 
 ```html
 <p><strong>John Smith</strong> — CEO at TechCorp</p>
-<p>"ConditionCMS made managing our multi-language sites incredibly efficient. 
+<p>"CondationCMS made managing our multi-language sites incredibly efficient. 
 The modular section approach saved us weeks of development time."</p>
 ```
 

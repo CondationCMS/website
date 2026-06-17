@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @source "../../../templates";
+@source inline("lg:order-1 lg:order-2");
 
 
 /* cutsom start */
@@ -134,13 +135,17 @@
 
 /* Sidebar Mobile Menu */
 .doc-nav-mobile {
-    transition: all 300ms ease-in-out;
+    transition: max-height 300ms ease-in-out;
     max-height: 0;
     overflow: hidden;
 }
 
 .doc-nav-mobile.open {
-    max-height: 800px;
+    max-height: calc(100vh - 4rem);
+    max-height: calc(100dvh - 4rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Submenu Toggle */

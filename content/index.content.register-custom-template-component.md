@@ -6,6 +6,7 @@ title: Register a custom template component
 description: Template components let you create reusable building blocks that keep
   templates clean, consistent, and easy to maintain.
 published: true
+reverse: true
 ---
 
 [[ext:code-tabs-container tabs="javascript:JavaScript,java:Java,template:Template" ]]

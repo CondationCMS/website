@@ -11,4 +11,4 @@ layout:
   order: 3
 ---
 
-Handle multiple sites efficiently with just one ConditionCMS installation. The flexible multi-site system also enables natural multi-language support by configuring each language as an independent site.
+Handle multiple sites efficiently with just one CondationCMS installation. The flexible multi-site system also enables natural multi-language support by configuring each language as an independent site.

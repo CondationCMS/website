@@ -12,7 +12,7 @@ publish_date: null
 
 ## Overview
 
-ConditionCMS provides flexible approaches for managing content to accommodate different workflows and user preferences. Whether you prefer working directly with files or using a visual interface, you can choose the method that best fits your team's needs.
+CondationCMS provides flexible approaches for managing content to accommodate different workflows and user preferences. Whether you prefer working directly with files or using a visual interface, you can choose the method that best fits your team's needs.
 
 ---
 
@@ -24,7 +24,7 @@ Create and edit content directly using your preferred text editor and version co
 
 **How it works:**
 - Write content in Markdown files manually
-- Organize files according to ConditionCMS file structure conventions
+- Organize files according to CondationCMS file structure conventions
 - Manage metadata (frontmatter) in each file
 - Commit changes to your repository
 
@@ -46,7 +46,7 @@ Create and edit content directly using your preferred text editor and version co
 
 ### 2. Manager Application
 
-Use the ConditionCMS Manager application to create and edit content through a visual interface with forms and editors.
+Use the CondationCMS Manager application to create and edit content through a visual interface with forms and editors.
 
 **How it works:**
 - Open the Manager application in your browser
@@ -96,7 +96,7 @@ The forms, fields, and editor layout are completely customizable by template dev
 2. Add frontmatter with metadata (title, date, template, etc.)
 3. Write content and create sections (`blog/tutorial.hero.main.md`, `blog/tutorial.content.intro.md`)
 4. Commit changes to Git
-5. Push to production; ConditionCMS automatically detects and renders the new content
+5. Push to production; CondationCMS automatically detects and renders the new content
 
 ### Example 2: Content Editor Using Manager Application
 
@@ -106,13 +106,13 @@ The forms, fields, and editor layout are completely customizable by template dev
 4. Fill in fields: title, description, featured image, body content
 5. See live preview on the right side updating in real-time
 6. For advanced sections, click into a sidebar dialog to add testimonials, features, or gallery items
-7. Click "Publish" when ready; ConditionCMS handles all metadata and file generation automatically
+7. Click "Publish" when ready; CondationCMS handles all metadata and file generation automatically
 
 ---
 
 ## Content Structure Consistency
 
-Regardless of which approach you use, all content must follow ConditionCMS conventions:
+Regardless of which approach you use, all content must follow CondationCMS conventions:
 
 **Pages:**
 - Named `\<pagename\>.md`
@@ -137,7 +137,7 @@ The Manager application handles these details automatically, while manual editin
 ## Getting Started
 
 **If you prefer manual editing:**
-1. Familiarize yourself with ConditionCMS file structure (Pages and Sections documentation)
+1. Familiarize yourself with CondationCMS file structure (Pages and Sections documentation)
 2. Set up your preferred text editor
 3. Clone your content repository
 4. Create files following naming conventions

@@ -45,17 +45,18 @@ Toolbars are a set of action buttons, place in a top corner of the div they are 
 
 Basic usage:
 ```javascript
-ext.ui.toolbar("<id>", "<type>", ["<actions>"])
+ext.ui.toolbar("<id>", "<type>", ["<actions>"], {<attributes>})
 ```
 **id**: a unique id for every toolbar.  
 **type**: the toolbar type, available **main**, **sections**, **sections** And **media**.  
 **actions**: list of actions available in the toolbar: **editContent**, **editAttributes**, **addSection**, **orderSections**.  
+**attributes**: map of attributes, for example the id of the form used for **editAttributes**
 
 ### Main toolbar
 
 Use the **ui** helper to add the _main_ toolbar definition to edit the content and attributes to you main div.
 ```condation
-<div {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"]) | raw }}>
+<div {{ ext.ui.toolbar("main", "main", ["editContent", "editAttributes"], {"form": "attributes"}) | raw }}>
 ...
 </div>
 ```
@@ -76,7 +77,7 @@ Actions are **editContent**, **editAttributes** and **deleteSection**, as option
 
 ```condation
 <div
-{{ ext.ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri}) | raw }}
+{{ ext.ui.toolbar(node.uri, "section" , ["editContent", "editAttributes" , "deleteSection" ], {"uri": node.uri, "form": "attributes"}) | raw }}
 >
 ...
 </div>

@@ -10,26 +10,26 @@ publish_date: null
 
 # Getting started
 
-This section covers the essential steps to get ConditionCMS up and running, including system requirements, installation procedures, and basic server management commands.
+This section covers the essential steps to get CondationCMS up and running, including system requirements, installation procedures, and basic server management commands.
 
 ## Requirements
 
-ConditionCMS requires **Java version 25** or later to be installed on your system. Java 25 provides the runtime environment necessary for the ConditionCMS server to execute.
+CondationCMS requires **Java version 25** or later to be installed on your system. Java 25 provides the runtime environment necessary for the CondationCMS server to execute.
 
 If you do not have Java installed, you can download it from the official [Java website](https://www.oracle.com/java/technologies/downloads/#java25) or use your system's package manager.
 
 ## Installation
 
-To install ConditionCMS, follow these steps:
+To install CondationCMS, follow these steps:
 
-1. Download the current [latest release](https://github.com/ConditionCMS/distribution/releases) from the official GitHub repository.
+1. Download the current [latest release](https://github.com/CondationCMS/distribution/releases) from the official GitHub repository.
 2. Unzip the release archive to a folder of your choice on your system.
 
-Since version 8.0.0, ConditionCMS provides pre-built releases for all major operating systems, including Linux, Windows, and macOS. These releases include the required Java 25 runtime, eliminating the need to install Java separately if you use a pre-built release.
+Since version 8.0.0, CondationCMS provides pre-built releases for all major operating systems, including Linux, Windows, and macOS. These releases include the required Java 25 runtime, eliminating the need to install Java separately if you use a pre-built release.
 
 ### Configuration Files
 
-After installation, you will need to configure three main configuration files to customize your ConditionCMS deployment:
+After installation, you will need to configure three main configuration files to customize your CondationCMS deployment:
 
 - [Server configuration](/documentation/cms/configuration/server-config) - Configure server settings such as port, IP address, IPC, and performance management
 - [Site configuration](/documentation/cms/configuration/site-config) - Configure individual site settings including hostname, theme, caching, and content processing
@@ -37,13 +37,13 @@ After installation, you will need to configure three main configuration files to
 
 ## Starting the Server
 
-Once ConditionCMS is installed and configured, you can start the server using the command-line interface:
+Once CondationCMS is installed and configured, you can start the server using the command-line interface:
 
 ```shell
 ./server.sh server start
 ```
 
-This command launches the ConditionCMS server with the configuration settings defined in your configuration files. The server will begin listening for incoming requests on the configured port and IP address.
+This command launches the CondationCMS server with the configuration settings defined in your configuration files. The server will begin listening for incoming requests on the configured port and IP address.
 
 ## Installing Modules
 

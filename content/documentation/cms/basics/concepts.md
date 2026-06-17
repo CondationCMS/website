@@ -14,7 +14,7 @@ publish_date: null
 
 ## Overview
 
-ConditionCMS is built on a layered architecture. Understanding the following fundamental concepts will help you grasp how the system works and how its components interact. This section organizes concepts from infrastructure down to extensibility.
+CondationCMS is built on a layered architecture. Understanding the following fundamental concepts will help you grasp how the system works and how its components interact. This section organizes concepts from infrastructure down to extensibility.
 
 ---
 
@@ -33,7 +33,7 @@ ConditionCMS is built on a layered architecture. Understanding the following fun
 
 ### Server
 
-The **ConditionCMS Server** is the core runtime that powers all hosted websites. It manages requests, processes content, coordinates extensions and modules, and handles all backend operations.
+The **CondationCMS Server** is the core runtime that powers all hosted websites. It manages requests, processes content, coordinates extensions and modules, and handles all backend operations.
 
 **Key capabilities:**
 - Hosts multiple independent websites simultaneously
@@ -49,7 +49,7 @@ A single server instance can scale to manage dozens of websites while keeping ea
 
 ### Host or Site
 
-A **host** (or **site**) is an individual website running on the ConditionCMS server. One server can manage multiple sites at the same time, each with independent configuration, content, themes, and settings.
+A **host** (or **site**) is an individual website running on the CondationCMS server. One server can manage multiple sites at the same time, each with independent configuration, content, themes, and settings.
 
 **Characteristics:**
 - Operates independently with its own content
@@ -59,7 +59,7 @@ A **host** (or **site**) is an individual website running on the ConditionCMS se
 - Maintains complete content isolation from other sites
 
 **Multi-Site Architecture:**
-ConditionCMS supports multi-site hosting to enable multi-language support. Users are shared across all sites on a single server instance. This is fundamentally different from multi-tenancy: multi-site is for language variants of the same organization, while multi-tenancy is for completely separate customers. For true multi-tenancy (separate customers with complete isolation), operate a dedicated server instance for each customer.
+CondationCMS supports multi-site hosting to enable multi-language support. Users are shared across all sites on a single server instance. This is fundamentally different from multi-tenancy: multi-site is for language variants of the same organization, while multi-tenancy is for completely separate customers. For true multi-tenancy (separate customers with complete isolation), operate a dedicated server instance for each customer.
 
 **Example use case:** A company with an English site (example.com) and a German site (example.de) shares the same user database and server infrastructure, but maintains separate content for each language.
 
@@ -107,7 +107,7 @@ A **page** is a single content unit within a site. The terms "page" and "node" a
 
 **Key points:**
 - Define how a section's data is structured and rendered
-- Processed by ConditionCMS's internal template engine
+- Processed by CondationCMS's internal template engine
 - Support dynamic content, conditionals, loops, and template logic
 - Are theme-specific (each theme has its own templates)
 - Can reference sections, variables, and assets
@@ -118,7 +118,7 @@ A **page** is a single content unit within a site. The terms "page" and "node" a
 
 ### Assets
 
-**Assets** are static files managed and served by ConditionCMS. Unlike sections (which define content structure and are dynamically rendered), assets are raw files delivered directly to users.
+**Assets** are static files managed and served by CondationCMS. Unlike sections (which define content structure and are dynamically rendered), assets are raw files delivered directly to users.
 
 **Types of assets:**
 - **Media files**: Images, videos, audio files
@@ -128,7 +128,7 @@ A **page** is a single content unit within a site. The terms "page" and "node" a
 - **Resources**: Fonts, icons, other static web files
 
 **Processing:**
-ConditionCMS automatically optimizes assets, including image compression, format conversion, and responsive image generation based on configured media profiles.
+CondationCMS automatically optimizes assets, including image compression, format conversion, and responsive image generation based on configured media profiles.
 
 **Example:** A product image, a PDF brochure, or a web font.
 
@@ -138,7 +138,7 @@ ConditionCMS automatically optimizes assets, including image compression, format
 
 ### Extensions
 
-**Extensions** are custom JavaScript components that extend ConditionCMS functionality for specific projects and themes. They run in a JavaScript runtime and integrate with the core system via hooks.
+**Extensions** are custom JavaScript components that extend CondationCMS functionality for specific projects and themes. They run in a JavaScript runtime and integrate with the core system via hooks.
 
 **Use extensions for:**
 - **Custom content tags**: Create domain-specific shortcodes or markup that renders specialized content
@@ -158,7 +158,7 @@ ConditionCMS automatically optimizes assets, including image compression, format
 
 ### Modules
 
-**Modules** are server-side components written in Java that extend ConditionCMS functionality with more powerful and performance-critical features than extensions.
+**Modules** are server-side components written in Java that extend CondationCMS functionality with more powerful and performance-critical features than extensions.
 
 **Use modules for:**
 - **Core services**: Essential functionality like template engines
@@ -179,7 +179,7 @@ ConditionCMS automatically optimizes assets, including image compression, format
 
 ### Hooks
 
-**Hooks** are extension points that allow developers to integrate custom code into various parts of the ConditionCMS core without modifying core classes directly. They follow an event-driven pattern.
+**Hooks** are extension points that allow developers to integrate custom code into various parts of the CondationCMS core without modifying core classes directly. They follow an event-driven pattern.
 
 **How hooks work:**
 - The core system triggers hooks at specific lifecycle points
@@ -220,13 +220,13 @@ Let's trace how these concepts work together when you create a blog post:
 
 ## Glossary
 
-**Asset**: A static file (image, document, stylesheet, font) managed and served by ConditionCMS.
+**Asset**: A static file (image, document, stylesheet, font) managed and served by CondationCMS.
 
 **Extension**: A custom JavaScript component that adds specialized functionality to templates or pages.
 
 **Hook**: An extension point in the core system that allows custom code to execute at specific lifecycle events.
 
-**Host**: A single website instance running on the ConditionCMS server. Synonym: Site.
+**Host**: A single website instance running on the CondationCMS server. Synonym: Site.
 
 **Module**: A server-side Java component that provides powerful, performance-critical functionality.
 
@@ -236,6 +236,6 @@ Let's trace how these concepts work together when you create a blog post:
 
 **Section**: A modular content building block that composes a page, referencing a template for rendering.
 
-**Server**: The core ConditionCMS runtime that hosts and manages all sites.
+**Server**: The core CondationCMS runtime that hosts and manages all sites.
 
 **Template**: A reusable layout definition that structures how a section's content is rendered.

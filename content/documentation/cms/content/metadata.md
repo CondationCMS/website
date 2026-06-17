@@ -10,7 +10,7 @@ publish_date: null
 
 # MetaData
 
-Metadata describes the properties and behavior of content pages in ConditionCMS. While the system provides several reserved metadata attributes (described below), you can also define custom attributes that will be available in your template code for flexible content management.
+Metadata describes the properties and behavior of content pages in CondationCMS. While the system provides several reserved metadata attributes (described below), you can also define custom attributes that will be available in your template code for flexible content management.
 
 ## Title
 
@@ -44,7 +44,7 @@ Excerpts are particularly useful for blog listings, content aggregations, and se
 
 ## Visibility and Publishing
 
-ConditionCMS provides several attributes to control when and how pages are published.
+CondationCMS provides several attributes to control when and how pages are published.
 
 ### Published Status
 
@@ -134,7 +134,7 @@ content:
     type: "application/json"
 ```
 
-This is useful for creating API endpoints, RSS feeds, or other non-HTML content from ConditionCMS. The specified content type is sent in the HTTP response headers, informing browsers and clients how to interpret the content.
+This is useful for creating API endpoints, RSS feeds, or other non-HTML content from CondationCMS. The specified content type is sent in the HTTP response headers, informing browsers and clients how to interpret the content.
 
 ## Views
 

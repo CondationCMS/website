@@ -18,7 +18,6 @@ menu:
 
 To provide users the possibility of creating content multiple field types exits.
 Form fields can be used in json format, what is used for the settings forms of page templates, or forms of list item types.
-The other use is directly in the html templates, to provide content related forms for pages and sections.
 
 ## text field type
 
@@ -29,11 +28,6 @@ The other use is directly in the html templates, to provide content related form
 	title: "Title of the page"
 }
 ```
-```condation
-{% if PREVIEW_MODE %}
-<div style="display: none;" {{ ext.ui.editMeta("text", "title" , node.uri, node.uri) | raw }}></div>
-{% endif %}
-```
 
 ## multiline text field type
 
@@ -43,11 +37,6 @@ The other use is directly in the html templates, to provide content related form
 	name: "description",
 	title: "Description of the page"
 }
-```
-```condation
-{% if PREVIEW_MODE %}
-<div style="display: none;" {{ ext.ui.editMeta("textarea", "description" , node.uri, node.uri) | raw }}></div>
-{% endif %}
 ```
 
 ## number field type
@@ -60,12 +49,6 @@ The other use is directly in the html templates, to provide content related form
 }
 ```
 
-```condation
-{% if PREVIEW_MODE %}
-<div style="display: none;" {{ ext.ui.editMeta("number", "description" , node.uri, node.uri) | raw }}></div>
-{% endif %}
-```
-
 ## mail field type
 
 ```json
@@ -74,12 +57,6 @@ The other use is directly in the html templates, to provide content related form
 	name: "email",
 	title: "A Mail"
 }
-```
-
-```condation
-{% if PREVIEW_MODE %}
-<div style="display: none;" {{ ext.ui.editMeta("mail", "email" , node.uri, node.uri) | raw }}></div>
-{% endif %}
 ```
 
 ## select field type

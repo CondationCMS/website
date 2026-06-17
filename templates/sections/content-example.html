@@ -5,14 +5,14 @@
 <section id="examples" class="bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-start">
-                    <div>
+                    <div class="{% if node.meta.reverse %}lg:order-2{% endif %}">
                         <p class="text-sm font-semibold tracking-wide uppercase text-blue-600 mb-3">Extend CondationCMS</p>
                         <h2 class="text-3xl sm:text-4xl font-bold text-gray-950 leading-tight">{{ node.meta.title }}</h2>
                         <p class="mt-5 text-lg leading-8 text-gray-600">
                             {{ node.meta.description }}
                         </p>
                     </div>
-                    <div>
+                    <div class="{% if node.meta.reverse %}lg:order-1{% endif %}">
                         {{ node.content | raw }}
                     </div>
                 </div>
