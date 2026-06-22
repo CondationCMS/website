@@ -13,7 +13,7 @@ postType: release
 
 Today we released version v2026.05 of the CondationCMS server.
 
-[Download](https://github.com/CondationCMS/distribution/releases/tag/v2026.05)
+[Download](https://github.com/CondationCMS/cms-server/releases/tag/v2026.05)
 
 
 ## Highlights of this release
