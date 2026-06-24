@@ -1,7 +1,7 @@
 ---
-title: 'Why we Built a Markdown-First CMS Instead of Another Headless CMS'
+title: 'Why We Built a Markdown-First CMS Instead of Another Headless CMS'
 seo:
-  description: Today, we released CondationCMS version v2026.06
+  description: 'Why CondationCMS uses Markdown files, templates, Git, and a flat-file structure instead of a headless-first architecture.'
   keywords: ''
   author: ''
 publish_date: 2026-06-25T00:00:00Z
@@ -9,73 +9,109 @@ template: blog-entry.html
 unpublish_date: null
 published: true
 postType: general
----
+-----------------
 
-# Why We Built a Flat-File CMS Instead of Another Headless System
+# Why We Built a Markdown-First CMS Instead of Another Headless CMS
 
-Headless CMS are everywhere right now. The reasoning is sound: separate content from presentation, put an API in the middle, attach any frontend you like. For certain use cases, that's exactly the right call. For many others, it's simply too much.
+Headless CMS are everywhere, and for good reasons. Separating content from presentation makes sense when content needs to appear in several frontends, apps, stores, or external systems. Put an API in the middle, let every consumer use the data in its own way.
 
-CondationCMS takes a different approach: Markdown files, flat-file structure, template-based rendering. That might sound like a step backwards. It isn't, and this article explains why.
+That is not what every project needs, though.
 
-## Content stays real files
+When building CondationCMS, we kept coming back to a simpler question: what does a normal content project actually need to stay understandable over time? For many websites, the answer is not another API layer or a separate frontend application. It is content that remains readable, templates that render it directly, and a project structure that does not hide its most important parts behind infrastructure.
 
-A Markdown file with front matter is not a database record behind an API. It's readable, archivable, and portable. No running server required, no special backend, no migration script.
+That is why CondationCMS is Markdown-first, flat-file based, and template-driven.
 
-That sounds obvious, but it isn't. Anyone who has tried exporting content from a proprietary CMS knows how much time that takes. With flat files, the content just lives in the filesystem. An editor, a `git log`, a simple `grep` — that's enough to understand what's there.
+## Content should remain real files
+
+A Markdown file with front matter is not a record trapped behind an API or inside a database. It is a file. You can open it in any editor, archive it, move it, inspect it with Git, or search through it with `grep`.
+
+That sounds almost too simple to mention. But anyone who has had to export content from a proprietary system knows that portability is often only promised until the day you want to leave.
+
+With flat files, the content lives in the filesystem:
+
+```text
+content/
+  blog/
+    markdown-first-cms.md
+```
+
+There is no export process before you can look at it. No running backend required just to read an article. No special migration tool needed to understand what is stored.
 
 > Content should outlive the software that created it.
 
-That principle has shaped CondationCMS from the start.
+That principle has shaped CondationCMS from the beginning.
 
-## Git is not an add-on
+## Git is part of the workflow, not an integration
 
-With flat files, version control isn't an optional plugin – it's a natural part of the workflow. Every text change, every new page, every template update becomes a commit. Content, configuration, and code are versioned together.
+With a flat-file project, Git fits naturally. Content changes, template changes, configuration changes, and code changes can all live in the same history.
 
-The practical implications are real: changes are diffable and reversible. Branches work well for staging content or new site structures. Deployments can be tied directly to a specific Git state.
+That has practical consequences. You can see what changed in an article. You can revert a broken template update. You can create a branch for a redesign or a new documentation section before it reaches production.
 
-This isn't an argument for every editorial team – a classic WYSIWYG backend has its place. But for developers, technically-minded teams, and content-adjacent projects, it's a significant advantage.
+For some editorial teams, that will not be the ideal workflow. A classic editor-focused backend with a WYSIWYG interface is often the better choice there.
 
-## Fewer moving parts
+But for developers, agencies, technically minded teams, and documentation-heavy projects, having content and project structure under version control is a real advantage rather than a nice extra.
 
-A CMS with a database, API layer, admin backend, caching layer, and a separate frontend is complex infrastructure. That complexity is justified in some scenarios. For a lot of projects, it's simply too much to maintain.
+## Fewer moving parts means fewer things to maintain
 
-A flat-file CMS needs no database installation, no backup strategy for table schemas, no schema migrations on updates. Deployment failures are easier to reason about, because the number of moving parts is smaller.
+A modern web stack can grow surprisingly quickly: database, API, admin interface, authentication, caching, frontend application, preview system, deployment pipeline.
 
-The foundation of a content project shouldn't itself become the biggest project on the team.
+Sometimes that complexity is necessary. Often, it is simply the price of choosing a stack that solves problems a project does not actually have.
+
+A flat-file CMS does not remove every operational concern, but it removes quite a few of them. There is no database to install, no schema migration to run during an update, and no database dump to restore after a failure.
+
+When something goes wrong, a smaller system is usually easier to inspect.
+
+> The foundation of a content project should not become the biggest project on the team.
 
 ## Templates and content often belong together
 
-Headless systems separate content from presentation – that's their promise. If you're serving multiple frontends or distributing content across channels, you need that separation.
+The central promise of headless architecture is separation: content is independent from presentation.
 
-But most websites aren't multi-channel platforms. A blog, a company site, a documentation project: they need a website, consistent design, SEO-friendly HTML, and reusable templates. For that, a template-based CMS is more direct than a headless setup where API, frontend, rendering, preview, and deployment all have to be assembled from scratch.
+That matters when content is delivered to multiple consumers. A mobile app, a web frontend, an internal portal, an external partner API, and a kiosk system all benefit from a shared content source.
 
-> Headless separates content from presentation. A traditional CMS can intentionally bring them together – when the website itself is the product.
+But a large part of the web is not built that way.
+
+A company site, a blog, a documentation portal, or a product website usually needs one thing first: a good website. It needs templates, structured content, SEO-friendly HTML, previews, and a deployment process that does not require assembling several separate applications.
+
+For those projects, keeping rendering close to content is not an architectural failure. It is often the more direct solution.
+
+> Headless separates content from presentation. A traditional CMS can intentionally bring them together when the website itself is the product.
 
 ## Markdown is not nostalgia
 
-Markdown has a reputation as a “developer format.” That reputation is undeserved. Markdown enforces structure without imposing it. Headings, lists, links, and media are transparent and portable. There are no hidden formatting layers, no tag soup, no proprietary extensions.
+Markdown is sometimes treated as a developer-only format or as a compromise made for simplicity. We see it differently.
 
-For technically-minded authors, that means less distraction and more direct control over content. For developers, it means content is processable without an intermediary. Shortcodes, components, and metadata integrate cleanly without overloading the format.
+Markdown makes structure visible. Headings are headings. Links are links. Lists are lists. The source remains readable without needing a visual editor to interpret hidden formatting.
 
-Markdown is a deliberate choice for clarity – not a step back.
+There is no tag soup, no proprietary document format, and no invisible styling layer mixed into the content.
 
-## Performance without a complicated stack
+That does not mean Markdown is right for every author. It does mean that it is a strong format for projects where clarity, portability, and long-term maintainability matter.
 
-Flat files don't mean slow. CondationCMS caches Markdown output, pre-compiles templates, and indexes content so that most pages can be served without a database query per request. Media can be optimized automatically.
+In CondationCMS, Markdown is not an isolated text format either. Metadata, shortcodes, components, and templates can extend content without turning the underlying files into something unreadable.
+
+## Performance does not require a complicated stack
+
+Flat files are sometimes associated with static generators or very small websites. That is too narrow a view.
+
+CondationCMS caches Markdown output, pre-compiles templates, indexes content, and can optimize media automatically. The goal is not to pretend that every site is static. The goal is to avoid treating a database query and a distributed architecture as the default answer to every page request.
 
 > Dynamic content does not always require a dynamic architecture.
 
-## Backups you can understand
+## Backups should be understandable
 
-A complete backup is a set of files: content, media, templates, configuration, modules. Restoring means copying the project directory back and starting the server. No database dumps, no service dependencies, no special restore procedures.
+A complete project backup can be a directory containing content, media, templates, configuration, and modules.
 
-That matters especially for smaller organizations, agencies, and projects that need to stay maintainable over years.
+Restoring it means bringing those files back and starting the server again.
 
-## Local development like any other project
+There are no table schemas to reconstruct, no database service to recover separately, and no special export format that only one vendor understands.
 
-A CondationCMS project looks like this locally:
+That is especially useful for smaller organizations, agencies, and long-lived projects. A website should still be maintainable years later, even when the people who originally built it are no longer involved.
 
-```
+## Local development should feel like working on a project
+
+A CondationCMS project is intentionally easy to recognize:
+
+```text
 project/
   content/
   templates/
@@ -84,13 +120,17 @@ project/
   config/
 ```
 
-Clone, start, edit, commit, deploy. No external SaaS instance, no separate database, no mandatory cloud dependency. That's easy to understand for developers and practical for agencies – especially when managing multiple projects in parallel.
+Clone it, start it, edit it, commit it, deploy it.
+
+There is no mandatory SaaS account, no required cloud service, and no separate database just to start working locally. For agencies managing several customer projects, that simplicity is valuable. For developers, it makes the project easier to inspect and easier to hand over.
 
 ## Structure through convention
 
-In a flat-file project, the directory structure is part of the information architecture. URLs, navigation, and content hierarchy are readable directly from the filesystem:
+With flat files, the directory structure becomes part of the information architecture.
 
-```
+A project can make its content hierarchy visible directly in the filesystem:
+
+```text
 content/
   blog/
     markdown-first-cms.md
@@ -99,12 +139,16 @@ content/
   about.md
 ```
 
-Metadata, content types, and validation are still necessary – but the core structure stays visible and traceable without opening an admin interface.
+URLs, navigation, and content organization can still be supported by metadata, content types, and validation. But the essential structure does not disappear into an admin interface.
+
+You can see how the project is organized by opening the project.
 
 ## Ownership stays with the project
 
-No mandatory cloud service, no per-editor or per-API-request fees, no dependency on an external content provider. Projects run on their own infrastructure, and content stays in the hands of whoever runs the site.
+CondationCMS does not require a mandatory cloud platform, per-editor pricing, or API request quotas. Projects run on their own infrastructure, and the people operating the site keep control over the content and deployment choices.
 
-This isn't an argument against modern platforms. It's an argument for control:
+This is not an argument against modern hosted platforms. They are useful, and in the right context they save time.
+
+It is an argument for choosing the level of infrastructure a project actually needs.
 
 > The goal is not to avoid modern platforms. The goal is to keep ownership and deployment choices where they belong: with the project.
