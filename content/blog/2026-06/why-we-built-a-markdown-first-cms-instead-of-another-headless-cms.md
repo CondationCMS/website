@@ -11,17 +11,17 @@ published: true
 postType: general
 ---
 
-# Why We Built a Flat-File CMS – Instead of Another Headless System
+# Why We Built a Flat-File CMS Instead of Another Headless System
 
-Headless CMS are everywhere right now. The reasoning is sound: separate content from presentation, put an API in the middle, attach any frontend you like. For certain use cases, that's exactly the right call. For many others, it's just too much.
+Headless CMS are everywhere right now. The reasoning is sound: separate content from presentation, put an API in the middle, attach any frontend you like. For certain use cases, that's exactly the right call. For many others, it's simply too much.
 
-CondationCMS takes a different approach: Markdown files, flat-file structure, template-based rendering. That might sound like a step backwards. It isn't – and this article explains why.
+CondationCMS takes a different approach: Markdown files, flat-file structure, template-based rendering. That might sound like a step backwards. It isn't, and this article explains why.
 
 ## Content stays real files
 
-A Markdown file with front matter is not a database record behind an API. It's readable, archivable, and portable – no running server required, no special backend, no migration script.
+A Markdown file with front matter is not a database record behind an API. It's readable, archivable, and portable. No running server required, no special backend, no migration script.
 
-That sounds obvious, but it isn't. Anyone who has tried exporting content from a proprietary CMS knows how much time that takes. With flat files, the content just lives in the filesystem. An editor, a `git log`, a simple `grep` – that's enough to understand what's there.
+That sounds obvious, but it isn't. Anyone who has tried exporting content from a proprietary CMS knows how much time that takes. With flat files, the content just lives in the filesystem. An editor, a `git log`, a simple `grep` — that's enough to understand what's there.
 
 > Content should outlive the software that created it.
 
