@@ -11,8 +11,6 @@ published: true
 postType: general
 ---
 
-# Why I Built a Markdown-First CMS Instead of Another Headless CMS
-
 To answer that question, I need to go back a bit. It all started in 2020, when I needed a CMS for a few personal projects. Up until that point I had mostly worked with WordPress, but it didn't feel like the right fit for what I had in mind. So I started an evaluation phase, looking at various systems.
 
 After a while I found several options that covered parts of my requirements, but none of them were quite what I wanted overall. That's when I decided to just build a CMS myself — the system I actually wanted to work with.
