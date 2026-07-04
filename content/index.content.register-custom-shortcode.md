@@ -29,7 +29,7 @@ $hooks.registerAction("system/content/shortCodes", ({shortCodes}) => {
 ```java
 // register component via java module
 @ShortCode("hello")
-public void hello_shortcode (String name) {
+public String hello_shortcode (String name) {
 	return "Hello " + name;
 }
 ```
