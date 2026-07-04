@@ -203,3 +203,16 @@ Form fields can be used in json format, what is used for the settings forms of p
 	title: "A page to link to"
 }
 ```
+
+## tags field
+
+```json
+{
+	type: "tags",
+	name: "taxonomy.tags",
+	title: "Tags",
+	options: {
+		taxonomy: "tags"
+	}
+}
+```

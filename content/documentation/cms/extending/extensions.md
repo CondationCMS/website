@@ -16,8 +16,8 @@ Extension are created via Javascript, supported by the awesome graal-js project.
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
-$hooks.registerAction("system/content/tags", ({tags}) => {
-	tags.put(
+$hooks.registerAction("system/content/shortcode", ({shortCodes}) => {
+	shortCodes.put(
 			"theme_name",
 			(params) => `Hello, I'm your <b>demo</b> theme.`
 	)
@@ -37,7 +37,7 @@ To avoid conflicts, the tag is registered under the *ext:* namespace.
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
 $hooks.registerAction("system/template/function", ({functions}) => {
-	$hooks.registerAction("system/template/function", ({functions.put(
+	functions.put(
 			"fn_message",
 			({color, message}) => `<div style="color: ${color}">${message}</div>`
 	)

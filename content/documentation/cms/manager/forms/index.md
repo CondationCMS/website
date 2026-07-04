@@ -21,8 +21,7 @@ In CondationCMS there are different types of forms
 ## Page settings
 
 ```js
-$hooks.registerFilter("manager/contentTypes/register", (context) => {
-    var contentTypes = context.value();
+$hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
     contentTypes.registerPageTemplate({
         name: "Default",
         template: "default.html"
@@ -41,8 +40,7 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 
 
 ```js
-$hooks.registerFilter("manager/contentTypes/register", (context) => {
-    var contentTypes = context.value();
+$hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
     contentTypes.registerSectionTemplate({
         section: "asection",
         name: "SectionTemplate",
@@ -58,11 +56,7 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 
 
 ```js
-$hooks.registerFilter("manager/contentTypes/register", (context) => {
-    var contentTypes = context.value();
-    /*
-    global definition if ListItemTypes
-    */
+$hooks.registerFilter("manager/contentTypes/register", (contentTypes) => {
     contentTypes.registerListItemType({
         name: "object.values",
         form: [
@@ -86,12 +80,13 @@ $hooks.registerFilter("manager/contentTypes/register", (context) => {
 
 ## Forms in template
 
+tpd
+
 ## Media forms
 
 
 ```javascript
-$hooks.registerFilter("manager/media/forms", (context) => {
-	var mediaForms = context.value();
+$hooks.registerFilter("manager/media/forms", (contentTypes) => {
 	mediaForms.registerForm("meta", {
 		fields: [
 			{
