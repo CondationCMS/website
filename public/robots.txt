@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /about/impressum
 Allow: /
 
 Sitemap: https://condation.com/module/seo-module/sitemap.xml
