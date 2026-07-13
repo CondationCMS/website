@@ -22,7 +22,7 @@ If you do not have Java installed, you can download it from the official [Java w
 
 To install CondationCMS, follow these steps:
 
-1. Download the current [latest release](https://github.com/CondationCMS/distribution/releases) from the official GitHub repository.
+1. Download the current [latest release](https://github.com/CondationCMS/cms-server/releases) from the official GitHub repository.
 2. Unzip the release archive to a folder of your choice on your system.
 
 Since version 8.0.0, CondationCMS provides pre-built releases for all major operating systems, including Linux, Windows, and macOS. These releases include the required Java 25 runtime, eliminating the need to install Java separately if you use a pre-built release.

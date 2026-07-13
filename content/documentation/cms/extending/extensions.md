@@ -12,7 +12,7 @@ CondationCMS offers different ways add new features to the cms. One of them are 
 The idea behind extension is to offer the possiblity for project or theme developer to add new functionality without the need to create, compile and build a Java project.
 Extension are created via Javascript, supported by the awesome graal-js project.
 
-### Create a content tag
+### Create a custom shortcode
 
 ```javascript
 import { $hooks } from 'system/hooks.mjs';
@@ -25,8 +25,8 @@ $hooks.registerAction("system/content/shortcode", ({shortCodes}) => {
 })
 ```
 
-After the tag is registered, it's usable inside the markdown content files. 
-To avoid conflicts, the tag is registered under the *ext:* namespace.
+After the shortcode is registered, it's usable inside the markdown content files. 
+To avoid conflicts, the shortcode is registered under the *ext:* namespace.
 
 ```tag
 \[\[ ext:theme_name /\]\]

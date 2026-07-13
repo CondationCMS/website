@@ -94,7 +94,7 @@ The MIME type used as the default content type when rendering content. The defau
 The ordered sequence of processing steps applied to content during the rendering process. Available pipeline processors include:
 
 - **markdown** - Converts Markdown syntax to HTML
-- **tags** - Processes custom tags (e.g., `[gallery]`, `[button]`)
+- **shortcodes** - Processes custom shortcodes (e.g., `[gallery]`, `[button]`)
 - **template** - Renders template engine code within content using the configured template engine
 
 If you include `template` in the pipeline, it must be the first step in the sequence. This ensures that template code is processed before other pipeline steps. For example, a pipeline of `["template", "markdown", "shortcode"]` would first process template code, then convert any resulting Markdown syntax to HTML, and finally process shortcodes.

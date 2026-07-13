@@ -141,7 +141,7 @@ CondationCMS automatically optimizes assets, including image compression, format
 **Extensions** are custom JavaScript components that extend CondationCMS functionality for specific projects and themes. They run in a JavaScript runtime and integrate with the core system via hooks.
 
 **Use extensions for:**
-- **Custom content tags**: Create domain-specific shortcodes or markup that renders specialized content
+- **Custom shortcodes**: Create domain-specific shortcodes or markup that renders specialized content
 - **Reusable template components**: Build encapsulated, interactive components for templates
 - **Custom routes**: Define custom URL endpoints and request handlers
 - **Third-party integrations**: Connect with external APIs and services
