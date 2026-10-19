@@ -28,7 +28,7 @@ $hooks.registerAction("system/template/component", ({components}) => {
 ```java
 // register component via java module
 @TemplateComponent("hello")
-public void hello_compnent (String name) {
+public String hello_compnent (String name) {
 	return "<div><h3>Hello</h3> <p>%s</p></div>".format(name);
 }
 ```
