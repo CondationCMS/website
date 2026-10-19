@@ -27,7 +27,7 @@ $hooks.registerAction("system/template/function", ({functions}) => {
 ```java
 // register function via java module
 @TemplateFunction("hello")
-public void hello_function (String name) {
+public String hello_function (String name) {
 	return "Hello " + name;
 }
 ```
